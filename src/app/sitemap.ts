@@ -14,10 +14,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
   const blogRoutes: MetadataRoute.Sitemap = [
-    { url: `${base}/blog`, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/blog`, changeFrequency: "weekly" as const, priority: 0.8 },
     ...posts.map((p) => ({
       url: `${base}/blog/${p.slug}`,
-      changeFrequency: "monthly",
+      changeFrequency: "monthly" as const,
       priority: 0.7,
       lastModified: new Date(p.date),
     })),
