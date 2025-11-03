@@ -45,7 +45,8 @@ function rateLimit(key: RateKey) {
 export async function POST(req: NextRequest) {
   const ip =
     req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    req.ip ||
+    req.headers.get("x-real-ip") ||
+    req.headers.get("cf-connecting-ip") ||
     "anonymous";
   const limit = rateLimit(`contact:${ip}`);
   if (!limit.allowed) {
@@ -78,7 +79,12 @@ export async function POST(req: NextRequest) {
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
   const TO = process.env.CONTACT_TO_EMAIL;
   const FROM = process.env.CONTACT_FROM_EMAIL || "no-reply@smacademy.fr";
+  const DRY_RUN = process.env.CONTACT_DRY_RUN === "1";
   if (!RESEND_API_KEY || !TO) {
+    if (DRY_RUN) {
+      console.log("[contact][dry-run]", JSON.stringify(data));
+      return NextResponse.json({ ok: true, dryRun: true });
+    }
     return NextResponse.json(
       { error: "Email service not configured" },
       { status: 503 }

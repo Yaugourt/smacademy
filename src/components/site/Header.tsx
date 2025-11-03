@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/site/ThemeToggle";
 
 const navItems = [
   { href: "/", label: "Accueil" },
@@ -27,16 +28,20 @@ export function Header() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm transition-colors hover:text-foreground/80",
+                "relative text-sm transition-colors hover:text-foreground/80",
                 pathname === item.href ? "text-foreground" : "text-foreground/60"
               )}
             >
               {item.label}
+              {pathname === item.href && (
+                <span className="absolute -bottom-2 left-0 h-0.5 w-full rounded-full" style={{ background: "linear-gradient(90deg, var(--primary), var(--brand-orange))" }} />
+              )}
             </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <Button asChild size="sm" className="rounded-full" variant="cta">
             <Link href="#contact">Nous contacter</Link>
           </Button>

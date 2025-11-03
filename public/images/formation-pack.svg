@@ -1,0 +1,13 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600' width='1200' height='600'>
+  <rect width='1200' height='600' fill='#0A84FF' opacity='0.10'/>
+  <g opacity='0.9'>
+    <rect x='260' y='200' width='200' height='200' rx='16' fill='white'/>
+    <rect x='500' y='200' width='200' height='200' rx='16' fill='white'/>
+    <rect x='740' y='200' width='200' height='200' rx='16' fill='white'/>
+  </g>
+  <circle cx='360' cy='300' r='20' fill='#2B579A'/>
+  <circle cx='600' cy='300' r='20' fill='#217346'/>
+  <circle cx='840' cy='300' r='20' fill='#D24726'/>
+</svg>
+
+

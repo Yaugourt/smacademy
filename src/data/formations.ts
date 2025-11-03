@@ -26,6 +26,8 @@ export const formations: Formation[] = [
     summary:
       "Formation express à l'installation et au raccordement fibre optique: techniques de déploiement, raccordements précis et contrôle qualité.",
     tags: ["Fibre", "Télécom"],
+    heroImage: "/placeholders/fibre.svg",
+    heroImage: "/images/formation-fibre.svg",
     duration: "2 à 3 jours",
     price: "Nous consulter",
     location: "Centre SM Academy (Nîmes) ou sur site",
@@ -52,7 +54,7 @@ export const formations: Formation[] = [
     summary:
       "Installer, configurer et entretenir des infrastructures de recharge pour véhicules électriques en respectant normes et sécurité.",
     tags: ["Électrique", "Mobilité"],
-    heroImage: "/globe.svg",
+    heroImage: "/images/formation-irve.svg",
     duration: "3 jours",
     price: "Nous consulter",
     location: "Centre SM Academy (Nîmes) ou sur site",
@@ -84,6 +86,8 @@ export const formations: Formation[] = [
     summary:
       "Concevoir, animer et évaluer des actions de formation efficaces, adaptées aux publics adultes.",
     tags: ["Pédagogie"],
+    heroImage: "/placeholders/formateur.svg",
+    heroImage: "/images/formation-formateur.svg",
     duration: "3 à 5 jours",
     price: "Nous consulter",
     location: "Centre SM Academy (Nîmes) ou sur site",
@@ -106,6 +110,8 @@ export const formations: Formation[] = [
     summary:
       "Devenir acteur de la prévention et maîtriser les gestes qui sauvent en milieu professionnel.",
     tags: ["Sécurité"],
+    heroImage: "/placeholders/sst.svg",
+    heroImage: "/images/formation-sst.svg",
     duration: "2 jours (initial)",
     price: "Nous consulter",
     location: "Centre SM Academy (Nîmes) ou sur site",
@@ -129,6 +135,8 @@ export const formations: Formation[] = [
     summary:
       "Acquérir les bonnes pratiques de manutention et de posture pour réduire les risques de TMS.",
     tags: ["Prévention"],
+    heroImage: "/placeholders/gestes.svg",
+    heroImage: "/images/formation-gestes.svg",
     duration: "1 jour",
     price: "Nous consulter",
     location: "Centre SM Academy (Nîmes) ou sur site",
@@ -151,6 +159,8 @@ export const formations: Formation[] = [
     summary:
       "Monter en compétence sur la bureautique pour gagner en efficacité au quotidien.",
     tags: ["Bureautique"],
+    heroImage: "/placeholders/packoffice.svg",
+    heroImage: "/images/formation-pack.svg",
     duration: "2 à 5 jours selon niveau",
     price: "Nous consulter",
     location: "Centre SM Academy (Nîmes) ou sur site",

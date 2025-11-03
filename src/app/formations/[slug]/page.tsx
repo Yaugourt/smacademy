@@ -86,6 +86,27 @@ export default async function FormationPage({ params }: PageProps) {
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_380px]">
         <article className="space-y-8">
+          <nav aria-label="Sommaire" className="sticky top-16 z-10 -mx-1 overflow-x-auto pb-2 pt-1 lg:static lg:mx-0">
+            <ul className="flex gap-2 text-xs text-muted-foreground">
+              {[
+                { id: "objectifs", label: "Objectifs", show: Boolean(formation.objectives?.length) },
+                { id: "programme", label: "Programme", show: Boolean(formation.program?.length) },
+                { id: "prerequis", label: "Prérequis", show: Boolean(formation.prerequisites?.length) },
+                { id: "public-vise", label: "Public visé", show: Boolean(formation.audience) },
+                { id: "infos-pratiques", label: "Infos pratiques", show: true },
+                { id: "financements", label: "Financements", show: Boolean(formation.financingNotes) },
+                { id: "faq", label: "FAQ", show: Boolean(formation.faqs?.length) },
+              ]
+                .filter((x) => x.show)
+                .map((x) => (
+                  <li key={x.id}>
+                    <a href={`#${x.id}`} className="rounded-full border px-3 py-1 hover:bg-secondary">
+                      {x.label}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </nav>
           {formation.objectives?.length ? (
             <section id="objectifs">
               <h2 className="text-xl font-semibold">Objectifs</h2>
@@ -158,12 +179,14 @@ export default async function FormationPage({ params }: PageProps) {
           {formation.faqs?.length ? (
             <section id="faq">
               <h2 className="text-xl font-semibold">FAQ</h2>
-              <div className="mt-3 space-y-3">
+              <div className="mt-3 space-y-2">
                 {formation.faqs.map((f) => (
-                  <div key={f.q} className="rounded-md border p-3">
-                    <div className="text-sm font-medium">{f.q}</div>
-                    <div className="text-sm text-muted-foreground">{f.a}</div>
-                  </div>
+                  <details key={f.q} className="group rounded-md border p-3 open:shadow-sm">
+                    <summary className="cursor-pointer list-none text-sm font-medium">
+                      {f.q}
+                    </summary>
+                    <div className="mt-2 text-sm text-muted-foreground">{f.a}</div>
+                  </details>
                 ))}
               </div>
             </section>

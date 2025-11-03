@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { formations } from "@/data/formations";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -19,7 +20,14 @@ export default function FormationsPage() {
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {formations.map((f) => (
-          <Card key={f.slug} className="transition-all hover:shadow-md">
+          <Card key={f.slug} className="transition-all hover:-translate-y-0.5 hover:shadow-md">
+            {f.heroImage && (
+              <div className="overflow-hidden rounded-t-xl">
+                <div className="relative h-36 w-full">
+                  <Image src={f.heroImage} alt={f.title} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover" />
+                </div>
+              </div>
+            )}
             <CardHeader>
               <CardTitle className="text-lg">{f.title}</CardTitle>
             </CardHeader>

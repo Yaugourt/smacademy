@@ -1,0 +1,11 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600' width='1200' height='600'>
+  <rect width='1200' height='600' fill='#FF7A00' opacity='0.12'/>
+  <g stroke='#0A84FF' stroke-width='6' opacity='0.7'>
+    <path d='M100 300 C 200 150, 400 450, 500 300 S 900 150, 1100 300' fill='none'/>
+    <path d='M100 360 C 260 260, 380 380, 520 320 S 840 220, 1100 360' fill='none'/>
+  </g>
+  <circle cx='600' cy='300' r='100' fill='white' opacity='0.9'/>
+  <circle cx='600' cy='300' r='8' fill='#0A84FF'/>
+</svg>
+
+

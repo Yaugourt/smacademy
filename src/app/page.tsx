@@ -4,6 +4,7 @@ import { formations } from "@/data/formations";
 import ContactForm from "@/components/forms/ContactForm";
 import MapEmbed from "@/components/site/MapEmbed";
 import { Phone, Sparkles, Users, BookOpen, BadgeCheck, Handshake, Coins, Building2, IdCard, Trophy } from "lucide-react";
+import ValuesAccordion from "@/components/sections/Values";
 
 export const metadata = {
   title: "Accueil",
@@ -16,7 +17,9 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-screen-xl px-4 py-12 sm:py-16">
       {/* Hero */}
-      <section className="flex flex-col items-start gap-5 pt-4">
+      <section className="relative overflow-hidden rounded-2xl border bg-gradient-to-b from-[oklch(0.98_0_0)] to-secondary/60 p-6 sm:p-8">
+        <div className="pointer-events-none absolute inset-0 opacity-20" style={{backgroundImage:"radial-gradient(1200px 600px at 0% -20%, var(--primary)/.25 0%, transparent 60%), radial-gradient(1200px 600px at 100% 0%, var(--brand-orange)/.25 0%, transparent 60%)"}} />
+        <div className="relative flex flex-col items-start gap-5 pt-4">
         <div className="flex flex-wrap gap-2">
           <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs text-muted-foreground">
             <BadgeCheck className="h-3.5 w-3.5" /> Qualiopi
@@ -47,6 +50,7 @@ export default function Home() {
           <Link href="/formations/sst" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary">Formation SST</Link>
           <Link href="/formations/irve" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary">Formation IRVE (Nîmes)</Link>
           <Link href="/formations/formateur" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary">Formation de formateur</Link>
+        </div>
         </div>
       </section>
 
@@ -88,11 +92,8 @@ export default function Home() {
         </div>
         <div>
           <h3 className="text-xl font-semibold tracking-tight">Nos valeurs</h3>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            <Feature index={1} icon={<Handshake className="h-5 w-5" />} title="Proximité" desc="Être disponible et accessible, écoute et communication ouverte." />
-            <Feature index={2} icon={<Users className="h-5 w-5" />} title="Accompagnement personnalisé" desc="Suivi individualisé selon objectifs, compétences et parcours." />
-            <Feature index={3} icon={<Sparkles className="h-5 w-5" />} title="Innovation pédagogique" desc="Méthodes et outils modernes, interactifs et engageants." />
-            <Feature index={4} icon={<Trophy className="h-5 w-5" />} title="Excellence" desc="Qualité du contenu et de l’expérience d’apprentissage." />
+          <div className="mt-4">
+            <ValuesAccordion />
           </div>
         </div>
       </section>

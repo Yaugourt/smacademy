@@ -125,4 +125,6 @@
   body {
     @apply bg-background text-foreground;
   }
+  html { scroll-behavior: smooth; }
+  h2, h3, h4 { scroll-margin-top: 6rem; }
 }
