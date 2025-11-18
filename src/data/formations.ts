@@ -13,6 +13,7 @@ export type Formation = {
   objectives?: string[];
   prerequisites?: string[];
   program?: string[];
+  images?: string[];
   financingNotes?: string;
   faqs?: { q: string; a: string }[];
   sections?: { title: string; content: string }[];
@@ -26,7 +27,7 @@ export const formations: Formation[] = [
     summary:
       "Formation express à l'installation et au raccordement fibre optique: techniques de déploiement, raccordements précis et contrôle qualité.",
     tags: ["Fibre", "Télécom"],
-    heroImage: "/placeholders/fibre.svg",
+    heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg",
     duration: "2 à 3 jours",
     price: "Nous consulter",
     location: "Centre SM Academy (Nîmes) ou sur site",
@@ -53,7 +54,7 @@ export const formations: Formation[] = [
     summary:
       "Installer, configurer et entretenir des infrastructures de recharge pour véhicules électriques en respectant normes et sécurité.",
     tags: ["Électrique", "Mobilité"],
-    heroImage: "/placeholders/irve.svg",
+    heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/irvee.jpg",
     duration: "3 jours",
     price: "Nous consulter",
     location: "Centre SM Academy (Nîmes) ou sur site",
@@ -70,6 +71,10 @@ export const formations: Formation[] = [
       "Dimensionnement et câblage",
       "Mise en service, paramétrage, essais",
     ],
+    images: [
+      "https://smacademy.fr/wp-content/uploads/2024/08/irve.jpg",
+      "https://smacademy.fr/wp-content/uploads/2024/08/irvee.jpg",
+    ],
     financingNotes:
       "Éligible selon les cas via OPCO, France Travail (AIF/POE) ou CPF. Nous vous accompagnons pour le montage du dossier.",
     faqs: [
@@ -85,7 +90,7 @@ export const formations: Formation[] = [
     summary:
       "Concevoir, animer et évaluer des actions de formation efficaces, adaptées aux publics adultes.",
     tags: ["Pédagogie"],
-    heroImage: "/placeholders/formateur.svg",
+    heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/reforme-formation-professionnelle-apprentissage-2-1.jpg",
     duration: "3 à 5 jours",
     price: "Nous consulter",
     location: "Centre SM Academy (Nîmes) ou sur site",
@@ -108,7 +113,7 @@ export const formations: Formation[] = [
     summary:
       "Devenir acteur de la prévention et maîtriser les gestes qui sauvent en milieu professionnel.",
     tags: ["Sécurité"],
-    heroImage: "/placeholders/sst.svg",
+    heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/sstt-2.jpg",
     duration: "2 jours (initial)",
     price: "Nous consulter",
     location: "Centre SM Academy (Nîmes) ou sur site",
@@ -132,7 +137,7 @@ export const formations: Formation[] = [
     summary:
       "Acquérir les bonnes pratiques de manutention et de posture pour réduire les risques de TMS.",
     tags: ["Prévention"],
-    heroImage: "/placeholders/gestes.svg",
+    heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/gg.jpg",
     duration: "1 jour",
     price: "Nous consulter",
     location: "Centre SM Academy (Nîmes) ou sur site",
@@ -155,7 +160,7 @@ export const formations: Formation[] = [
     summary:
       "Monter en compétence sur la bureautique pour gagner en efficacité au quotidien.",
     tags: ["Bureautique"],
-    heroImage: "/placeholders/packoffice.svg",
+    heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/PACK-OFF-1.png",
     duration: "2 à 5 jours selon niveau",
     price: "Nous consulter",
     location: "Centre SM Academy (Nîmes) ou sur site",

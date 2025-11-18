@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -18,8 +19,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 w-full max-w-screen-xl items-center justify-between px-4 sm:h-20">
-        <Link href="/" className="font-semibold tracking-tight">
-          SM Academy
+        <Link href="/" className="inline-flex items-center gap-2 font-semibold tracking-tight">
+          <Image
+            src="https://smacademy.fr/wp-content/uploads/2024/09/logo-sma.png"
+            alt="SM Academy"
+            width={120}
+            height={28}
+            className="h-7 w-auto"
+            priority
+          />
         </Link>
 
         <nav className="hidden gap-6 md:flex">

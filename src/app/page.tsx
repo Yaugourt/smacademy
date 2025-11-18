@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { formations } from "@/data/formations";
 import ContactForm from "@/components/forms/ContactForm";
@@ -19,38 +20,82 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden rounded-2xl border bg-gradient-to-b from-[oklch(0.98_0_0)] to-secondary/60 p-6 sm:p-8">
         <div className="pointer-events-none absolute inset-0 opacity-20" style={{backgroundImage:"radial-gradient(1200px 600px at 0% -20%, var(--primary)/.25 0%, transparent 60%), radial-gradient(1200px 600px at 100% 0%, var(--brand-orange)/.25 0%, transparent 60%)"}} />
-        <div className="relative flex flex-col items-start gap-5 pt-4">
-        <div className="flex flex-wrap gap-2">
-          <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs text-muted-foreground">
-            <BadgeCheck className="h-3.5 w-3.5" /> Qualiopi
+        <div className="relative grid gap-6 pt-4 md:grid-cols-2">
+          <div className="flex flex-col items-start gap-5">
+            <div className="flex flex-wrap gap-2">
+              <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs text-muted-foreground">
+                <BadgeCheck className="h-3.5 w-3.5" /> Qualiopi
+              </div>
+              <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs text-muted-foreground">
+                Formation Nîmes (Gard)
+              </div>
+            </div>
+            <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
+              SM ACADEMY
+              <span className="block text-foreground/70">Ensemble formons votre avenir.</span>
+            </h1>
+            <p className="max-w-2xl text-lg text-muted-foreground">
+              Centre de formation basé à Nîmes (Gard). Formations professionnelles animées par un formateur expérimenté, diplômé et certifié.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Button asChild className="rounded-full" variant="cta">
+                <Link href="/formations">Voir les formations</Link>
+              </Button>
+              <Button asChild variant="outline" className="rounded-full">
+                <Link href="#contact">Être rappelé</Link>
+              </Button>
+              <Button asChild variant="outline" className="rounded-full">
+                <a href="tel:+33982774444"><Phone className="mr-1 h-4 w-4" /> Nous appeler</a>
+              </Button>
+            </div>
+            <div className="mt-2 flex flex-wrap gap-2 text-sm">
+              <Link href="/formations/sst" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary">Formation SST</Link>
+              <Link href="/formations/irve" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary">Formation IRVE (Nîmes)</Link>
+              <Link href="/formations/formateur" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary">Formation de formateur</Link>
+            </div>
           </div>
-          <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs text-muted-foreground">
-            Formation Nîmes (Gard)
+          <div className="relative hidden md:block">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="relative h-40 w-full overflow-hidden rounded-lg border sm:h-48">
+                <Image
+                  src="https://smacademy.fr/wp-content/uploads/2024/08/sstt-2.jpg"
+                  alt="Formation SST"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="relative h-40 w-full overflow-hidden rounded-lg border sm:h-48">
+                <Image
+                  src="https://smacademy.fr/wp-content/uploads/2024/08/irve.jpg"
+                  alt="Formation IRVE"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="relative h-32 w-full overflow-hidden rounded-lg border sm:h-40">
+                <Image
+                  src="https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg"
+                  alt="Fibre optique D3"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative h-32 w-full overflow-hidden rounded-lg border sm:h-40">
+                <Image
+                  src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_0212-1024x768.jpg"
+                  alt="Formation de formateur"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-          SM ACADEMY
-          <span className="block text-foreground/70">Ensemble formons votre avenir.</span>
-        </h1>
-        <p className="max-w-2xl text-lg text-muted-foreground">
-          Centre de formation basé à Nîmes (Gard). Formations professionnelles animées par un formateur expérimenté, diplômé et certifié.
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <Button asChild className="rounded-full" variant="cta">
-            <Link href="/formations">Voir les formations</Link>
-          </Button>
-          <Button asChild variant="outline" className="rounded-full">
-            <Link href="#contact">Être rappelé</Link>
-          </Button>
-          <Button asChild variant="outline" className="rounded-full">
-            <a href="tel:+33982774444"><Phone className="mr-1 h-4 w-4" /> Nous appeler</a>
-          </Button>
-        </div>
-        <div className="mt-2 flex flex-wrap gap-2 text-sm">
-          <Link href="/formations/sst" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary">Formation SST</Link>
-          <Link href="/formations/irve" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary">Formation IRVE (Nîmes)</Link>
-          <Link href="/formations/formateur" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary">Formation de formateur</Link>
-        </div>
         </div>
       </section>
 
@@ -77,7 +122,7 @@ export default function Home() {
       </section>
 
       {/* Qui sommes-nous */}
-      <section className="mt-16 grid gap-8 md:grid-cols-2">
+      <section className="mt-16 grid gap-8 rounded-2xl border bg-primary/5 p-6 md:grid-cols-2 sm:p-8">
         <div>
           <h2 className="text-2xl font-semibold tracking-tight">Qui sommes-nous ?</h2>
           <p className="mt-3 text-sm text-muted-foreground">
@@ -94,6 +139,48 @@ export default function Home() {
           <h3 className="text-xl font-semibold tracking-tight">Nos valeurs</h3>
           <div className="mt-4">
             <ValuesAccordion />
+          </div>
+        </div>
+      </section>
+
+      {/* Vues du centre et des formations (images actuelles) */}
+      <section className="mt-12">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="relative h-40 overflow-hidden rounded-lg border sm:h-48">
+            <Image
+              src="https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg"
+              alt="Installation fibre optique"
+              fill
+              sizes="(max-width: 1024px) 50vw, 25vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative h-40 overflow-hidden rounded-lg border sm:h-48">
+            <Image
+              src="https://smacademy.fr/wp-content/uploads/2024/08/irvee.jpg"
+              alt="IRVE bornes de recharge"
+              fill
+              sizes="(max-width: 1024px) 50vw, 25vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative h-40 overflow-hidden rounded-lg border sm:h-48">
+            <Image
+              src="https://smacademy.fr/wp-content/uploads/2024/08/gg.jpg"
+              alt="Gestes et postures"
+              fill
+              sizes="(max-width: 1024px) 50vw, 25vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative h-40 overflow-hidden rounded-lg border sm:h-48">
+            <Image
+              src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_0212-1024x768.jpg"
+              alt="Formation de formateur"
+              fill
+              sizes="(max-width: 1024px) 50vw, 25vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

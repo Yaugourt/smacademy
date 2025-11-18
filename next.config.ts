@@ -16,7 +16,7 @@ const csp = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' 'unsafe-eval'", // adjust if you host analytics
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob:",
+  "img-src 'self' https://smacademy.fr data: blob:",
   "font-src 'self' data:",
   "connect-src 'self' https://api.resend.com",
   "frame-ancestors 'self'",
@@ -32,6 +32,15 @@ const nextConfig: NextConfig = {
       ],
     },
   ],
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "smacademy.fr",
+        pathname: "/wp-content/uploads/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

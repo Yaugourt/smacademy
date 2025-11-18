@@ -46,16 +46,16 @@
 :root {
   --radius: 0.625rem;
   --background: #ffffff;
-  --foreground: #0b0b0f;
+  --foreground: #324A6D;
   --card: #ffffff;
   --card-foreground: #0b0b0f;
   --popover: #ffffff;
   --popover-foreground: #0b0b0f;
-  --primary: #0a84ff;
+  --primary: #1c6188;
   --primary-foreground: #ffffff;
-  --brand-orange: #ff7a00;
-  --brand-orange-600: #ff6a00;
-  --brand-orange-700: #e85f00;
+  --brand-orange: #e9631c;
+  --brand-orange-600: #db5c1a;
+  --brand-orange-700: #c65318;
   --secondary: #f5f7fb;
   --secondary-foreground: #0b0b0f;
   --muted: #f5f7fb;
@@ -88,11 +88,11 @@
   --card-foreground: #f5f6f8;
   --popover: #121318;
   --popover-foreground: #f5f6f8;
-  --primary: #66b6ff;
-  --primary-foreground: #04121f;
-  --brand-orange: #ff9a3e;
-  --brand-orange-600: #ff8a24;
-  --brand-orange-700: #ff7a00;
+  --primary: #66a6ce;
+  --primary-foreground: #081b27;
+  --brand-orange: #f28b58;
+  --brand-orange-600: #ea7a40;
+  --brand-orange-700: #e0632a;
   --secondary: #121318;
   --secondary-foreground: #f5f6f8;
   --muted: #1a1b22;
