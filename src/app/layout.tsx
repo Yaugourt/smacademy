@@ -5,6 +5,7 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import FloatingBar from "@/components/site/FloatingBar";
 import BackToTop from "@/components/site/BackToTop";
+import CookieBanner from "@/components/site/CookieBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -78,6 +79,7 @@ export default function RootLayout({
         <Footer />
         <FloatingBar />
         <BackToTop />
+        <CookieBanner />
       </body>
     </html>
   );

@@ -60,8 +60,13 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-8 text-xs text-muted-foreground">
-          © 2025 SM Academy. Tous droits réservés.
+        <div className="mt-8 flex flex-col items-start justify-between gap-3 text-xs text-muted-foreground sm:flex-row">
+          <div>© 2025 SM Academy. Tous droits réservés.</div>
+          <div className="flex gap-4">
+            <Link href="/mentions-legales" className="hover:text-[var(--brand-orange)]">Mentions légales</Link>
+            <Link href="/confidentialite" className="hover:text-[var(--brand-orange)]">Confidentialité</Link>
+            <Link href="/cookies" className="hover:text-[var(--brand-orange)]">Cookies</Link>
+          </div>
         </div>
       </div>
     </footer>
