@@ -4,6 +4,7 @@ export type Post = {
   excerpt: string;
   date: string; // ISO
   coverImage?: string;
+  category?: string;
   tags?: string[];
   author?: string;
   contentHtml: string;
@@ -17,6 +18,7 @@ export const posts: Post[] = [
       "Panorama des exigences IRVE et des points de vigilance lors de l'installation et la mise en service.",
     date: new Date().toISOString(),
     coverImage: "/window.svg",
+    category: "IRVE",
     tags: ["IRVE", "Électricité", "Normes"],
     author: "SM Academy",
     contentHtml: `
@@ -37,6 +39,7 @@ export const posts: Post[] = [
       "Comprendre l'intérêt du Sauveteur Secouriste du Travail et les obligations de l'employeur.",
     date: new Date(Date.now() - 86400000).toISOString(),
     coverImage: "/file.svg",
+    category: "SST",
     tags: ["SST", "Sécurité"],
     author: "SM Academy",
     contentHtml: `
@@ -51,6 +54,7 @@ export const posts: Post[] = [
       "Tour d'horizon des dispositifs de financement mobilisables selon votre situation.",
     date: new Date(Date.now() - 2 * 86400000).toISOString(),
     coverImage: "/globe.svg",
+    category: "Financements",
     tags: ["Financement", "CPF", "OPCO"],
     author: "SM Academy",
     contentHtml: `
@@ -62,6 +66,28 @@ export const posts: Post[] = [
 
 export function getPostBySlug(slug: string): Post | undefined {
   return posts.find((p) => p.slug === slug);
+}
+
+export function getAllCategories(): string[] {
+  return Array.from(
+    new Set(posts.map((p) => p.category).filter(Boolean) as string[])
+  ).sort();
+}
+
+export function getAllTags(): string[] {
+  const set = new Set<string>();
+  for (const p of posts) {
+    (p.tags || []).forEach((t) => set.add(t));
+  }
+  return Array.from(set).sort();
+}
+
+export function getPostsByCategory(category: string): Post[] {
+  return posts.filter((p) => (p.category || "").toLowerCase() === category.toLowerCase());
+}
+
+export function getPostsByTag(tag: string): Post[] {
+  return posts.filter((p) => (p.tags || []).some((t) => t.toLowerCase() === tag.toLowerCase()));
 }
 
 
