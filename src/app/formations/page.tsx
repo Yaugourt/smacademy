@@ -8,14 +8,33 @@ import ContactForm from "@/components/forms/ContactForm";
 import { Cable, HeartPulse, Zap, GraduationCap, Dumbbell, FlaskConical, HardHat } from "lucide-react";
 
 export const metadata = {
-  title: "Formations",
+  title: "Formations à Nîmes (Gard) | SM Academy",
   description:
-    "Découvrez nos formations: SST, IRVE, Fibre optique D3, Gestes & Postures, Pack Office, Formation de formateur.",
+    "Formations professionnelles à Nîmes: SST, IRVE, Fibre optique D3, Gestes & Postures, Pack Office, Formation de formateur. Sessions courtes, Qualiopi, finançable CPF/OPCO.",
+  alternates: {
+    canonical: "/formations",
+  },
 };
 
 export default function FormationsPage() {
   return (
     <div className="mx-auto w-full max-w-screen-xl px-4 py-12">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            itemListElement: formations.map((f, idx) => ({
+              "@type": "ListItem",
+              position: idx + 1,
+              url: `https://smacademy.fr/formations/${f.slug}`,
+              name: f.title,
+            })),
+          }),
+        }}
+      />
       {/* Hero images from current site */}
       <section className="grid gap-3 sm:grid-cols-2">
         <div className="relative h-72 overflow-hidden rounded-xl border sm:h-[420px]">
@@ -40,8 +59,10 @@ export default function FormationsPage() {
         </div>
       </section>
 
-      <h1 className="mt-10 text-3xl font-semibold tracking-tight">Formations</h1>
-      <p className="mt-2 text-foreground">Découvrez nos formations à Nîmes (Gard) ou dans vos locaux.</p>
+      <h1 className="mt-10 text-3xl font-semibold tracking-tight">Formations à Nîmes (Gard)</h1>
+      <p className="mt-2 text-foreground">
+        Parcours courts et professionnalisants – centre certifié Qualiopi. Sessions finançables via CPF/OPCO. Intervention possible en intra-entreprise dans tout le Gard.
+      </p>
       {/* Above-the-fold conversion: quick stats + CTA */}
       <section className="mt-6 grid gap-4 lg:grid-cols-[1fr_auto]">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

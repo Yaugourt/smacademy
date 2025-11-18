@@ -20,8 +20,22 @@ export async function generateMetadata({ params }: PageProps) {
   const formation = getFormationBySlug(slug);
   if (!formation) return {};
   return {
-    title: formation.title,
-    description: formation.summary,
+    title: `${formation.title} – Nîmes (Gard) | SM Academy`,
+    description:
+      formation.summary ||
+      `${formation.title} à Nîmes (Gard): programme, objectifs, prérequis, durée et financement CPF/OPCO.`,
+    alternates: {
+      canonical: `/formations/${slug}`,
+    },
+    openGraph: {
+      title: formation.title,
+      description:
+        formation.summary ||
+        `${formation.title} à Nîmes (Gard): programme, objectifs, prérequis, durée et financement CPF/OPCO.`,
+      type: "article",
+      url: `https://smacademy.fr/formations/${slug}`,
+      images: formation.heroImage ? [formation.heroImage] : undefined,
+    },
   };
 }
 
@@ -49,6 +63,38 @@ export default async function FormationPage({ params }: PageProps) {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Accueil", item: "https://smacademy.fr/" },
+              { "@type": "ListItem", position: 2, name: "Formations", item: "https://smacademy.fr/formations" },
+              { "@type": "ListItem", position: 3, name: formation.title, item: `https://smacademy.fr/formations/${formation.slug}` },
+            ],
+          }),
+        }}
+      />
+      {formation.faqs?.length ? (
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: formation.faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+            }),
+          }}
+        />
+      ) : null}
       <Breadcrumbs
         items={[
           { href: "/", label: "Accueil" },
@@ -162,7 +208,7 @@ export default async function FormationPage({ params }: PageProps) {
               )}
             </div>
             <p className="mt-3 text-xs text-muted-foreground">
-              Formation disponible dans notre centre à Nîmes ou en intra-entreprise (sur site).
+              Formation disponible dans notre centre à Nîmes (Gard) ou en intra-entreprise (sur site). Financements possibles: CPF/OPCO/France Travail selon situation.
             </p>
           </section>
 

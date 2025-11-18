@@ -9,9 +9,12 @@ import ValuesAccordion from "@/components/sections/Values";
 import ReviewsStrip from "@/components/site/ReviewsStrip";
 
 export const metadata = {
-  title: "Accueil",
+  title: "Centre de formation à Nîmes (Qualiopi) | SM Academy",
   description:
-    "SM Academy – Centre de formation certifié Qualiopi à Nîmes: SST, IRVE, Fibre optique, Gestes & Postures, Pack Office, Formation de formateur.",
+    "Formations professionnelles à Nîmes (Gard) : SST, IRVE, Fibre optique D3, Gestes & Postures, Pack Office, Formation de formateur. Sessions courtes, finançables CPF/OPCO.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function Home() {
@@ -41,10 +44,10 @@ export default function Home() {
             </div>
             <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
               SM ACADEMY
-              <span className="block text-foreground/70">Ensemble formons votre avenir.</span>
+              <span className="block text-foreground/70">Centre de formation Qualiopi à Nîmes (Gard)</span>
             </h1>
             <p className="max-w-2xl text-lg text-foreground">
-              Centre de formation basé à Nîmes (Gard). Formations professionnelles animées par un formateur expérimenté, diplômé et certifié.
+              Formations professionnelles courtes (SST, IRVE, Fibre D3, Gestes &amp; Postures, Excel, Formateur) à Nîmes. Sessions finançables via CPF/OPCO – accompagnement dossier inclus.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button asChild className="rounded-full" variant="default">
@@ -119,7 +122,7 @@ export default function Home() {
 
       {/* Formations highlights */}
       <section className="mt-12">
-        <h2 className="text-2xl font-semibold tracking-tight">Nos formations</h2>
+        <h2 className="text-2xl font-semibold tracking-tight">Nos formations à Nîmes (Gard)</h2>
         <p className="mt-1 text-sm text-foreground">Des parcours courts et professionnalisants, adaptés à vos besoins.</p>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((f) => (

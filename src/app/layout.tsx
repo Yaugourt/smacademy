@@ -5,6 +5,7 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import FloatingBar from "@/components/site/FloatingBar";
 import BackToTop from "@/components/site/BackToTop";
+import { reviewsSummary } from "@/data/reviews";
 import CookieBanner from "@/components/site/CookieBanner";
 
 const geistSans = Geist({
@@ -53,24 +54,76 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": "EducationalOrganization",
               name: "SM Academy",
               url: "https://smacademy.fr",
-              sameAs: [],
+              logo: "https://smacademy.fr/wp-content/uploads/2024/09/logo-sma.png",
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "94 Avenue du Docteur Fleming",
                 addressLocality: "Nîmes",
                 addressRegion: "Occitanie",
+                postalCode: "30900",
                 addressCountry: "FR",
               },
-              contactPoint: [
-                {
-                  "@type": "ContactPoint",
-                  telephone: "+33982774444",
-                  contactType: "customer service",
-                  availableLanguage: ["French"],
-                },
-              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+33982774444",
+                contactType: "customer service",
+                availableLanguage: ["French"],
+              },
+              aggregateRating:
+                reviewsSummary?.rating && reviewsSummary?.total
+                  ? {
+                      "@type": "AggregateRating",
+                      ratingValue: reviewsSummary.rating,
+                      reviewCount: reviewsSummary.total,
+                    }
+                  : undefined,
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "SM Academy",
+              url: "https://smacademy.fr",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://smacademy.fr/?s={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "SM Academy",
+              url: "https://smacademy.fr",
+              image: "https://smacademy.fr/wp-content/uploads/2024/09/logo-sma.png",
+              telephone: "+33982774444",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "94 Avenue du Docteur Fleming",
+                addressLocality: "Nîmes",
+                addressRegion: "Occitanie",
+                postalCode: "30900",
+                addressCountry: "FR",
+              },
+              hasMap: "https://www.google.com/maps?q=94%20Av.%20du%20Dr%20Fleming%2C%2030900%20N%C3%AEmes",
+              areaServed: {
+                "@type": "AdministrativeArea",
+                name: "Gard",
+              },
             }),
           }}
         />

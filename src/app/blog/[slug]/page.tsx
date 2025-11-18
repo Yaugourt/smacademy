@@ -14,9 +14,16 @@ export async function generateMetadata({ params }: PageProps) {
   const post = getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: post.title,
+    title: `${post.title} | Blog SM Academy`,
     description: post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      url: `https://smacademy.fr/blog/${post.slug}`,
+      images: post.coverImage ? [post.coverImage] : undefined,
+    },
   } as any;
 }
 
@@ -38,10 +45,21 @@ export default async function BlogPostPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Article",
+            "@type": "BlogPosting",
             headline: post.title,
             datePublished: post.date,
+            dateModified: post.date,
             author: [{ "@type": "Organization", name: post.author || "SM Academy" }],
+            publisher: {
+              "@type": "Organization",
+              name: "SM Academy",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://smacademy.fr/wp-content/uploads/2024/09/logo-sma.png",
+              },
+            },
+            image: post.coverImage ? [post.coverImage] : undefined,
+            mainEntityOfPage: `https://smacademy.fr/blog/${post.slug}`,
           }),
         }}
       />

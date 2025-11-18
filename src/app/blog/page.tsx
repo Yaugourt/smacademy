@@ -7,7 +7,8 @@ import { shimmer, toBase64 } from "@/lib/image";
 export const metadata = {
   title: "Blog",
   description:
-    "Articles SM Academy: IRVE, SST, financements (OPCO, CPF, France Travail) et conseils formation.",
+    "Blog SM Academy (Nîmes, Gard) : IRVE, SST, Fibre, Gestes & Postures, CPF/OPCO, reconversion. Guides pratiques et actualités locales.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogIndex() {

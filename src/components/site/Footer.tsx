@@ -10,6 +10,11 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">
               Centre de formation certifié Qualiopi – Nîmes (Gard).
             </p>
+            <address className="not-italic text-xs text-muted-foreground">
+              94 Avenue du Docteur Fleming<br />
+              30900 Nîmes, France<br />
+              Tél: 09 82 77 44 44
+            </address>
           </div>
           <div>
             <div className="text-sm font-semibold">Formations</div>

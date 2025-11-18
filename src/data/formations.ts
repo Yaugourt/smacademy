@@ -25,7 +25,7 @@ export const formations: Formation[] = [
     title: "Installation et raccordement Fibre optique D3",
     city: "Nîmes (Gard)",
     summary:
-      "Formation express à l'installation et au raccordement fibre optique: techniques de déploiement, raccordements précis et contrôle qualité.",
+      "Formation fibre optique D3 à Nîmes (Gard): déploiement, raccordements précis et contrôle qualité (OTDR, photométrie). Parcours court, finançable CPF/OPCO.",
     tags: ["Fibre", "Télécom"],
     heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg",
     duration: "2 à 3 jours",
@@ -52,7 +52,7 @@ export const formations: Formation[] = [
     title: "IRVE – Installation de bornes de recharge",
     city: "Nîmes (Gard)",
     summary:
-      "Installer, configurer et entretenir des infrastructures de recharge pour véhicules électriques en respectant normes et sécurité.",
+      "Formation IRVE à Nîmes (Gard): installer, configurer et entretenir des bornes de recharge selon les normes. Finançable CPF/OPCO.",
     tags: ["Électrique", "Mobilité"],
     heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/irvee.jpg",
     duration: "3 jours",
@@ -88,7 +88,7 @@ export const formations: Formation[] = [
     title: "Formation de formateur pour adultes",
     city: "Nîmes (Gard)",
     summary:
-      "Concevoir, animer et évaluer des actions de formation efficaces, adaptées aux publics adultes.",
+      "Formation de formateur à Nîmes (Gard): concevoir, animer et évaluer des formations efficaces pour adultes. Finançable CPF/OPCO.",
     tags: ["Pédagogie"],
     heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/reforme-formation-professionnelle-apprentissage-2-1.jpg",
     duration: "3 à 5 jours",
@@ -111,7 +111,7 @@ export const formations: Formation[] = [
     title: "SST – Sauveteur Secouriste du Travail",
     city: "Nîmes (Gard)",
     summary:
-      "Devenir acteur de la prévention et maîtriser les gestes qui sauvent en milieu professionnel.",
+      "Formation SST à Nîmes (Gard): devenir acteur de la prévention et maîtriser les gestes qui sauvent. Initiale + MAC. Finançable CPF/OPCO.",
     tags: ["Sécurité"],
     heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/sstt-2.jpg",
     duration: "2 jours (initial)",
@@ -135,7 +135,7 @@ export const formations: Formation[] = [
     title: "Gestes et Postures – Prévenir les TMS",
     city: "Nîmes (Gard)",
     summary:
-      "Acquérir les bonnes pratiques de manutention et de posture pour réduire les risques de TMS.",
+      "Formation Gestes & Postures à Nîmes (Gard): bonnes pratiques de manutention et posture pour réduire les TMS. Intra possible dans tout le Gard.",
     tags: ["Prévention"],
     heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/gg.jpg",
     duration: "1 jour",
@@ -158,7 +158,7 @@ export const formations: Formation[] = [
     title: "Pack Office – Word, Excel, PowerPoint, Outlook",
     city: "Nîmes (Gard)",
     summary:
-      "Monter en compétence sur la bureautique pour gagner en efficacité au quotidien.",
+      "Formation Pack Office à Nîmes (Gard): Word, Excel, PowerPoint, Outlook pour gagner en efficacité. Parcours modulaires. CPF/OPCO possibles.",
     tags: ["Bureautique"],
     heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/PACK-OFF-1.png",
     duration: "2 à 5 jours selon niveau",
