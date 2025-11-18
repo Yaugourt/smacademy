@@ -14,11 +14,12 @@ const securityHeaders = [
 
 const csp = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval'", // adjust if you host analytics
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' https://smacademy.fr data: blob:",
   "font-src 'self' data:",
-  "connect-src 'self' https://api.resend.com",
+  "connect-src 'self' https://api.resend.com https://api.calendly.com",
+  "frame-src https://www.google.com https://maps.google.com https://calendly.com",
   "frame-ancestors 'self'",
 ].join("; ");
 

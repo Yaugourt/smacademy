@@ -1,19 +1,11 @@
+import CookiesReset from "@/components/site/CookiesReset";
+
 export const metadata = {
   title: "Politique cookies",
   description: "Politique relative aux cookies et traceurs.",
 };
 
-"use client";
-
 export default function CookiesPage() {
-  function resetConsent() {
-    try {
-      localStorage.removeItem("sm_consent");
-      // soft reload to re-afficher la bannière
-      window.location.reload();
-    } catch {}
-  }
-
   return (
     <div className="mx-auto w-full max-w-screen-md px-4 py-12">
       <h1 className="text-3xl font-semibold tracking-tight">Politique cookies</h1>
@@ -34,12 +26,7 @@ export default function CookiesPage() {
           Une bannière permet d’accepter ou de refuser. Votre choix est conservé localement. Vous pouvez le modifier à tout
           moment ci-dessous:
         </p>
-        <button
-          className="rounded-full bg-[var(--brand-orange)] px-4 py-2 text-sm font-medium text-white hover:bg-[var(--brand-orange-600)]"
-          onClick={resetConsent}
-        >
-          Réinitialiser mes choix
-        </button>
+        <CookiesReset />
         <h2>Durée</h2>
         <p>Le consentement est conservé jusqu’à 6 mois, puis nous vous redemanderons votre choix.</p>
       </div>
