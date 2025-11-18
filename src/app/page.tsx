@@ -34,24 +34,24 @@ export default function Home() {
               SM ACADEMY
               <span className="block text-foreground/70">Ensemble formons votre avenir.</span>
             </h1>
-            <p className="max-w-2xl text-lg text-muted-foreground">
+            <p className="max-w-2xl text-lg text-foreground">
               Centre de formation basé à Nîmes (Gard). Formations professionnelles animées par un formateur expérimenté, diplômé et certifié.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button asChild className="rounded-full" variant="cta">
                 <Link href="/formations">Voir les formations</Link>
               </Button>
-              <Button asChild variant="outline" className="rounded-full">
+              <Button asChild variant="cta" className="rounded-full">
                 <Link href="#contact">Être rappelé</Link>
               </Button>
-              <Button asChild variant="outline" className="rounded-full">
+              <Button asChild variant="outline" className="rounded-full border-[var(--brand-orange)] text-[var(--brand-orange)] hover:bg-[var(--brand-orange)] hover:text-white">
                 <a href="tel:+33982774444"><Phone className="mr-1 h-4 w-4" /> Nous appeler</a>
               </Button>
             </div>
             <div className="mt-2 flex flex-wrap gap-2 text-sm">
-              <Link href="/formations/sst" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary">Formation SST</Link>
-              <Link href="/formations/irve" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary">Formation IRVE (Nîmes)</Link>
-              <Link href="/formations/formateur" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary">Formation de formateur</Link>
+              <Link href="/formations/sst" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary hover:border-[var(--brand-orange)] hover:text-[var(--brand-orange)]">Formation SST</Link>
+              <Link href="/formations/irve" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary hover:border-[var(--brand-orange)] hover:text-[var(--brand-orange)]">Formation IRVE (Nîmes)</Link>
+              <Link href="/formations/formateur" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary hover:border-[var(--brand-orange)] hover:text-[var(--brand-orange)]">Formation de formateur</Link>
             </div>
           </div>
           <div className="relative hidden md:block">
@@ -102,17 +102,17 @@ export default function Home() {
       {/* Formations highlights */}
       <section className="mt-12">
         <h2 className="text-2xl font-semibold tracking-tight">Nos formations</h2>
-        <p className="mt-1 text-sm text-muted-foreground">Des parcours courts et professionnalisants, adaptés à vos besoins.</p>
+        <p className="mt-1 text-sm text-foreground">Des parcours courts et professionnalisants, adaptés à vos besoins.</p>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((f) => (
-            <div key={f.slug} className="group rounded-xl border p-5 transition-all hover:shadow-md">
+            <div key={f.slug} className="group rounded-xl border p-5 transition-all hover:shadow-md hover:border-[var(--brand-orange)]">
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold">{f.title}</h3>
                 <span className="text-xs text-muted-foreground">{f.city}</span>
               </div>
               <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{f.summary}</p>
               <div className="mt-4">
-                <Link href={`/formations/${f.slug}`} className="text-sm font-medium text-primary underline-offset-4 hover:underline">
+                <Link href={`/formations/${f.slug}`} className="text-sm font-medium text-[var(--brand-orange)] underline-offset-4 hover:underline">
                   En savoir plus
                 </Link>
               </div>
@@ -125,13 +125,13 @@ export default function Home() {
       <section className="mt-16 grid gap-8 rounded-2xl border bg-primary/5 p-6 md:grid-cols-2 sm:p-8">
         <div>
           <h2 className="text-2xl font-semibold tracking-tight">Qui sommes-nous ?</h2>
-          <p className="mt-3 text-sm text-muted-foreground">
+          <p className="mt-3 text-sm text-foreground">
             SM Academy – Centre de formation basé à Nîmes dans le Gard. SM Academy est un organisme de formation certifié Qualiopi, reconnu pour son excellence dans l’enseignement et l’accompagnement professionnel. Nos formations sont animées par un formateur expérimenté, diplômé et certifié, garantissant une pédagogie de qualité.
           </p>
-          <p className="mt-3 text-sm text-muted-foreground">
+          <p className="mt-3 text-sm text-foreground">
             Nous proposons une gamme variée de formations: Gestes et Postures, Sauveteur Secouriste du Travail (SST), Installation et Raccordement Fibre Optique, Infrastructure de Recharge de Véhicule Électrique (IRVE), Pack Office, et Formation de Formateur.
           </p>
-          <p className="mt-3 text-xs italic text-muted-foreground">
+          <p className="mt-3 text-xs italic text-foreground">
             Formation disponible dans notre centre de formation mais il est également possible d’intervenir dans vos locaux.
           </p>
         </div>

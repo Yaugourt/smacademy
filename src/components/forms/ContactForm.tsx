@@ -106,22 +106,22 @@ export default function ContactForm({ context }: { context?: string }) {
   return (
     <form
       id="contact-form"
-      className="mt-4 grid gap-4 sm:grid-cols-2"
+      className="mt-4 grid gap-5 sm:grid-cols-2"
       action={async (formData: FormData) => onSubmit(formData)}
     >
-      <div className="sm:col-span-1">
+      <div className="sm:col-span-1 space-y-2">
         <Label htmlFor="name">Nom</Label>
         <Input id="name" name="name" required placeholder="Nom Prénom" />
       </div>
-      <div className="sm:col-span-1">
+      <div className="sm:col-span-1 space-y-2">
         <Label htmlFor="email">Email</Label>
         <Input id="email" name="email" type="email" placeholder="vous@exemple.com" />
       </div>
-      <div className="sm:col-span-1">
+      <div className="sm:col-span-1 space-y-2">
         <Label htmlFor="phone">Téléphone</Label>
         <Input id="phone" name="phone" required inputMode="tel" placeholder="06 12 34 56 78" />
       </div>
-      <div className="sm:col-span-1">
+      <div className="sm:col-span-1 space-y-2">
         <Label htmlFor="bestTime">Meilleur moment pour vous appeler</Label>
         <select id="bestTime" name="bestTime" className="h-9 w-full rounded-md border bg-background px-3 text-sm">
           <option value="ASAP">Dès que possible</option>
@@ -130,7 +130,7 @@ export default function ContactForm({ context }: { context?: string }) {
           <option value="Soir">Soir</option>
         </select>
       </div>
-      <div className="sm:col-span-2">
+      <div className="sm:col-span-2 space-y-2">
         <Label htmlFor="message">Message</Label>
         <Textarea id="message" name="message" rows={5} placeholder="Votre besoin, dates souhaitées, nombre de participants, etc." />
       </div>
@@ -144,7 +144,7 @@ export default function ContactForm({ context }: { context?: string }) {
         aria-hidden="true"
       />
       {/* Consent */}
-      <div className="sm:col-span-2 flex items-center gap-2 text-xs text-muted-foreground">
+      <div className="sm:col-span-2 mt-1 flex items-start gap-2 text-xs">
         <input id="consent" name="consent" type="checkbox" required className="h-4 w-4" />
         <label htmlFor="consent">J’accepte d’être contacté(e) par SM Academy au sujet de ma demande.</label>
       </div>
@@ -153,8 +153,8 @@ export default function ContactForm({ context }: { context?: string }) {
       {Object.entries(utm).map(([k, v]) => (
         <input key={k} type="hidden" name={k} value={v} />
       ))}
-      <div className="sm:col-span-2 flex items-center gap-3">
-        <Button type="submit" disabled={pending} className="rounded-full">
+      <div className="sm:col-span-2 mt-1 flex flex-wrap items-center gap-3">
+        <Button type="submit" disabled={pending} className="rounded-full" variant="cta">
           {pending ? "Envoi..." : "Envoyer"}
         </Button>
         <Button asChild variant="outline" className="rounded-full">

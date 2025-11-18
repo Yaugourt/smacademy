@@ -40,7 +40,7 @@ export default function FormationsPage() {
       </section>
 
       <h1 className="mt-10 text-3xl font-semibold tracking-tight">Formations</h1>
-      <p className="mt-2 text-muted-foreground">Découvrez nos formations à Nîmes (Gard) ou dans vos locaux.</p>
+      <p className="mt-2 text-foreground">Découvrez nos formations à Nîmes (Gard) ou dans vos locaux.</p>
       {/* Above-the-fold conversion: quick stats + CTA */}
       <section className="mt-6 grid gap-4 lg:grid-cols-[1fr_auto]">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -53,7 +53,7 @@ export default function FormationsPage() {
           <Button asChild className="rounded-full" variant="cta">
             <a href="#contact">Être rappelé</a>
           </Button>
-          <Button asChild variant="outline" className="rounded-full">
+          <Button asChild variant="outline" className="rounded-full border-[var(--brand-orange)] text-[var(--brand-orange)] hover:bg-[var(--brand-orange)] hover:text-white">
             <a href="tel:+33982774444">Nous appeler</a>
           </Button>
         </div>
@@ -141,7 +141,7 @@ export default function FormationsPage() {
 
       <section id="contact" className="mt-12 rounded-xl border p-6">
         <h2 className="text-2xl font-semibold">Un conseiller vous rappelle</h2>
-        <p className="mt-1 text-sm text-muted-foreground">
+        <p className="mt-1 text-sm text-foreground">
           Dites-nous votre besoin, on vous oriente vers la bonne formation.
         </p>
         <div className="mt-4">
@@ -200,7 +200,11 @@ function FeatureBlock({
         </div>
         <div className="flex flex-wrap gap-3">
           {detailsHref && (
-            <Button asChild variant="outline" className="rounded-full">
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-full border-[var(--brand-orange)] text-[var(--brand-orange)] hover:bg-[var(--brand-orange)] hover:text-white"
+            >
               <Link href={detailsHref}>Voir la formation</Link>
             </Button>
           )}
@@ -223,7 +227,7 @@ function FeatureBlock({
 function KPI({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-xl border p-5">
-      <div className="text-3xl font-semibold">{value}</div>
+      <div className="text-3xl font-semibold text-[var(--brand-orange)]">{value}</div>
       <div className="mt-1 text-sm text-muted-foreground">{label}</div>
     </div>
   );
