@@ -25,7 +25,6 @@ export function Header() {
             alt="SM Academy"
             width={120}
             height={28}
-            className="h-7 w-auto"
             priority
           />
         </Link>

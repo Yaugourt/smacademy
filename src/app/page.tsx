@@ -6,6 +6,7 @@ import ContactForm from "@/components/forms/ContactForm";
 import MapEmbed from "@/components/site/MapEmbed";
 import { Phone, Sparkles, Users, BookOpen, BadgeCheck, Handshake, Coins, Building2, IdCard, Trophy, Cable, HeartPulse, Zap, GraduationCap, Dumbbell, FlaskConical, HardHat } from "lucide-react";
 import ValuesAccordion from "@/components/sections/Values";
+import ReviewsStrip from "@/components/site/ReviewsStrip";
 
 export const metadata = {
   title: "Accueil",
@@ -109,6 +110,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Avis Google (solution maison SSR) */}
+      <section className="mt-8">
+        <ReviewsStrip />
       </section>
 
       {/* Formations highlights */}

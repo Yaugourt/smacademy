@@ -16,7 +16,7 @@ const csp = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' https://smacademy.fr data: blob:",
+  "img-src 'self' https://smacademy.fr https://lh3.googleusercontent.com data: blob:",
   "font-src 'self' data:",
   "connect-src 'self' https://api.resend.com https://api.calendly.com",
   "frame-src https://www.google.com https://maps.google.com https://calendly.com",
