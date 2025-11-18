@@ -5,6 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/forms/ContactForm";
+import { Cable, HeartPulse, Zap, GraduationCap, Dumbbell, FlaskConical, HardHat } from "lucide-react";
 
 export const metadata = {
   title: "Formations",
@@ -50,7 +51,7 @@ export default function FormationsPage() {
           <KPI label="Stagiaires formés" value="51" />
         </div>
         <div className="flex items-center gap-3 lg:justify-end">
-          <Button asChild className="rounded-full" variant="cta">
+          <Button asChild variant="outline" className="rounded-full border-[var(--brand-orange)] text-[var(--brand-orange)] hover:bg-[var(--brand-orange)] hover:text-white">
             <a href="#contact">Être rappelé</a>
           </Button>
           <Button asChild variant="outline" className="rounded-full border-[var(--brand-orange)] text-[var(--brand-orange)] hover:bg-[var(--brand-orange)] hover:text-white">
@@ -71,6 +72,7 @@ export default function FormationsPage() {
           cost="999 €"
           programHref="https://smttechnologie.fr/wp-content/uploads/2024/02/Critere-2-Programme-et-contenu.pdf"
           detailsHref="/formations/fibre-optique-d3"
+          icon={<Cable className="h-5 w-5 text-[var(--brand-orange)]" />}
         />
         <FeatureBlock
           image="https://smacademy.fr/wp-content/uploads/2025/02/header-sst-1024x782.jpg"
@@ -83,6 +85,7 @@ export default function FormationsPage() {
           programHref="https://smttechnologie.fr/wp-content/uploads/2024/02/Critere-2-Programme-et-contenu.pdf"
           reversed
           detailsHref="/formations/sst"
+          icon={<HeartPulse className="h-5 w-5 text-[var(--brand-orange)]" />}
         />
         <FeatureBlock
           image="https://smacademy.fr/wp-content/uploads/2025/02/habilitation-electrique.jpg"
@@ -94,6 +97,7 @@ export default function FormationsPage() {
           bulletsRight={["Manœuvre, non électriciens: H0 / H0V / B0 / B0V / BS / BE"]}
           duration="1 à 3,5 jours (7h à 24,5h)"
           cost="Sur devis"
+          icon={<Zap className="h-5 w-5 text-[var(--brand-orange)]" />}
         />
         <FeatureBlock
           image="https://smacademy.fr/wp-content/uploads/2024/08/reforme-formation-professionnelle-apprentissage-2.jpg"
@@ -105,6 +109,7 @@ export default function FormationsPage() {
           cost="1500 €"
           reversed
           detailsHref="/formations/formateur"
+          icon={<GraduationCap className="h-5 w-5 text-[var(--brand-orange)]" />}
         />
         <FeatureBlock
           image="https://smacademy.fr/wp-content/uploads/2024/08/formation-gestes-et-postures-ne-plus-se-faire-de-mal-au-quotidien.webp"
@@ -115,6 +120,7 @@ export default function FormationsPage() {
           duration="1 jour (7h)"
           cost="En cours"
           detailsHref="/formations/gestes-et-postures"
+          icon={<Dumbbell className="h-5 w-5 text-[var(--brand-orange)]" />}
         />
         <FeatureBlock
           image="https://smacademy.fr/wp-content/uploads/2025/02/img.jpg"
@@ -125,6 +131,7 @@ export default function FormationsPage() {
           duration="4h"
           cost="Sur devis"
           reversed
+          icon={<FlaskConical className="h-5 w-5 text-[var(--brand-orange)]" />}
         />
         <FeatureBlock
           image="https://smacademy.fr/wp-content/uploads/2025/02/637cc50279103fc747cff18f_6140a5f3fbeaf1d18962d58e_AIPR.png"
@@ -134,6 +141,7 @@ export default function FormationsPage() {
           bulletsRight={["Encadrant"]}
           duration="1 jour (7h) ou 0,5 jour (4h)"
           cost="Sur devis"
+          icon={<HardHat className="h-5 w-5 text-[var(--brand-orange)]" />}
         />
       </section>
 
@@ -156,6 +164,7 @@ function FeatureBlock({
   image,
   imageAlt,
   title,
+  icon,
   bulletsLeft,
   bulletsRight,
   duration,
@@ -167,6 +176,7 @@ function FeatureBlock({
   image: string;
   imageAlt: string;
   title: string;
+  icon?: React.ReactNode;
   bulletsLeft: string[];
   bulletsRight: string[];
   duration: string;
@@ -181,7 +191,10 @@ function FeatureBlock({
         <Image src={image} alt={imageAlt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
       </div>
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold">{title}</h2>
+        <h2 className="flex items-center gap-2 text-xl font-semibold">
+          {icon}
+          <span>{title}</span>
+        </h2>
         <div className="grid gap-4 sm:grid-cols-2">
           <ul className="list-disc pl-5 text-sm text-muted-foreground">
             {bulletsLeft.map((b) => (
@@ -208,7 +221,7 @@ function FeatureBlock({
               <Link href={detailsHref}>Voir la formation</Link>
             </Button>
           )}
-          <Button asChild className="rounded-full">
+          <Button asChild variant="outline" className="rounded-full border-[var(--brand-orange)] text-[var(--brand-orange)] hover:bg-[var(--brand-orange)] hover:text-white">
             <a href="#contact">Être rappelé</a>
           </Button>
           {programHref && (

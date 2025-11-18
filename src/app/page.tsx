@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { formations } from "@/data/formations";
 import ContactForm from "@/components/forms/ContactForm";
 import MapEmbed from "@/components/site/MapEmbed";
-import { Phone, Sparkles, Users, BookOpen, BadgeCheck, Handshake, Coins, Building2, IdCard, Trophy } from "lucide-react";
+import { Phone, Sparkles, Users, BookOpen, BadgeCheck, Handshake, Coins, Building2, IdCard, Trophy, Cable, HeartPulse, Zap, GraduationCap, Dumbbell, FlaskConical, HardHat } from "lucide-react";
 import ValuesAccordion from "@/components/sections/Values";
 
 export const metadata = {
@@ -15,6 +15,14 @@ export const metadata = {
 
 export default function Home() {
   const featured = formations.slice(0, 6);
+  const iconBySlug: Record<string, React.ReactNode> = {
+    "fibre-optique-d3": <Cable className="h-4 w-4 text-[var(--brand-orange)]" />,
+    sst: <HeartPulse className="h-4 w-4 text-[var(--brand-orange)]" />,
+    irve: <Zap className="h-4 w-4 text-[var(--brand-orange)]" />,
+    formateur: <GraduationCap className="h-4 w-4 text-[var(--brand-orange)]" />,
+    "gestes-et-postures": <Dumbbell className="h-4 w-4 text-[var(--brand-orange)]" />,
+    "pack-office": <FlaskConical className="h-4 w-4 text-[var(--brand-orange)]" />,
+  };
   return (
     <div className="mx-auto w-full max-w-screen-xl px-4 py-12 sm:py-16">
       {/* Hero */}
@@ -38,10 +46,14 @@ export default function Home() {
               Centre de formation basé à Nîmes (Gard). Formations professionnelles animées par un formateur expérimenté, diplômé et certifié.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button asChild className="rounded-full" variant="cta">
+              <Button asChild className="rounded-full" variant="default">
                 <Link href="/formations">Voir les formations</Link>
               </Button>
-              <Button asChild variant="cta" className="rounded-full">
+              <Button
+                asChild
+                variant="outline"
+                className="rounded-full border-[var(--brand-orange)] text-[var(--brand-orange)] hover:bg-[var(--brand-orange)] hover:text-white"
+              >
                 <Link href="#contact">Être rappelé</Link>
               </Button>
               <Button asChild variant="outline" className="rounded-full border-[var(--brand-orange)] text-[var(--brand-orange)] hover:bg-[var(--brand-orange)] hover:text-white">
@@ -58,7 +70,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-3">
               <div className="relative h-40 w-full overflow-hidden rounded-lg border sm:h-48">
                 <Image
-                  src="https://smacademy.fr/wp-content/uploads/2024/08/sstt-2.jpg"
+                  src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_1325-e1740574444704.png"
                   alt="Formation SST"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -68,7 +80,7 @@ export default function Home() {
               </div>
               <div className="relative h-40 w-full overflow-hidden rounded-lg border sm:h-48">
                 <Image
-                  src="https://smacademy.fr/wp-content/uploads/2024/08/irve.jpg"
+                  src="https://smacademy.fr/wp-content/uploads/2025/02/IMG_3091-scaled-e1740573209118.jpg"
                   alt="Formation IRVE"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -107,7 +119,9 @@ export default function Home() {
           {featured.map((f) => (
             <div key={f.slug} className="group rounded-xl border p-5 transition-all hover:shadow-md hover:border-[var(--brand-orange)]">
               <div className="flex items-center justify-between">
-                <h3 className="text-base font-semibold">{f.title}</h3>
+                <h3 className="text-base font-semibold inline-flex items-center gap-2">
+                  {iconBySlug[f.slug] || <HardHat className="h-4 w-4 text-[var(--brand-orange)]" />}{f.title}
+                </h3>
                 <span className="text-xs text-muted-foreground">{f.city}</span>
               </div>
               <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{f.summary}</p>

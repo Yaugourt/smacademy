@@ -62,6 +62,89 @@ export const posts: Post[] = [
       <p>Nous vous accompagnons pour le montage de votre dossier.</p>
     `,
   },
+  {
+    slug: "habilitation-electrique-niveaux-et-bonnes-pratiques",
+    title: "Habilitation électrique: niveaux, rôles et bonnes pratiques",
+    excerpt:
+      "Comprendre les symboles d'habilitation (H0/B0/BS/BE/B1/B2/BC/HC), les situations de travail et les réflexes sécurité.",
+    date: new Date(Date.now() - 3 * 86400000).toISOString(),
+    coverImage: "/file.svg",
+    category: "Électricité",
+    tags: ["Habilitation", "Sécurité", "Électricité"],
+    author: "SM Academy",
+    contentHtml: `
+      <p>L'habilitation électrique atteste de la capacité d'une personne à accomplir des tâches électriques en sécurité. Elle s'appuie sur l'évaluation des connaissances et des savoir-faire adaptés au poste.</p>
+      <h3>Lire les symboles</h3>
+      <ul>
+        <li><strong>H0/H0V</strong>: non électricien en haute tension (voisinage).</li>
+        <li><strong>B0/BS/BE</strong>: interventions élémentaires ou spécifiques en basse tension.</li>
+        <li><strong>B1/B2/B1V/B2V/BC</strong>: travaux d'ordre électrique en BT (exécution, consignation).</li>
+        <li><strong>HC</strong>: consignation en HT.</li>
+      </ul>
+      <p>Le recyclage périodique et la pratique sont essentiels pour maintenir le niveau de sécurité.</p>
+    `,
+  },
+  {
+    slug: "gestes-et-postures-prevenir-les-tms",
+    title: "Gestes & Postures: prévenir les TMS au quotidien",
+    excerpt:
+      "Repérer les facteurs de risque, aménager le poste et adopter les bons gestes pour réduire les troubles musculo-squelettiques.",
+    date: new Date(Date.now() - 4 * 86400000).toISOString(),
+    coverImage: "/window.svg",
+    category: "Prévention",
+    tags: ["TMS", "Prévention", "Ergonomie"],
+    author: "SM Academy",
+    contentHtml: `
+      <p>Les TMS représentent une part importante des maladies professionnelles. Une démarche efficace combine aménagement du poste, organisation du travail et formation aux gestes sûrs.</p>
+      <h3>Trois leviers</h3>
+      <ul>
+        <li>Analyser les contraintes (charges, postures, répétitivité) et éliminer ce qui peut l'être.</li>
+        <li>Aménager: réglages, aides à la manutention, organisation des flux.</li>
+        <li>Former: principes biomécaniques, gestes de manutention, pauses actives.</li>
+      </ul>
+    `,
+  },
+  {
+    slug: "qualiopi-7-criteres-et-benefices",
+    title: "Qualiopi: les 7 critères et ce que ça change pour vous",
+    excerpt:
+      "Décryptage des critères du Référentiel National Qualité (RNQ) et des bénéfices pour les apprenants et entreprises.",
+    date: new Date(Date.now() - 5 * 86400000).toISOString(),
+    coverImage: "/globe.svg",
+    category: "Qualité",
+    tags: ["Qualiopi", "Qualité", "RNQ"],
+    author: "SM Academy",
+    contentHtml: `
+      <p>Qualiopi atteste de la qualité des processus d'un organisme de formation via le RNQ. Cela garantit des informations claires, des parcours adaptés, une montée en compétence mesurable et une amélioration continue.</p>
+      <h3>À retenir</h3>
+      <ul>
+        <li>Information précise sur les prestations et leurs résultats.</li>
+        <li>Ingénierie pédagogique et adaptation aux publics (handicap inclus).</li>
+        <li>Compétences des formateurs et veille active.</li>
+        <li>Amélioration continue via la prise en compte des retours.</li>
+      </ul>
+    `,
+  },
+  {
+    slug: "bien-choisir-sa-formation-professionnelle",
+    title: "Comment bien choisir sa formation professionnelle",
+    excerpt:
+      "Objectifs, prérequis, financement, certification: les 5 questions à se poser pour un choix efficace.",
+    date: new Date(Date.now() - 6 * 86400000).toISOString(),
+    coverImage: "/file.svg",
+    category: "Conseils",
+    tags: ["Orientation", "Financement", "Qualité"],
+    author: "SM Academy",
+    contentHtml: `
+      <p>Le bon choix de formation aligne un besoin métier, un objectif mesurable et un dispositif adapté (contenus, durée, modalités, évaluation). Vérifiez la reconnaissance (certification), les prérequis et les solutions de financement.</p>
+      <ul>
+        <li>Clarifiez l'objectif (compétence visée, délai, livrables).</li>
+        <li>Évaluez vos prérequis; demandez un positionnement si nécessaire.</li>
+        <li>Étudiez les modalités (présentiel, pratique, accompagnement post-formation).</li>
+        <li>Mobilisez les financements (OPCO, CPF, France Travail) et planifiez.</li>
+      </ul>
+    `,
+  },
 ];
 
 export function getPostBySlug(slug: string): Post | undefined {

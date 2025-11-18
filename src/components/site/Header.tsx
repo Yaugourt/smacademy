@@ -17,7 +17,7 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background shadow-sm">
       <div className="mx-auto flex h-16 w-full max-w-screen-xl items-center justify-between px-4 sm:h-20">
         <Link href="/" className="inline-flex items-center gap-2 font-semibold tracking-tight">
           <Image
@@ -36,13 +36,13 @@ export function Header() {
               key={item.href}
               href={item.href}
               className={cn(
-                "relative text-sm transition-colors hover:text-foreground/80",
-                pathname === item.href ? "text-foreground" : "text-foreground/60"
+                "relative text-[15px] font-medium transition-colors hover:text-[var(--brand-orange)]",
+                pathname === item.href ? "text-foreground" : "text-foreground"
               )}
             >
               {item.label}
               {pathname === item.href && (
-                <span className="absolute -bottom-2 left-0 h-0.5 w-full rounded-full" style={{ background: "linear-gradient(90deg, var(--primary), var(--brand-orange))" }} />
+                <span className="absolute -bottom-2 left-0 h-[3px] w-full rounded-full" style={{ background: "var(--brand-orange)" }} />
               )}
             </Link>
           ))}
@@ -50,7 +50,15 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button asChild size="sm" className="rounded-full" variant="cta">
+          <Button
+            asChild
+            size="sm"
+            className="rounded-full border-[var(--brand-orange)] text-[var(--brand-orange)] hover:bg-[var(--brand-orange)] hover:text-white"
+            variant="outline"
+          >
+            <Link href="#contact">Être rappelé</Link>
+          </Button>
+          <Button asChild size="sm" className="rounded-full" variant="default">
             <Link href="#contact">Nous contacter</Link>
           </Button>
         </div>
