@@ -18,8 +18,8 @@ import {
   CalendarCheck,
   ArrowRight,
   Star,
-  Building2,
-  Handshake,
+  Building2 as LucideBuilding2,
+  Handshake as LucideHandshake,
   MapPin,
 } from "lucide-react";
 import ValuesAccordion from "@/components/sections/Values";
