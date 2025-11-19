@@ -42,11 +42,11 @@ export default function Footer() {
           <div>
             <div className="text-sm font-semibold">Contact</div>
             <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-              <li>Tél: 09 82 77 44 44 / 07 67 89 19 70</li>
+              <li>09 82 77 44 44 / 06 68 99 74 36</li>
               <li>
-                Email: <a href="mailto:contact@smtechnologie.fr">contact@smtechnologie.fr</a>
+                <a href="mailto:contact@smtechnologie.fr">contact@smtechnologie.fr</a>
               </li>
-              <li>Lun–Ven 8h–18h</li>
+              <li>Lundi au Vendredi de 8h à 18h</li>
             </ul>
           </div>
           <div>

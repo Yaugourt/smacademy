@@ -17,7 +17,7 @@ export default function MentionsLegalesPage() {
           <strong>SIREN:</strong> 982 761 678 – <strong>RCS:</strong> Nîmes<br />
           <strong>TVA intracommunautaire:</strong> FR19982761678<br />
           <strong>E-mail:</strong> contact@smtechnologie.fr<br />
-          <strong>Téléphone:</strong> 09 82 77 44 44
+          <strong>Téléphone:</strong> 09 82 77 44 44 / 06 68 99 74 36
         </p>
         <h2>Direction de la publication</h2>
         <p>
@@ -43,7 +43,7 @@ export default function MentionsLegalesPage() {
         </p>
         <h2>Contact</h2>
         <p>
-          <a href="mailto:contact@smtechnologie.fr">contact@smtechnologie.fr</a> – 09 82 77 44 44
+          <a href="mailto:contact@smtechnologie.fr">contact@smtechnologie.fr</a> – 09 82 77 44 44 / 06 68 99 74 36
         </p>
       </div>
     </div>

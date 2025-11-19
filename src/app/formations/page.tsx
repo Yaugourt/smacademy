@@ -148,7 +148,7 @@ export default function FormationsPage() {
               </p>
               <div className="space-y-4">
                 <Button asChild className="w-full bg-[var(--brand-orange)] hover:bg-[var(--brand-orange-600)] text-white">
-                  <a href="tel:+33982774444">09 82 77 44 44</a>
+                  <a href="tel:+33668997436">06 68 99 74 36</a>
                 </Button>
                 <Button asChild variant="outline" className="w-full">
                   <a href="#contact">Être rappelé</a>

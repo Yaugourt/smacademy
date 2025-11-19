@@ -317,9 +317,14 @@ export default async function FormationPage({ params }: PageProps) {
               <p className="text-sm text-slate-300 mb-4">
                 Nos conseillers sont là pour vous aider dans votre choix.
               </p>
-              <a href="tel:+33982774444" className="text-lg font-bold hover:text-[var(--brand-orange)] transition-colors">
-                09 82 77 44 44
-              </a>
+              <div className="flex flex-col gap-1">
+                <a href="tel:+33982774444" className="text-lg font-bold hover:text-[var(--brand-orange)] transition-colors">
+                  09 82 77 44 44
+                </a>
+                <a href="tel:+33668997436" className="text-lg font-bold hover:text-[var(--brand-orange)] transition-colors">
+                  06 68 99 74 36
+                </a>
+              </div>
             </div>
 
           </aside>

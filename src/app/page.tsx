@@ -71,7 +71,7 @@ export default function Home() {
                 </Button>
                 <Button asChild variant="outline" size="lg" className="rounded-full border-2 border-muted-foreground/20 hover:border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white text-base px-8 h-12 transition-all">
                   <Link href="#contact">
-                    <Phone className="mr-2 h-4 w-4" /> Être rappelé
+                    <Phone className="mr-2 h-4 w-4" /> 06 68 99 74 36
                   </Link>
                 </Button>
               </div>
@@ -325,9 +325,10 @@ export default function Home() {
                    <div className="bg-white/10 p-3 rounded-full">
                      <Phone className="h-6 w-6" />
                    </div>
-                   <div>
+                   <div className="flex flex-col">
                      <div className="text-sm text-white/60">Par téléphone</div>
                      <a href="tel:+33982774444" className="text-xl font-bold hover:text-[var(--brand-orange)] transition-colors">09 82 77 44 44</a>
+                     <a href="tel:+33668997436" className="text-lg font-bold hover:text-[var(--brand-orange)] transition-colors">06 68 99 74 36</a>
                    </div>
                  </div>
                  
