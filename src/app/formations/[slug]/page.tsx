@@ -1,16 +1,31 @@
 import { notFound } from "next/navigation";
 import { getFormationBySlug } from "@/data/formations";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/forms/ContactForm";
 import Breadcrumbs from "@/components/site/Breadcrumbs";
 import Link from "next/link";
 import Image from "next/image";
 import MapEmbed from "@/components/site/MapEmbed";
+import { 
+  Clock, 
+  MapPin, 
+  Award, 
+  Euro, 
+  CheckCircle2, 
+  Calendar, 
+  FileText, 
+  Target, 
+  BookOpen, 
+  Users, 
+  HelpCircle,
+  Phone,
+  Download
+} from "lucide-react";
 
 type PageProps = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  // Keep static for SSG; dynamic admin will revalidate later
   const { formations } = require("@/data/formations");
   return formations.map((f: any) => ({ slug: f.slug }));
 }
@@ -23,7 +38,7 @@ export async function generateMetadata({ params }: PageProps) {
     title: `${formation.title} – Nîmes (Gard) | SM Academy`,
     description:
       formation.summary ||
-      `${formation.title} à Nîmes (Gard): programme, objectifs, prérequis, durée et financement CPF/OPCO.`,
+      `${formation.title} à Nîmes (Gard): programme, objectifs, prérequis, durée et financement OPCO / Entreprise.`,
     alternates: {
       canonical: `/formations/${slug}`,
     },
@@ -31,7 +46,7 @@ export async function generateMetadata({ params }: PageProps) {
       title: formation.title,
       description:
         formation.summary ||
-        `${formation.title} à Nîmes (Gard): programme, objectifs, prérequis, durée et financement CPF/OPCO.`,
+        `${formation.title} à Nîmes (Gard): programme, objectifs, prérequis, durée et financement OPCO / Entreprise.`,
       type: "article",
       url: `https://smacademy.fr/formations/${slug}`,
       images: formation.heroImage ? [formation.heroImage] : undefined,
@@ -45,7 +60,8 @@ export default async function FormationPage({ params }: PageProps) {
   if (!formation) return notFound();
 
   return (
-    <div className="mx-auto w-full max-w-screen-xl px-4 py-12">
+    <div className="min-h-screen bg-slate-50 pb-12">
+      {/* Structured Data */}
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -63,212 +79,253 @@ export default async function FormationPage({ params }: PageProps) {
           }),
         }}
       />
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Accueil", item: "https://smacademy.fr/" },
-              { "@type": "ListItem", position: 2, name: "Formations", item: "https://smacademy.fr/formations" },
-              { "@type": "ListItem", position: 3, name: formation.title, item: `https://smacademy.fr/formations/${formation.slug}` },
-            ],
-          }),
-        }}
-      />
-      {formation.faqs?.length ? (
-        <script
-          type="application/ld+json"
-          suppressHydrationWarning
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: formation.faqs.map((f) => ({
-                "@type": "Question",
-                name: f.q,
-                acceptedAnswer: { "@type": "Answer", text: f.a },
-              })),
-            }),
-          }}
-        />
-      ) : null}
-      <Breadcrumbs
-        items={[
-          { href: "/", label: "Accueil" },
-          { href: "/formations", label: "Formations" },
-          { label: formation.title },
-        ]}
-      />
-
-      <header className="mt-4 flex flex-col gap-3">
-        {formation.heroImage ? (
-          <div className="overflow-hidden rounded-xl border bg-secondary/40">
-            <div className="relative h-40 w-full sm:h-56">
-              <Image
-                src={formation.heroImage}
-                alt={formation.title}
-                fill
-                sizes="100vw"
-                className="object-cover"
-                priority
-              />
-            </div>
+      
+      {/* Hero Header */}
+      <header className="relative bg-white border-b">
+        <div className="mx-auto w-full max-w-screen-xl px-4 py-8">
+           <Breadcrumbs
+            items={[
+              { href: "/", label: "Accueil" },
+              { href: "/formations", label: "Formations" },
+              { label: formation.title },
+            ]}
+          />
+          <div className="mt-6 grid lg:grid-cols-[1fr_400px] gap-8 items-start">
+             <div className="space-y-6">
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary" className="bg-[var(--brand-orange)]/10 text-[var(--brand-orange-700)] hover:bg-[var(--brand-orange)]/20 border-0">
+                    {formation.city}
+                  </Badge>
+                  {formation.tags?.map((t) => (
+                    <Badge key={t} variant="outline" className="text-slate-600">
+                      {t}
+                    </Badge>
+                  ))}
+                </div>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900">
+                  {formation.title}
+                </h1>
+                <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
+                  {formation.summary}
+                </p>
+                
+                <div className="flex flex-wrap gap-6 text-sm text-slate-600 pt-2">
+                   {formation.duration && (
+                     <div className="flex items-center gap-2">
+                       <div className="p-2 bg-slate-100 rounded-full"><Clock className="h-4 w-4" /></div>
+                       <span className="font-medium">{formation.duration}</span>
+                     </div>
+                   )}
+                   {formation.certification && (
+                     <div className="flex items-center gap-2">
+                       <div className="p-2 bg-slate-100 rounded-full"><Award className="h-4 w-4" /></div>
+                       <span className="font-medium">{formation.certification}</span>
+                     </div>
+                   )}
+                   <div className="flex items-center gap-2">
+                      <div className="p-2 bg-slate-100 rounded-full"><CheckCircle2 className="h-4 w-4 text-green-600" /></div>
+                      <span className="font-medium text-green-700">Éligible OPCO / France Travail</span>
+                   </div>
+                </div>
+             </div>
+             
+             {/* Hero Image (Desktop) */}
+             <div className="hidden lg:block relative h-64 w-full rounded-2xl overflow-hidden shadow-lg">
+                {formation.heroImage ? (
+                  <Image
+                    src={formation.heroImage}
+                    alt={formation.title}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                ) : (
+                   <div className="w-full h-full bg-slate-200 flex items-center justify-center">
+                     <Award className="h-12 w-12 text-slate-400" />
+                   </div>
+                )}
+             </div>
           </div>
-        ) : null}
-        <h1 className="text-3xl font-semibold tracking-tight">{formation.title}</h1>
-        <div className="flex flex-wrap gap-2">
-          <Badge variant="secondary">{formation.city}</Badge>
-          {formation.tags?.map((t) => (
-            <Badge key={t} variant="outline">
-              {t}
-            </Badge>
-          ))}
         </div>
-        <p className="max-w-prose text-muted-foreground">{formation.summary}</p>
       </header>
 
-      <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_380px]">
-        <article className="space-y-8">
-          <nav aria-label="Sommaire" className="sticky top-16 z-10 -mx-1 overflow-x-auto pb-2 pt-1 lg:static lg:mx-0">
-            <ul className="flex gap-2 text-xs text-muted-foreground">
-              {[
-                { id: "objectifs", label: "Objectifs", show: Boolean(formation.objectives?.length) },
-                { id: "programme", label: "Programme", show: Boolean(formation.program?.length) },
-                { id: "prerequis", label: "Prérequis", show: Boolean(formation.prerequisites?.length) },
-                { id: "public-vise", label: "Public visé", show: Boolean(formation.audience) },
-                { id: "infos-pratiques", label: "Infos pratiques", show: true },
-                { id: "financements", label: "Financements", show: Boolean(formation.financingNotes) },
-                { id: "faq", label: "FAQ", show: Boolean(formation.faqs?.length) },
-              ]
-                .filter((x) => x.show)
-                .map((x) => (
-                  <li key={x.id}>
-                    <a href={`#${x.id}`} className="rounded-full border px-3 py-1 hover:bg-secondary">
-                      {x.label}
-                    </a>
-                  </li>
-                ))}
-            </ul>
-          </nav>
-          {formation.objectives?.length ? (
-            <section id="objectifs">
-              <h2 className="text-xl font-semibold">Objectifs</h2>
-              <ul className="mt-3 list-disc pl-5 text-sm text-muted-foreground">
-                {formation.objectives.map((o) => (
-                  <li key={o}>{o}</li>
-                ))}
-              </ul>
-            </section>
-          ) : null}
+      <div className="mx-auto w-full max-w-screen-xl px-4 py-12">
+        <div className="grid gap-12 lg:grid-cols-[1fr_380px]">
+          
+          {/* Main Content */}
+          <main className="space-y-12">
+            
+            {/* Sticky Nav */}
+            <nav className="sticky top-16 z-20 bg-white/80 backdrop-blur-md border rounded-full px-4 py-2 shadow-sm overflow-x-auto no-scrollbar">
+               <ul className="flex items-center gap-1 text-sm font-medium min-w-max">
+                 {[
+                    { id: "objectifs", label: "Objectifs", show: Boolean(formation.objectives?.length) },
+                    { id: "programme", label: "Programme", show: Boolean(formation.program?.length) },
+                    { id: "prerequis", label: "Prérequis", show: Boolean(formation.prerequisites?.length) },
+                    { id: "infos", label: "Infos", show: true },
+                 ].filter(x => x.show).map((item) => (
+                   <li key={item.id}>
+                     <a href={`#${item.id}`} className="px-4 py-2 rounded-full hover:bg-slate-100 hover:text-[var(--primary)] transition-colors block">
+                       {item.label}
+                     </a>
+                   </li>
+                 ))}
+               </ul>
+            </nav>
 
-          {formation.program?.length ? (
-            <section id="programme">
-              <h2 className="text-xl font-semibold">Programme</h2>
-              <ul className="mt-3 list-disc pl-5 text-sm text-muted-foreground">
-                {formation.program.map((p) => (
-                  <li key={p}>{p}</li>
-                ))}
-              </ul>
-            </section>
-          ) : null}
+            {formation.objectives?.length && (
+              <section id="objectifs" className="scroll-mt-32 bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+                <h2 className="flex items-center gap-3 text-2xl font-bold mb-6">
+                  <Target className="h-6 w-6 text-[var(--brand-orange)]" />
+                  Objectifs pédagogiques
+                </h2>
+                <ul className="grid gap-3">
+                  {formation.objectives.map((o, i) => (
+                    <li key={i} className="flex items-start gap-3 text-slate-600">
+                      <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span>{o}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
-          {formation.prerequisites?.length ? (
-            <section id="prerequis">
-              <h2 className="text-xl font-semibold">Prérequis</h2>
-              <ul className="mt-3 list-disc pl-5 text-sm text-muted-foreground">
-                {formation.prerequisites.map((p) => (
-                  <li key={p}>{p}</li>
-                ))}
-              </ul>
-            </section>
-          ) : null}
+            {formation.program?.length && (
+              <section id="programme" className="scroll-mt-32 bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+                <h2 className="flex items-center gap-3 text-2xl font-bold mb-6">
+                  <BookOpen className="h-6 w-6 text-[var(--brand-orange)]" />
+                  Programme de la formation
+                </h2>
+                <div className="space-y-4">
+                  {formation.program.map((p, i) => (
+                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                       <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white border font-bold text-slate-400 text-sm">
+                         {i + 1}
+                       </span>
+                       <p className="text-slate-700 font-medium pt-1">{p}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 pt-6 border-t border-slate-100">
+                  <Button variant="outline" className="gap-2">
+                    <Download className="h-4 w-4" /> Télécharger le programme PDF
+                  </Button>
+                </div>
+              </section>
+            )}
 
-          {formation.audience ? (
-            <section id="public-vise">
-              <h2 className="text-xl font-semibold">Public visé</h2>
-              <p className="mt-3 text-sm text-muted-foreground">{formation.audience}</p>
-            </section>
-          ) : null}
+            <div className="grid md:grid-cols-2 gap-8">
+               {formation.prerequisites?.length && (
+                  <section id="prerequis" className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm scroll-mt-32">
+                    <h2 className="flex items-center gap-2 text-lg font-bold mb-4">
+                      <FileText className="h-5 w-5 text-[var(--brand-orange)]" />
+                      Prérequis
+                    </h2>
+                    <ul className="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                      {formation.prerequisites.map((p, i) => <li key={i}>{p}</li>)}
+                    </ul>
+                  </section>
+               )}
 
-          <section id="infos-pratiques">
-            <h2 className="text-xl font-semibold">Infos pratiques</h2>
-            <div className="mt-3 grid gap-3 sm:grid-cols-2">
-              {formation.duration && (
-                <Info label="Durée" value={formation.duration} />
-              )}
-              {formation.price && <Info label="Tarif" value={formation.price} />}
-              {formation.location && (
-                <Info label="Lieu" value={formation.location} />
-              )}
-              {formation.certification && (
-                <Info label="Certification" value={formation.certification} />
-              )}
+               {formation.audience && (
+                  <section className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+                    <h2 className="flex items-center gap-2 text-lg font-bold mb-4">
+                      <Users className="h-5 w-5 text-[var(--brand-orange)]" />
+                      Public visé
+                    </h2>
+                    <p className="text-slate-600 text-sm">{formation.audience}</p>
+                  </section>
+               )}
             </div>
-            <p className="mt-3 text-xs text-muted-foreground">
-              Formation disponible dans notre centre à Nîmes (Gard) ou en intra-entreprise (sur site). Financements possibles: CPF/OPCO/France Travail selon situation.
-            </p>
-          </section>
 
-          {formation.financingNotes ? (
-            <section id="financements">
-              <h2 className="text-xl font-semibold">Financements</h2>
-              <p className="mt-3 text-sm text-muted-foreground">{formation.financingNotes}</p>
-              <p className="mt-2 text-xs">
-                Voir aussi <Link className="text-primary underline-offset-4 hover:underline" href="/">les dispositifs de financement</Link>.
-              </p>
-            </section>
-          ) : null}
+            {formation.faqs?.length && (
+              <section id="faq" className="scroll-mt-32">
+                <h2 className="text-2xl font-bold mb-6">Questions fréquentes</h2>
+                <div className="grid gap-4">
+                  {formation.faqs.map((f, i) => (
+                    <details key={i} className="group bg-white rounded-xl border border-slate-200 open:border-[var(--brand-orange)] transition-colors">
+                      <summary className="flex cursor-pointer items-center justify-between p-6 font-medium text-slate-900 list-none">
+                        {f.q}
+                        <span className="transition group-open:rotate-180">
+                          <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                      </summary>
+                      <div className="px-6 pb-6 pt-0 text-slate-600 text-sm leading-relaxed">
+                        {f.a}
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </section>
+            )}
 
-          {formation.faqs?.length ? (
-            <section id="faq">
-              <h2 className="text-xl font-semibold">FAQ</h2>
-              <div className="mt-3 space-y-2">
-                {formation.faqs.map((f) => (
-                  <details key={f.q} className="group rounded-md border p-3 open:shadow-sm">
-                    <summary className="cursor-pointer list-none text-sm font-medium">
-                      {f.q}
-                    </summary>
-                    <div className="mt-2 text-sm text-muted-foreground">{f.a}</div>
-                  </details>
-                ))}
+          </main>
+
+          {/* Sidebar Booking Card */}
+          <aside className="lg:sticky lg:top-24 lg:h-fit space-y-6">
+            
+            {/* Booking Box */}
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/50">
+               <div className="mb-6 pb-6 border-b border-slate-100">
+                 <div className="text-sm text-slate-500 mb-1">Tarif de la formation</div>
+                 <div className="flex items-baseline gap-2">
+                   <span className="text-3xl font-bold text-[var(--primary)]">
+                     {formation.price === "Nous consulter" ? "Sur devis" : formation.price}
+                   </span>
+                 </div>
+                 {formation.financingNotes && (
+                   <div className="mt-2 text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded inline-block">
+                     Financement possible
+                   </div>
+                 )}
+               </div>
+
+               <div className="space-y-4 mb-6">
+                 <div className="flex items-center gap-3 text-sm text-slate-600">
+                    <MapPin className="h-4 w-4 text-slate-400" />
+                    <span>{formation.location || "Centre SM Academy, Nîmes"}</span>
+                 </div>
+                 <div className="flex items-center gap-3 text-sm text-slate-600">
+                    <Calendar className="h-4 w-4 text-slate-400" />
+                    <span>Prochaines sessions : <span className="text-green-600 font-medium">Nous contacter</span></span>
+                 </div>
+               </div>
+
+               <div className="space-y-3">
+                 <h3 className="font-bold text-sm">Intéressé(e) ?</h3>
+                 <p className="text-xs text-slate-500 mb-3">Remplissez le formulaire pour recevoir le programme détaillé et un devis.</p>
+                 <ContactForm context={`Page: ${formation.title}`} />
+               </div>
+            </div>
+
+            {/* Map Box */}
+            <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+              <MapEmbed query="94 Av. du Dr Fleming Nimes" height={200} />
+              <div className="p-4 bg-white text-xs text-slate-500 flex gap-2 items-center">
+                <MapPin className="h-3 w-3" /> 94 Avenue du Docteur Fleming, Nîmes
               </div>
-            </section>
-          ) : null}
-        </article>
-
-        <aside className="lg:sticky lg:top-24 lg:h-fit">
-          <div className="rounded-xl border p-5">
-            <h3 className="text-base font-semibold">Intéressé(e) ? On vous rappelle</h3>
-            <p className="mt-1 text-xs text-muted-foreground">
-              Réponse rapide, du lundi au vendredi 8h–18h.
-            </p>
-            <div className="mt-4">
-              <ContactForm context={formation.title} />
             </div>
-          </div>
-          <MapEmbed className="mt-4" query="94 Av. du Dr Fleming Nimes" height={240} />
-          <div className="mt-4 rounded-xl border p-5 text-sm">
-            <div className="font-semibold">Besoin d’une autre formation ?</div>
-            <Link href="/formations" className="text-primary underline-offset-4 hover:underline">
-              Voir toutes les formations
-            </Link>
-          </div>
-        </aside>
+
+             {/* Need Help Box */}
+            <div className="rounded-2xl bg-slate-900 p-6 text-white">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 bg-white/10 rounded-full">
+                  <Phone className="h-5 w-5" />
+                </div>
+                <div className="font-bold">Une question ?</div>
+              </div>
+              <p className="text-sm text-slate-300 mb-4">
+                Nos conseillers sont là pour vous aider dans votre choix.
+              </p>
+              <a href="tel:+33982774444" className="text-lg font-bold hover:text-[var(--brand-orange)] transition-colors">
+                09 82 77 44 44
+              </a>
+            </div>
+
+          </aside>
+
+        </div>
       </div>
     </div>
   );
 }
-
-function Info({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-md border p-3 text-sm">
-      <div className="text-xs text-muted-foreground">{label}</div>
-      <div className="font-medium">{value}</div>
-    </div>
-  );
-}
-
-

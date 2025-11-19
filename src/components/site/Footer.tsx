@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t">
-      <div className="mx-auto w-full max-w-screen-xl px-4 py-10">
+    <footer className="border-t bg-slate-50">
+      <div className="mx-auto w-full max-w-screen-xl px-4 py-12">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div className="space-y-2">
             <div className="text-sm font-semibold">SM Academy</div>

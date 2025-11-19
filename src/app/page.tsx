@@ -3,15 +3,31 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { formations } from "@/data/formations";
 import ContactForm from "@/components/forms/ContactForm";
-import MapEmbed from "@/components/site/MapEmbed";
-import { Phone, Sparkles, Users, BookOpen, BadgeCheck, Handshake, Coins, Building2, IdCard, Trophy, Cable, HeartPulse, Zap, GraduationCap, Dumbbell, FlaskConical, HardHat } from "lucide-react";
+import {
+  Phone,
+  Cable,
+  HeartPulse,
+  Zap,
+  GraduationCap,
+  Dumbbell,
+  FlaskConical,
+  CheckCircle2,
+  Users,
+  Trophy,
+  CalendarCheck,
+  ArrowRight,
+  Star,
+  Building2,
+  Handshake,
+  MapPin,
+} from "lucide-react";
 import ValuesAccordion from "@/components/sections/Values";
 import ReviewsStrip from "@/components/site/ReviewsStrip";
 
 export const metadata = {
   title: "Centre de formation à Nîmes (Qualiopi) | SM Academy",
   description:
-    "Formations professionnelles à Nîmes (Gard) : SST, IRVE, Fibre optique D3, Gestes & Postures, Pack Office, Formation de formateur. Sessions courtes, finançables CPF/OPCO.",
+    "Formations professionnelles à Nîmes (Gard) : SST, IRVE, Fibre optique D3, Gestes & Postures, Pack Office, Formation de formateur. Sessions courtes, finançables OPCO.",
   alternates: {
     canonical: "/",
   },
@@ -20,267 +36,320 @@ export const metadata = {
 export default function Home() {
   const featured = formations.slice(0, 6);
   const iconBySlug: Record<string, React.ReactNode> = {
-    "fibre-optique-d3": <Cable className="h-4 w-4 text-[var(--brand-orange)]" />,
-    sst: <HeartPulse className="h-4 w-4 text-[var(--brand-orange)]" />,
-    irve: <Zap className="h-4 w-4 text-[var(--brand-orange)]" />,
-    formateur: <GraduationCap className="h-4 w-4 text-[var(--brand-orange)]" />,
-    "gestes-et-postures": <Dumbbell className="h-4 w-4 text-[var(--brand-orange)]" />,
-    "pack-office": <FlaskConical className="h-4 w-4 text-[var(--brand-orange)]" />,
+    "fibre-optique-d3": <Cable className="h-5 w-5 text-[var(--brand-orange)]" />,
+    sst: <HeartPulse className="h-5 w-5 text-[var(--brand-orange)]" />,
+    irve: <Zap className="h-5 w-5 text-[var(--brand-orange)]" />,
+    formateur: <GraduationCap className="h-5 w-5 text-[var(--brand-orange)]" />,
+    "gestes-et-postures": <Dumbbell className="h-5 w-5 text-[var(--brand-orange)]" />,
+    "pack-office": <FlaskConical className="h-5 w-5 text-[var(--brand-orange)]" />,
   };
+
   return (
-    <div className="mx-auto w-full max-w-screen-xl px-4 py-12 sm:py-16">
-      {/* Hero */}
-      <section className="relative overflow-hidden rounded-2xl border bg-gradient-to-b from-[oklch(0.98_0_0)] to-secondary/60 p-6 sm:p-8">
-        <div className="pointer-events-none absolute inset-0 opacity-20" style={{backgroundImage:"radial-gradient(1200px 600px at 0% -20%, var(--primary)/.25 0%, transparent 60%), radial-gradient(1200px 600px at 100% 0%, var(--brand-orange)/.25 0%, transparent 60%)"}} />
-        <div className="relative grid gap-6 pt-4 md:grid-cols-2">
-          <div className="flex flex-col items-start gap-5">
-            <div className="flex flex-wrap gap-2">
-              <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs text-muted-foreground">
-                <BadgeCheck className="h-3.5 w-3.5" /> Qualiopi
+    <div className="flex flex-col min-h-screen">
+      {/* Hero Section - More Immersive */}
+      <section className="relative w-full bg-gradient-to-b from-slate-50 to-white pt-12 pb-16 lg:pt-20 lg:pb-24">
+        <div className="mx-auto w-full max-w-screen-xl px-4 md:px-6">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
+            <div className="flex flex-col justify-center space-y-8">
+              <div className="space-y-4">
+                <div className="inline-flex items-center rounded-full border border-[var(--brand-orange)]/30 bg-[var(--brand-orange)]/10 px-3 py-1 text-sm font-medium text-[var(--brand-orange-700)]">
+                  <span className="flex h-2 w-2 rounded-full bg-[var(--brand-orange)] mr-2 animate-pulse"></span>
+                  Centre agréé Qualiopi à Nîmes
+                </div>
+                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl/none text-slate-900">
+                  Boostez votre carrière avec nos <span className="text-[var(--primary)]">formations certifiantes</span>
+                </h1>
+                <p className="max-w-[600px] text-slate-600 md:text-xl leading-relaxed">
+                  Des formations courtes et opérationnelles : Fibre Optique, IRVE, SST, et plus. 
+                  Financez votre avenir via OPCO / France Travail.
+                </p>
               </div>
-              <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs text-muted-foreground">
-                Formation Nîmes (Gard)
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild size="lg" className="rounded-full bg-[var(--brand-orange)] hover:bg-[var(--brand-orange-600)] text-white shadow-lg shadow-orange-200 text-base px-8 h-12">
+                  <Link href="/formations">Découvrir les formations</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="rounded-full border-2 border-slate-200 hover:border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white text-base px-8 h-12 transition-all">
+                  <Link href="#contact">
+                    <Phone className="mr-2 h-4 w-4" /> Être rappelé
+                  </Link>
+                </Button>
+              </div>
+              
+              {/* Trust Badges */}
+                <div className="flex flex-wrap gap-6 text-sm text-slate-500 items-center pt-4">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-green-500" />
+                  <span>Financement OPCO / France Travail</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-green-500" />
+                  <span>Certification officielle</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-green-500" />
+                  <span>Sessions fréquentes</span>
+                </div>
               </div>
             </div>
-            <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-              SM ACADEMY
-              <span className="block text-foreground/70">Centre de formation Qualiopi à Nîmes (Gard)</span>
-            </h1>
-            <p className="max-w-2xl text-lg text-foreground">
-              Formations professionnelles courtes (SST, IRVE, Fibre D3, Gestes &amp; Postures, Excel, Formateur) à Nîmes. Sessions finançables via CPF/OPCO – accompagnement dossier inclus.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Button asChild className="rounded-full" variant="default">
-                <Link href="/formations">Voir les formations</Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="rounded-full border-[var(--brand-orange)] text-[var(--brand-orange)] hover:bg-[var(--brand-orange)] hover:text-white"
-              >
-                <Link href="#contact">Être rappelé</Link>
-              </Button>
-              <Button asChild variant="outline" className="rounded-full border-[var(--brand-orange)] text-[var(--brand-orange)] hover:bg-[var(--brand-orange)] hover:text-white">
-                <a href="tel:+33982774444"><Phone className="mr-1 h-4 w-4" /> Nous appeler</a>
-              </Button>
-            </div>
-            <div className="mt-2 flex flex-wrap gap-2 text-sm">
-              <Link href="/formations/sst" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary hover:border-[var(--brand-orange)] hover:text-[var(--brand-orange)]">Formation SST</Link>
-              <Link href="/formations/irve" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary hover:border-[var(--brand-orange)] hover:text-[var(--brand-orange)]">Formation IRVE (Nîmes)</Link>
-              <Link href="/formations/formateur" className="rounded-full border px-3 py-1 text-foreground/80 hover:bg-secondary hover:border-[var(--brand-orange)] hover:text-[var(--brand-orange)]">Formation de formateur</Link>
-            </div>
-          </div>
-          <div className="relative hidden md:block">
-            <div className="grid grid-cols-2 gap-3">
-              <div className="relative h-40 w-full overflow-hidden rounded-lg border sm:h-48">
-                <Image
-                  src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_1325-e1740574444704.png"
-                  alt="Formation SST"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="relative h-40 w-full overflow-hidden rounded-lg border sm:h-48">
-                <Image
-                  src="https://smacademy.fr/wp-content/uploads/2025/02/IMG_3091-scaled-e1740573209118.jpg"
-                  alt="Formation IRVE"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="relative h-32 w-full overflow-hidden rounded-lg border sm:h-40">
-                <Image
+            
+            {/* Hero Image Composition */}
+            <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
+              <div className="relative aspect-square lg:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
+                 <Image
                   src="https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg"
-                  alt="Fibre optique D3"
+                  alt="Formation SM Academy"
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
+                {/* Floating Badge */}
+                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-4">
+                  <div className="bg-[var(--primary)] rounded-full p-3 text-white">
+                    <Trophy className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-slate-900">98% de réussite</div>
+                    <div className="text-xs text-slate-500">Sur nos certifications techniques</div>
+                  </div>
+                </div>
               </div>
-              <div className="relative h-32 w-full overflow-hidden rounded-lg border sm:h-40">
-                <Image
-                  src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_0212-1024x768.jpg"
-                  alt="Formation de formateur"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
+              {/* Decorative elements */}
+              <div className="absolute -z-10 top-[-20px] right-[-20px] h-[200px] w-[200px] bg-[var(--brand-orange)]/10 rounded-full blur-3xl" />
+              <div className="absolute -z-10 bottom-[-20px] left-[-20px] h-[200px] w-[200px] bg-[var(--primary)]/10 rounded-full blur-3xl" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="border-y bg-slate-50 py-12">
+        <div className="mx-auto w-full max-w-screen-xl px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="space-y-2">
+              <div className="text-3xl md:text-4xl font-bold text-[var(--primary)]">500+</div>
+              <div className="text-sm font-medium text-slate-600">Stagiaires formés</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl md:text-4xl font-bold text-[var(--primary)]">98%</div>
+              <div className="text-sm font-medium text-slate-600">Taux de satisfaction</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl md:text-4xl font-bold text-[var(--primary)]">100%</div>
+              <div className="text-sm font-medium text-slate-600">Accompagnement dossiers</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl md:text-4xl font-bold text-[var(--primary)]">30</div>
+              <div className="text-sm font-medium text-slate-600">Sessions par an</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Strip */}
+      <section className="py-12 bg-white">
+        <div className="mx-auto w-full max-w-screen-xl px-4">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8">
+            <h2 className="text-2xl font-bold tracking-tight">Ils nous font confiance</h2>
+            <div className="flex items-center gap-1">
+               {[1, 2, 3, 4, 5].map((i) => (
+                 <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+               ))}
+            </div>
+          </div>
+          <ReviewsStrip />
+        </div>
+      </section>
+
+      {/* Formations Grid - Modern Cards */}
+      <section id="formations" className="py-16 lg:py-24 bg-slate-50">
+        <div className="mx-auto w-full max-w-screen-xl px-4">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tight text-slate-900">Nos formations à la une</h2>
+              <p className="text-slate-600 max-w-2xl">
+                Des programmes conçus pour l'emploi, dispensés par des experts terrain.
+              </p>
+            </div>
+            <Button variant="outline" asChild className="hidden md:flex">
+              <Link href="/formations">Voir tout le catalogue <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            </Button>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {featured.map((f) => (
+              <div key={f.slug} className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:shadow-md border border-slate-100 hover:border-[var(--brand-orange)]/30">
+                {/* Card Image */}
+                <div className="relative h-48 overflow-hidden bg-slate-100">
+                  {f.heroImage ? (
+                    <Image
+                      src={f.heroImage}
+                      alt={f.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="flex h-full items-center justify-center bg-slate-100">
+                      {iconBySlug[f.slug]}
+                    </div>
+                  )}
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-[var(--primary)] shadow-sm">
+                    {f.city === "Nîmes (Gard)" ? "Nîmes" : f.city}
+                  </div>
+                </div>
+
+                {/* Card Content */}
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="mb-4 flex items-center gap-2 text-xs font-medium text-[var(--brand-orange)]">
+                    {iconBySlug[f.slug]}
+                    <span>{f.tags?.[0] || "Formation Pro"}</span>
+                  </div>
+                  <h3 className="mb-2 text-xl font-bold text-slate-900 line-clamp-2 group-hover:text-[var(--primary)] transition-colors">
+                    {f.title}
+                  </h3>
+                  <p className="mb-6 text-sm text-slate-600 line-clamp-3 flex-1">
+                    {f.summary}
+                  </p>
+                  
+                  <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                     <div className="text-xs text-slate-500 font-medium flex items-center gap-1">
+                       <CalendarCheck className="h-3.5 w-3.5" /> Sessions fréquentes
+                     </div>
+                     <Link href={`/formations/${f.slug}`} className="text-sm font-semibold text-[var(--primary)] flex items-center gap-1 hover:text-[var(--brand-orange)] transition-colors">
+                       Voir le programme <ArrowRight className="h-3.5 w-3.5" />
+                     </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-8 text-center md:hidden">
+             <Button variant="outline" asChild className="w-full">
+              <Link href="/formations">Voir tout le catalogue <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us - Features */}
+      <section className="py-16 lg:py-24">
+        <div className="mx-auto w-full max-w-screen-xl px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1 relative">
+               <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-4 mt-8">
+                    <div className="rounded-2xl overflow-hidden shadow-lg">
+                      <Image src="https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg" width={400} height={500} alt="Formation technique" className="w-full h-auto object-cover" />
+                    </div>
+                    <div className="bg-[var(--primary)] p-6 rounded-2xl text-white text-center">
+                      <div className="text-3xl font-bold mb-1">OPCO</div>
+                      <div className="text-sm opacity-90">Prise en charge entreprise</div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                     <div className="bg-slate-100 p-6 rounded-2xl text-center">
+                      <div className="text-3xl font-bold mb-1 text-[var(--brand-orange)]">100%</div>
+                      <div className="text-sm text-slate-600">Accompagnement administratif</div>
+                    </div>
+                    <div className="rounded-2xl overflow-hidden shadow-lg">
+                      <Image src="https://smacademy.fr/wp-content/uploads/2024/08/irvee.jpg" width={400} height={500} alt="Formation IRVE" className="w-full h-auto object-cover" />
+                    </div>
+                  </div>
+               </div>
+            </div>
+            
+            <div className="order-1 lg:order-2 space-y-8">
+              <div className="space-y-4">
+                <div className="inline-flex items-center rounded-full bg-[var(--primary)]/10 px-3 py-1 text-sm font-medium text-[var(--primary)]">
+                   Pourquoi nous choisir ?
+                </div>
+                <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                  L'excellence de la formation professionnelle à Nîmes
+                </h2>
+                <p className="text-slate-600 text-lg">
+                  SM Academy est bien plus qu'un centre de formation. Nous sommes votre partenaire pour l'évolution de vos compétences et de votre carrière.
+                </p>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-orange-100 text-[var(--brand-orange)]">
+                    <Users className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-slate-900">Formateurs Experts</h3>
+                    <p className="text-slate-600">Tous nos formateurs sont des professionnels certifiés avec une solide expérience terrain.</p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-[var(--primary)]">
+                    <Trophy className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-slate-900">Certifié Qualiopi</h3>
+                    <p className="text-slate-600">Un gage de qualité qui rend nos formations éligibles aux financements publics et mutualisés.</p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-600">
+                    <Handshake className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-slate-900">Accompagnement Personnalisé</h3>
+                    <p className="text-slate-600">Du montage de votre dossier de financement jusqu'à la remise de votre certification.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Avis Google (solution maison SSR) */}
-      <section className="mt-8">
-        <ReviewsStrip />
-      </section>
-
-      {/* Formations highlights */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-semibold tracking-tight">Nos formations à Nîmes (Gard)</h2>
-        <p className="mt-1 text-sm text-foreground">Des parcours courts et professionnalisants, adaptés à vos besoins.</p>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featured.map((f) => (
-            <div key={f.slug} className="group rounded-xl border p-5 transition-all hover:shadow-md hover:border-[var(--brand-orange)]">
-              <div className="flex items-center justify-between">
-                <h3 className="text-base font-semibold inline-flex items-center gap-2">
-                  {iconBySlug[f.slug] || <HardHat className="h-4 w-4 text-[var(--brand-orange)]" />}{f.title}
-                </h3>
-                <span className="text-xs text-muted-foreground">{f.city}</span>
-              </div>
-              <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{f.summary}</p>
-              <div className="mt-4">
-                <Link href={`/formations/${f.slug}`} className="text-sm font-medium text-[var(--brand-orange)] underline-offset-4 hover:underline">
-                  En savoir plus
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Qui sommes-nous */}
-      <section className="mt-16 grid gap-8 rounded-2xl border bg-primary/5 p-6 md:grid-cols-2 sm:p-8">
-        <div>
-          <h2 className="text-2xl font-semibold tracking-tight">Qui sommes-nous ?</h2>
-          <p className="mt-3 text-sm text-foreground">
-            SM Academy – Centre de formation basé à Nîmes dans le Gard. SM Academy est un organisme de formation certifié Qualiopi, reconnu pour son excellence dans l’enseignement et l’accompagnement professionnel. Nos formations sont animées par un formateur expérimenté, diplômé et certifié, garantissant une pédagogie de qualité.
-          </p>
-          <p className="mt-3 text-sm text-foreground">
-            Nous proposons une gamme variée de formations: Gestes et Postures, Sauveteur Secouriste du Travail (SST), Installation et Raccordement Fibre Optique, Infrastructure de Recharge de Véhicule Électrique (IRVE), Pack Office, et Formation de Formateur.
-          </p>
-          <p className="mt-3 text-xs italic text-foreground">
-            Formation disponible dans notre centre de formation mais il est également possible d’intervenir dans vos locaux.
-          </p>
-        </div>
-        <div>
-          <h3 className="text-xl font-semibold tracking-tight">Nos valeurs</h3>
-          <div className="mt-4">
-            <ValuesAccordion />
-          </div>
-        </div>
-      </section>
-
-      {/* Vues du centre et des formations (images actuelles) */}
-      <section className="mt-12">
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="relative h-40 overflow-hidden rounded-lg border sm:h-48">
-            <Image
-              src="https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg"
-              alt="Installation fibre optique"
-              fill
-              sizes="(max-width: 1024px) 50vw, 25vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="relative h-40 overflow-hidden rounded-lg border sm:h-48">
-            <Image
-              src="https://smacademy.fr/wp-content/uploads/2024/08/irvee.jpg"
-              alt="IRVE bornes de recharge"
-              fill
-              sizes="(max-width: 1024px) 50vw, 25vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="relative h-40 overflow-hidden rounded-lg border sm:h-48">
-            <Image
-              src="https://smacademy.fr/wp-content/uploads/2024/08/gg.jpg"
-              alt="Gestes et postures"
-              fill
-              sizes="(max-width: 1024px) 50vw, 25vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="relative h-40 overflow-hidden rounded-lg border sm:h-48">
-            <Image
-              src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_0212-1024x768.jpg"
-              alt="Formation de formateur"
-              fill
-              sizes="(max-width: 1024px) 50vw, 25vw"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Financements */}
-      <section className="mt-16">
-        <h2 className="text-2xl font-semibold tracking-tight">Financements</h2>
-        <p className="mt-1 text-sm text-muted-foreground">Plusieurs dispositifs pour financer votre formation.</p>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <FinanceCard icon={<IdCard className="h-5 w-5" />} title="France Travail" desc="AIF, POE dans le cadre du PPAE pour demandeurs d’emploi." />
-          <FinanceCard icon={<Building2 className="h-5 w-5" />} title="OPCO" desc="Prise en charge des coûts de formation pour les salariés." />
-          <FinanceCard icon={<Coins className="h-5 w-5" />} title="Aides régionales" desc="Dispositifs locaux selon votre région." />
-          <FinanceCard icon={<BookOpen className="h-5 w-5" />} title="CPF" desc="Mobilisez votre Compte Personnel de Formation." />
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section id="contact" className="mt-16 rounded-xl border p-6">
-        <div className="flex flex-col gap-2">
-          <h2 className="text-2xl font-semibold">On vous rappelle</h2>
-          <p className="text-sm text-muted-foreground">Lun–Ven 8h–18h. Tél: <a className="font-medium" href="tel:+33982774444">09 82 77 44 44</a> / <a className="font-medium" href="tel:+33767891970">07 67 89 19 70</a> · Email: <a className="font-medium" href="mailto:contact@smtechnologie.fr">contact@smtechnologie.fr</a></p>
-        </div>
-        <div className="mt-4">
-          <ContactForm context="Accueil" />
-        </div>
-        <MapEmbed className="mt-6" query="94 Av. du Dr Fleming Nimes" height={320} />
-      </section>
-
-      {/* Notre équipe */}
-      <section className="mt-16">
-        <h2 className="text-2xl font-semibold tracking-tight">Notre équipe</h2>
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
-          <TeamCard name="Khalid" role="Président et Formateur" />
-          <TeamCard name="Hicham" role="Directeur général" />
-          <TeamCard name="Sofiane" role="RRH & Responsable pédagogique" />
+      {/* Contact / CTA Section */}
+      <section id="contact" className="py-16 lg:py-24 bg-[var(--primary)] text-white">
+        <div className="mx-auto w-full max-w-screen-xl px-4">
+           <div className="grid lg:grid-cols-2 gap-12">
+             <div className="space-y-8">
+               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Prêt à lancer votre projet ?</h2>
+               <p className="text-white/80 text-lg max-w-md">
+                 Remplissez le formulaire, nous vous rappelons dans la journée pour étudier votre besoin et vos possibilités de financement.
+               </p>
+               
+               <div className="space-y-6 pt-4">
+                 <div className="flex items-center gap-4">
+                   <div className="bg-white/10 p-3 rounded-full">
+                     <Phone className="h-6 w-6" />
+                   </div>
+                   <div>
+                     <div className="text-sm text-white/60">Par téléphone</div>
+                     <a href="tel:+33982774444" className="text-xl font-bold hover:text-[var(--brand-orange)] transition-colors">09 82 77 44 44</a>
+                   </div>
+                 </div>
+                 
+                 <div className="flex items-center gap-4">
+                   <div className="bg-white/10 p-3 rounded-full">
+                     <MapPin className="h-6 w-6" />
+                   </div>
+                   <div>
+                     <div className="text-sm text-white/60">Notre centre</div>
+                     <div className="font-medium">94 Avenue du Docteur Fleming<br/>30900 Nîmes</div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             
+             <div className="bg-white text-slate-900 rounded-2xl p-6 shadow-2xl">
+               <h3 className="text-xl font-bold mb-6">Demande de rappel gratuite</h3>
+               <ContactForm context="Accueil-New" />
+             </div>
+           </div>
         </div>
       </section>
     </div>
   );
 }
 
-function Feature({ index, icon, title, desc }: { index?: number; icon: React.ReactNode; title: string; desc: string }) {
-  return (
-    <div className="rounded-xl border p-4">
-      <div className="flex items-center gap-2 text-sm font-semibold">
-        {typeof index === "number" ? (
-          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-secondary text-xs font-semibold text-foreground/80">{index}</span>
-        ) : (
-          <span className="rounded-md bg-secondary p-2 text-foreground/80">{icon}</span>
-        )}
-        <span className="flex items-center gap-2">
-          {!index && <span className="rounded-md bg-secondary p-2 text-foreground/80">{icon}</span>}
-          {title}
-        </span>
-      </div>
-      <p className="mt-2 text-xs text-muted-foreground">{desc}</p>
-    </div>
-  );
-}
-
-function FinanceCard({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
-  return (
-    <div className="rounded-xl border p-4">
-      <div className="flex items-center gap-2 text-sm font-semibold">
-        <span className="rounded-md bg-secondary p-2 text-foreground/80">{icon}</span>
-        {title}
-      </div>
-      <p className="mt-2 text-xs text-muted-foreground">{desc}</p>
-    </div>
-  );
-}
-
-function TeamCard({ name, role }: { name: string; role: string }) {
-  return (
-    <div className="rounded-xl border p-4">
-      <div className="text-sm font-semibold">{name}</div>
-      <div className="text-xs text-muted-foreground">{role}</div>
-    </div>
-  );
-}

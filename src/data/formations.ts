@@ -25,7 +25,7 @@ export const formations: Formation[] = [
     title: "Installation et raccordement Fibre optique D3",
     city: "Nîmes (Gard)",
     summary:
-      "Formation fibre optique D3 à Nîmes (Gard): déploiement, raccordements précis et contrôle qualité (OTDR, photométrie). Parcours court, finançable CPF/OPCO.",
+      "Formation fibre optique D3 à Nîmes (Gard): déploiement, raccordements précis et contrôle qualité (OTDR, photométrie). Parcours court, finançable OPCO / France Travail.",
     tags: ["Fibre", "Télécom"],
     heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg",
     duration: "2 à 3 jours",
@@ -52,7 +52,7 @@ export const formations: Formation[] = [
     title: "IRVE – Installation de bornes de recharge",
     city: "Nîmes (Gard)",
     summary:
-      "Formation IRVE à Nîmes (Gard): installer, configurer et entretenir des bornes de recharge selon les normes. Finançable CPF/OPCO.",
+      "Formation IRVE à Nîmes (Gard): installer, configurer et entretenir des bornes de recharge selon les normes. Finançable OPCO / France Travail.",
     tags: ["Électrique", "Mobilité"],
     heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/irvee.jpg",
     duration: "3 jours",
@@ -76,11 +76,11 @@ export const formations: Formation[] = [
       "https://smacademy.fr/wp-content/uploads/2024/08/irvee.jpg",
     ],
     financingNotes:
-      "Éligible selon les cas via OPCO, France Travail (AIF/POE) ou CPF. Nous vous accompagnons pour le montage du dossier.",
+      "Éligible selon les cas via OPCO, France Travail (AIF/POE). Nous vous accompagnons pour le montage du dossier.",
     faqs: [
       { q: "Public visé ?", a: "Électriciens, installateurs, techniciens maintenance." },
       { q: "Lieu ?", a: "Au centre SM Academy (Nîmes) ou en intra sur votre site." },
-      { q: "Financement ?", a: "OPCO, CPF, France Travail possibles selon votre situation." },
+      { q: "Financement ?", a: "OPCO, France Travail possibles selon votre situation." },
     ],
   },
   {
@@ -88,7 +88,7 @@ export const formations: Formation[] = [
     title: "Formation de formateur pour adultes",
     city: "Nîmes (Gard)",
     summary:
-      "Formation de formateur à Nîmes (Gard): concevoir, animer et évaluer des formations efficaces pour adultes. Finançable CPF/OPCO.",
+      "Formation de formateur à Nîmes (Gard): concevoir, animer et évaluer des formations efficaces pour adultes. Finançable OPCO / Entreprise.",
     tags: ["Pédagogie"],
     heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/reforme-formation-professionnelle-apprentissage-2-1.jpg",
     duration: "3 à 5 jours",
@@ -111,7 +111,7 @@ export const formations: Formation[] = [
     title: "SST – Sauveteur Secouriste du Travail",
     city: "Nîmes (Gard)",
     summary:
-      "Formation SST à Nîmes (Gard): devenir acteur de la prévention et maîtriser les gestes qui sauvent. Initiale + MAC. Finançable CPF/OPCO.",
+      "Formation SST à Nîmes (Gard): devenir acteur de la prévention et maîtriser les gestes qui sauvent. Initiale + MAC. Finançable OPCO / France Travail.",
     tags: ["Sécurité"],
     heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/sstt-2.jpg",
     duration: "2 jours (initial)",
@@ -158,7 +158,7 @@ export const formations: Formation[] = [
     title: "Pack Office – Word, Excel, PowerPoint, Outlook",
     city: "Nîmes (Gard)",
     summary:
-      "Formation Pack Office à Nîmes (Gard): Word, Excel, PowerPoint, Outlook pour gagner en efficacité. Parcours modulaires. CPF/OPCO possibles.",
+      "Formation Pack Office à Nîmes (Gard): Word, Excel, PowerPoint, Outlook pour gagner en efficacité. Parcours modulaires. OPCO / Entreprise possibles.",
     tags: ["Bureautique"],
     heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/PACK-OFF-1.png",
     duration: "2 à 5 jours selon niveau",
@@ -180,5 +180,3 @@ export const formations: Formation[] = [
 export function getFormationBySlug(slug: string): Formation | undefined {
   return formations.find((f) => f.slug === slug);
 }
-
-
