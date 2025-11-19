@@ -60,7 +60,7 @@ export default async function FormationPage({ params }: PageProps) {
   if (!formation) return notFound();
 
   return (
-    <div className="min-h-screen bg-slate-50 pb-12">
+    <div className="min-h-screen bg-background pb-12">
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -81,7 +81,7 @@ export default async function FormationPage({ params }: PageProps) {
       />
       
       {/* Hero Header */}
-      <header className="relative bg-white border-b">
+      <header className="relative bg-card border-b">
         <div className="mx-auto w-full max-w-screen-xl px-4 py-8">
            <Breadcrumbs
             items={[
@@ -93,37 +93,37 @@ export default async function FormationPage({ params }: PageProps) {
           <div className="mt-6 grid lg:grid-cols-[1fr_400px] gap-8 items-start">
              <div className="space-y-6">
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="bg-[var(--brand-orange)]/10 text-[var(--brand-orange-700)] hover:bg-[var(--brand-orange)]/20 border-0">
+                  <Badge variant="secondary" className="bg-[var(--brand-orange)]/10 text-[var(--brand-orange-700)] dark:text-[var(--brand-orange)] hover:bg-[var(--brand-orange)]/20 border-0">
                     {formation.city}
                   </Badge>
                   {formation.tags?.map((t) => (
-                    <Badge key={t} variant="outline" className="text-slate-600">
+                    <Badge key={t} variant="outline" className="text-muted-foreground">
                       {t}
                     </Badge>
                   ))}
                 </div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
                   {formation.title}
                 </h1>
-                <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
+                <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
                   {formation.summary}
                 </p>
                 
-                <div className="flex flex-wrap gap-6 text-sm text-slate-600 pt-2">
+                <div className="flex flex-wrap gap-6 text-sm text-muted-foreground pt-2">
                    {formation.duration && (
                      <div className="flex items-center gap-2">
-                       <div className="p-2 bg-slate-100 rounded-full"><Clock className="h-4 w-4" /></div>
+                       <div className="p-2 bg-muted rounded-full"><Clock className="h-4 w-4" /></div>
                        <span className="font-medium">{formation.duration}</span>
                      </div>
                    )}
                    {formation.certification && (
                      <div className="flex items-center gap-2">
-                       <div className="p-2 bg-slate-100 rounded-full"><Award className="h-4 w-4" /></div>
+                       <div className="p-2 bg-muted rounded-full"><Award className="h-4 w-4" /></div>
                        <span className="font-medium">{formation.certification}</span>
                      </div>
                    )}
                    <div className="flex items-center gap-2">
-                      <div className="p-2 bg-slate-100 rounded-full"><CheckCircle2 className="h-4 w-4 text-green-600" /></div>
+                      <div className="p-2 bg-muted rounded-full"><CheckCircle2 className="h-4 w-4 text-green-600" /></div>
                       <span className="font-medium text-green-700">Éligible OPCO / France Travail</span>
                    </div>
                 </div>
@@ -140,8 +140,8 @@ export default async function FormationPage({ params }: PageProps) {
                     priority
                   />
                 ) : (
-                   <div className="w-full h-full bg-slate-200 flex items-center justify-center">
-                     <Award className="h-12 w-12 text-slate-400" />
+                   <div className="w-full h-full bg-muted flex items-center justify-center">
+                     <Award className="h-12 w-12 text-muted-foreground" />
                    </div>
                 )}
              </div>
@@ -156,7 +156,7 @@ export default async function FormationPage({ params }: PageProps) {
           <main className="space-y-12">
             
             {/* Sticky Nav */}
-            <nav className="sticky top-16 z-20 bg-white/80 backdrop-blur-md border rounded-full px-4 py-2 shadow-sm overflow-x-auto no-scrollbar">
+            <nav className="sticky top-16 z-20 bg-background/80 backdrop-blur-md border border-border rounded-full px-4 py-2 shadow-sm overflow-x-auto no-scrollbar">
                <ul className="flex items-center gap-1 text-sm font-medium min-w-max">
                  {[
                     { id: "objectifs", label: "Objectifs", show: Boolean(formation.objectives?.length) },
@@ -165,7 +165,7 @@ export default async function FormationPage({ params }: PageProps) {
                     { id: "infos", label: "Infos", show: true },
                  ].filter(x => x.show).map((item) => (
                    <li key={item.id}>
-                     <a href={`#${item.id}`} className="px-4 py-2 rounded-full hover:bg-slate-100 hover:text-[var(--primary)] transition-colors block">
+                     <a href={`#${item.id}`} className="px-4 py-2 rounded-full hover:bg-muted hover:text-[var(--primary)] transition-colors block text-foreground">
                        {item.label}
                      </a>
                    </li>
@@ -174,14 +174,14 @@ export default async function FormationPage({ params }: PageProps) {
             </nav>
 
             {formation.objectives?.length && (
-              <section id="objectifs" className="scroll-mt-32 bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
-                <h2 className="flex items-center gap-3 text-2xl font-bold mb-6">
+              <section id="objectifs" className="scroll-mt-32 bg-card rounded-2xl p-8 border border-border shadow-sm">
+                <h2 className="flex items-center gap-3 text-2xl font-bold mb-6 text-foreground">
                   <Target className="h-6 w-6 text-[var(--brand-orange)]" />
                   Objectifs pédagogiques
                 </h2>
                 <ul className="grid gap-3">
                   {formation.objectives.map((o, i) => (
-                    <li key={i} className="flex items-start gap-3 text-slate-600">
+                    <li key={i} className="flex items-start gap-3 text-muted-foreground">
                       <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                       <span>{o}</span>
                     </li>
@@ -191,22 +191,22 @@ export default async function FormationPage({ params }: PageProps) {
             )}
 
             {formation.program?.length && (
-              <section id="programme" className="scroll-mt-32 bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
-                <h2 className="flex items-center gap-3 text-2xl font-bold mb-6">
+              <section id="programme" className="scroll-mt-32 bg-card rounded-2xl p-8 border border-border shadow-sm">
+                <h2 className="flex items-center gap-3 text-2xl font-bold mb-6 text-foreground">
                   <BookOpen className="h-6 w-6 text-[var(--brand-orange)]" />
                   Programme de la formation
                 </h2>
                 <div className="space-y-4">
                   {formation.program.map((p, i) => (
-                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
-                       <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white border font-bold text-slate-400 text-sm">
+                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-muted/50 border border-border">
+                       <span className="flex h-8 w-8 items-center justify-center rounded-full bg-background border border-border font-bold text-muted-foreground text-sm">
                          {i + 1}
                        </span>
-                       <p className="text-slate-700 font-medium pt-1">{p}</p>
+                       <p className="text-foreground font-medium pt-1">{p}</p>
                     </div>
                   ))}
                 </div>
-                <div className="mt-6 pt-6 border-t border-slate-100">
+                <div className="mt-6 pt-6 border-t border-border">
                   <Button variant="outline" className="gap-2">
                     <Download className="h-4 w-4" /> Télécharger le programme PDF
                   </Button>
@@ -216,41 +216,41 @@ export default async function FormationPage({ params }: PageProps) {
 
             <div className="grid md:grid-cols-2 gap-8">
                {formation.prerequisites?.length && (
-                  <section id="prerequis" className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm scroll-mt-32">
-                    <h2 className="flex items-center gap-2 text-lg font-bold mb-4">
+                  <section id="prerequis" className="bg-card rounded-2xl p-6 border border-border shadow-sm scroll-mt-32">
+                    <h2 className="flex items-center gap-2 text-lg font-bold mb-4 text-foreground">
                       <FileText className="h-5 w-5 text-[var(--brand-orange)]" />
                       Prérequis
                     </h2>
-                    <ul className="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                    <ul className="list-disc pl-5 space-y-2 text-muted-foreground text-sm">
                       {formation.prerequisites.map((p, i) => <li key={i}>{p}</li>)}
                     </ul>
                   </section>
                )}
 
                {formation.audience && (
-                  <section className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
-                    <h2 className="flex items-center gap-2 text-lg font-bold mb-4">
+                  <section className="bg-card rounded-2xl p-6 border border-border shadow-sm">
+                    <h2 className="flex items-center gap-2 text-lg font-bold mb-4 text-foreground">
                       <Users className="h-5 w-5 text-[var(--brand-orange)]" />
                       Public visé
                     </h2>
-                    <p className="text-slate-600 text-sm">{formation.audience}</p>
+                    <p className="text-muted-foreground text-sm">{formation.audience}</p>
                   </section>
                )}
             </div>
 
             {formation.faqs?.length && (
               <section id="faq" className="scroll-mt-32">
-                <h2 className="text-2xl font-bold mb-6">Questions fréquentes</h2>
+                <h2 className="text-2xl font-bold mb-6 text-foreground">Questions fréquentes</h2>
                 <div className="grid gap-4">
                   {formation.faqs.map((f, i) => (
-                    <details key={i} className="group bg-white rounded-xl border border-slate-200 open:border-[var(--brand-orange)] transition-colors">
-                      <summary className="flex cursor-pointer items-center justify-between p-6 font-medium text-slate-900 list-none">
+                    <details key={i} className="group bg-card rounded-xl border border-border open:border-[var(--brand-orange)] transition-colors">
+                      <summary className="flex cursor-pointer items-center justify-between p-6 font-medium text-foreground list-none">
                         {f.q}
-                        <span className="transition group-open:rotate-180">
+                        <span className="transition group-open:rotate-180 text-muted-foreground">
                           <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                         </span>
                       </summary>
-                      <div className="px-6 pb-6 pt-0 text-slate-600 text-sm leading-relaxed">
+                      <div className="px-6 pb-6 pt-0 text-muted-foreground text-sm leading-relaxed">
                         {f.a}
                       </div>
                     </details>
@@ -265,43 +265,43 @@ export default async function FormationPage({ params }: PageProps) {
           <aside className="lg:sticky lg:top-24 lg:h-fit space-y-6">
             
             {/* Booking Box */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/50">
-               <div className="mb-6 pb-6 border-b border-slate-100">
-                 <div className="text-sm text-slate-500 mb-1">Tarif de la formation</div>
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-xl shadow-black/5 dark:shadow-black/20">
+               <div className="mb-6 pb-6 border-b border-border">
+                 <div className="text-sm text-muted-foreground mb-1">Tarif de la formation</div>
                  <div className="flex items-baseline gap-2">
                    <span className="text-3xl font-bold text-[var(--primary)]">
                      {formation.price === "Nous consulter" ? "Sur devis" : formation.price}
                    </span>
                  </div>
                  {formation.financingNotes && (
-                   <div className="mt-2 text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded inline-block">
+                   <div className="mt-2 text-xs bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 px-2 py-1 rounded inline-block">
                      Financement possible
                    </div>
                  )}
                </div>
 
                <div className="space-y-4 mb-6">
-                 <div className="flex items-center gap-3 text-sm text-slate-600">
-                    <MapPin className="h-4 w-4 text-slate-400" />
+                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <MapPin className="h-4 w-4 text-muted-foreground/70" />
                     <span>{formation.location || "Centre SM Academy, Nîmes"}</span>
                  </div>
-                 <div className="flex items-center gap-3 text-sm text-slate-600">
-                    <Calendar className="h-4 w-4 text-slate-400" />
+                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <Calendar className="h-4 w-4 text-muted-foreground/70" />
                     <span>Prochaines sessions : <span className="text-green-600 font-medium">Nous contacter</span></span>
                  </div>
                </div>
 
                <div className="space-y-3">
-                 <h3 className="font-bold text-sm">Intéressé(e) ?</h3>
-                 <p className="text-xs text-slate-500 mb-3">Remplissez le formulaire pour recevoir le programme détaillé et un devis.</p>
+                 <h3 className="font-bold text-sm text-foreground">Intéressé(e) ?</h3>
+                 <p className="text-xs text-muted-foreground mb-3">Remplissez le formulaire pour recevoir le programme détaillé et un devis.</p>
                  <ContactForm context={`Page: ${formation.title}`} />
                </div>
             </div>
 
             {/* Map Box */}
-            <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+            <div className="rounded-2xl overflow-hidden border border-border shadow-sm">
               <MapEmbed query="94 Av. du Dr Fleming Nimes" height={200} />
-              <div className="p-4 bg-white text-xs text-slate-500 flex gap-2 items-center">
+              <div className="p-4 bg-card text-xs text-muted-foreground flex gap-2 items-center">
                 <MapPin className="h-3 w-3" /> 94 Avenue du Docteur Fleming, Nîmes
               </div>
             </div>

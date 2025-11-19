@@ -77,10 +77,10 @@ export async function POST(req: NextRequest) {
   }
 
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
-  const TO = process.env.CONTACT_TO_EMAIL;
+  const TO = "facturations.smt@gmail.com";
   const FROM = process.env.CONTACT_FROM_EMAIL || "no-reply@smacademy.fr";
   const DRY_RUN = process.env.CONTACT_DRY_RUN === "1";
-  if (!RESEND_API_KEY || !TO) {
+  if (!RESEND_API_KEY) {
     if (DRY_RUN) {
       console.log("[contact][dry-run]", JSON.stringify(data));
       return NextResponse.json({ ok: true, dryRun: true });

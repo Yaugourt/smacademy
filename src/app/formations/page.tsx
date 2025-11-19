@@ -39,7 +39,7 @@ export default function FormationsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-background">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -125,8 +125,8 @@ export default function FormationsPage() {
           {/* Main Column: Formations List */}
           <div className="space-y-6">
              <div className="flex items-center justify-between mb-6">
-               <h2 className="text-2xl font-bold text-slate-900">Catalogue {new Date().getFullYear()}</h2>
-               <div className="hidden sm:flex items-center gap-2 text-sm text-slate-500">
+               <h2 className="text-2xl font-bold text-foreground">Catalogue {new Date().getFullYear()}</h2>
+               <div className="hidden sm:flex items-center gap-2 text-sm text-muted-foreground">
                  <Filter className="h-4 w-4" />
                  <span>{formations.length} formations disponibles</span>
                </div>
@@ -141,9 +141,9 @@ export default function FormationsPage() {
 
           {/* Sidebar: Quick Contact & Infos */}
           <aside className="space-y-6 lg:sticky lg:top-24">
-            <div className="bg-white rounded-xl border border-slate-100 shadow-sm p-6">
-              <h3 className="text-lg font-bold mb-4">Besoin d'aide ?</h3>
-              <p className="text-sm text-slate-600 mb-6">
+            <div className="bg-card rounded-xl border border-border shadow-sm p-6">
+              <h3 className="text-lg font-bold mb-4 text-foreground">Besoin d'aide ?</h3>
+              <p className="text-sm text-muted-foreground mb-6">
                 Nos conseillers sont disponibles pour vous orienter vers la bonne formation et monter votre dossier.
               </p>
               <div className="space-y-4">
@@ -171,15 +171,15 @@ export default function FormationsPage() {
       </div>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 bg-white border-t">
+      <section id="contact" className="py-16 bg-background border-t">
         <div className="mx-auto w-full max-w-screen-xl px-4 max-w-4xl">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold mb-4">Un projet de formation ?</h2>
-            <p className="text-slate-600">
+            <h2 className="text-3xl font-bold mb-4 text-foreground">Un projet de formation ?</h2>
+            <p className="text-muted-foreground">
               Laissez-nous vos coordonnées, un conseiller pédagogique vous rappelle sous 24h.
             </p>
           </div>
-          <div className="bg-slate-50 p-6 md:p-8 rounded-2xl border">
+          <div className="bg-muted/30 p-6 md:p-8 rounded-2xl border border-border">
              <ContactForm context="Page Formations" />
           </div>
         </div>
@@ -190,7 +190,7 @@ export default function FormationsPage() {
 
 function FormationCard({ formation, icon }: { formation: any; icon: React.ReactNode }) {
   return (
-    <div className="group flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-all hover:border-[var(--brand-orange)]/30">
+    <div className="group flex flex-col md:flex-row bg-card rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-md transition-all hover:border-[var(--brand-orange)]/30">
       {/* Image */}
       <div className="relative w-full md:w-72 h-56 md:h-auto flex-shrink-0 overflow-hidden">
          {formation.heroImage ? (
@@ -202,12 +202,12 @@ function FormationCard({ formation, icon }: { formation: any; icon: React.ReactN
               sizes="(max-width: 768px) 100vw, 300px"
             />
          ) : (
-           <div className="w-full h-full bg-slate-100 flex items-center justify-center text-slate-300">
+           <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground">
              <HardHat className="h-12 w-12" />
            </div>
          )}
          <div className="absolute top-3 left-3">
-           <Badge className="bg-white/90 text-slate-900 hover:bg-white backdrop-blur-sm shadow-sm">
+           <Badge className="bg-background/90 text-foreground hover:bg-background backdrop-blur-sm shadow-sm">
              {formation.city}
            </Badge>
          </div>
@@ -221,23 +221,23 @@ function FormationCard({ formation, icon }: { formation: any; icon: React.ReactN
             <span>{formation.tags?.[0] || "Formation"}</span>
           </div>
           {formation.duration && (
-            <div className="flex items-center gap-1 text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded">
+            <div className="flex items-center gap-1 text-xs text-muted-foreground bg-muted px-2 py-1 rounded">
               <Clock className="h-3 w-3" /> {formation.duration}
             </div>
           )}
         </div>
 
-        <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-[var(--primary)] transition-colors">
+        <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-[var(--primary)] transition-colors">
           {formation.title}
         </h3>
-        <p className="text-slate-600 text-sm line-clamp-2 mb-4 flex-1">
+        <p className="text-muted-foreground text-sm line-clamp-2 mb-4 flex-1">
           {formation.summary}
         </p>
 
-        <div className="flex items-center justify-between pt-4 border-t border-slate-50 mt-auto">
+        <div className="flex items-center justify-between pt-4 border-t border-border mt-auto">
            <div className="flex flex-col gap-1">
              {formation.price && (
-                <span className="text-xs font-medium text-slate-500">
+                <span className="text-xs font-medium text-muted-foreground">
                    {formation.price === "Nous consulter" ? "Sur devis" : formation.price}
                 </span>
              )}

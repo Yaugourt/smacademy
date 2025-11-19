@@ -46,7 +46,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const readingTime = Math.max(1, Math.round(wordCount / 200));
 
   return (
-    <div className="min-h-screen bg-slate-50 pb-12">
+    <div className="min-h-screen bg-background pb-12">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -73,12 +73,12 @@ export default async function BlogPostPage({ params }: PageProps) {
       />
 
       {/* Article Header */}
-      <div className="bg-white border-b">
+      <div className="bg-card border-b border-border">
         <div className="mx-auto w-full max-w-screen-xl px-4 py-8 md:py-12 max-w-4xl">
            <Breadcrumbs items={[{ href: "/", label: "Accueil" }, { href: "/blog", label: "Blog" }, { label: post.title }]} />
            
            <div className="mt-8 space-y-6 text-center">
-              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-slate-500">
+              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
                  {post.category && (
                     <Badge variant="secondary" className="bg-[var(--brand-orange)]/10 text-[var(--brand-orange)] hover:bg-[var(--brand-orange)]/20 border-0 font-medium">
                        {post.category}
@@ -88,17 +88,17 @@ export default async function BlogPostPage({ params }: PageProps) {
                  <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> {readingTime} min de lecture</span>
               </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight">
                  {post.title}
               </h1>
 
-              <p className="text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                  {post.excerpt}
               </p>
               
               <div className="flex items-center justify-center gap-3 pt-2">
-                 <div className="flex items-center gap-2 text-sm font-medium text-slate-900 bg-slate-100 pr-4 pl-2 py-1.5 rounded-full">
-                    <div className="h-8 w-8 rounded-full bg-white border flex items-center justify-center text-[var(--primary)]">
+                 <div className="flex items-center gap-2 text-sm font-medium text-foreground bg-muted pr-4 pl-2 py-1.5 rounded-full">
+                    <div className="h-8 w-8 rounded-full bg-background border border-border flex items-center justify-center text-[var(--primary)]">
                        <User className="h-4 w-4" />
                     </div>
                     {post.author || "SM Academy"}
@@ -111,7 +111,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {/* Featured Image */}
       {post.coverImage && (
         <div className="mx-auto w-full max-w-screen-xl px-4 max-w-5xl -mt-8 relative z-10">
-           <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+           <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl border-4 border-background bg-muted">
               <Image
                  src={post.coverImage}
                  alt={post.title}
@@ -129,23 +129,23 @@ export default async function BlogPostPage({ params }: PageProps) {
             {/* Main Content */}
             <article className="min-w-0">
                <div 
-                 className="prose prose-lg prose-slate max-w-none 
-                 prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-slate-900 
+                 className="prose prose-lg prose-slate dark:prose-invert max-w-none 
+                 prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground 
                  prose-a:text-[var(--brand-orange)] prose-a:no-underline hover:prose-a:underline
-                 prose-img:rounded-xl prose-img:shadow-md"
+                 prose-img:rounded-xl prose-img:shadow-md prose-p:text-muted-foreground prose-li:text-muted-foreground"
                  dangerouslySetInnerHTML={{ __html: post.contentHtml }} 
                />
 
                {/* Tags */}
                {post.tags && post.tags.length > 0 && (
-                  <div className="mt-12 pt-8 border-t border-slate-200">
-                     <div className="flex items-center gap-2 mb-4 text-sm font-bold text-slate-900">
+                  <div className="mt-12 pt-8 border-t border-border">
+                     <div className="flex items-center gap-2 mb-4 text-sm font-bold text-foreground">
                         <Tag className="h-4 w-4" /> Sujets abordés :
                      </div>
                      <div className="flex flex-wrap gap-2">
                         {post.tags.map(tag => (
                            <Link key={tag} href={`/blog/tag/${encodeURIComponent(tag)}`}>
-                              <Badge variant="outline" className="hover:border-[var(--brand-orange)] hover:text-[var(--brand-orange)] cursor-pointer py-1.5 px-3 text-sm font-normal text-slate-600">
+                              <Badge variant="outline" className="hover:border-[var(--brand-orange)] hover:text-[var(--brand-orange)] cursor-pointer py-1.5 px-3 text-sm font-normal text-muted-foreground">
                                  #{tag}
                               </Badge>
                            </Link>
@@ -155,11 +155,11 @@ export default async function BlogPostPage({ params }: PageProps) {
                )}
 
                {/* CTA Share */}
-               <div className="mt-12 bg-slate-100 rounded-2xl p-8 text-center">
-                  <h3 className="font-bold text-lg mb-2">Vous avez aimé cet article ?</h3>
-                  <p className="text-slate-600 mb-6 text-sm">Partagez-le avec votre réseau ou découvrez nos formations liées.</p>
+               <div className="mt-12 bg-muted/50 rounded-2xl p-8 text-center border border-border">
+                  <h3 className="font-bold text-lg mb-2 text-foreground">Vous avez aimé cet article ?</h3>
+                  <p className="text-muted-foreground mb-6 text-sm">Partagez-le avec votre réseau ou découvrez nos formations liées.</p>
                   <div className="flex justify-center gap-4">
-                     <Button variant="outline" className="gap-2 bg-white">
+                     <Button variant="outline" className="gap-2 bg-card hover:bg-muted">
                         <Share2 className="h-4 w-4" /> Partager
                      </Button>
                      <Button className="gap-2 bg-[var(--brand-orange)] hover:bg-[var(--brand-orange-600)] text-white">
@@ -191,14 +191,14 @@ export default async function BlogPostPage({ params }: PageProps) {
 
                {/* Related Posts */}
                {related.length > 0 && (
-                  <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
-                     <h3 className="font-bold text-slate-900 mb-4">Articles similaires</h3>
+                  <div className="bg-card rounded-xl border border-border p-6 shadow-sm">
+                     <h3 className="font-bold text-foreground mb-4">Articles similaires</h3>
                      <ul className="space-y-4">
                         {related.map((r) => (
                            <li key={r.slug} className="group">
                               <Link href={`/blog/${r.slug}`} className="block">
-                                 <div className="text-xs text-slate-500 mb-1">{new Date(r.date).toLocaleDateString("fr-FR")}</div>
-                                 <div className="font-semibold text-slate-800 group-hover:text-[var(--brand-orange)] transition-colors line-clamp-2">
+                                 <div className="text-xs text-muted-foreground mb-1">{new Date(r.date).toLocaleDateString("fr-FR")}</div>
+                                 <div className="font-semibold text-foreground group-hover:text-[var(--brand-orange)] transition-colors line-clamp-2">
                                     {r.title}
                                  </div>
                               </Link>
@@ -214,7 +214,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       
       {/* Back to Blog */}
       <div className="mx-auto w-full max-w-screen-xl px-4 pb-12">
-         <Button variant="ghost" asChild className="hover:bg-slate-100 text-slate-600">
+         <Button variant="ghost" asChild className="hover:bg-muted text-muted-foreground">
             <Link href="/blog">
                <ArrowLeft className="mr-2 h-4 w-4" /> Retour au blog
             </Link>

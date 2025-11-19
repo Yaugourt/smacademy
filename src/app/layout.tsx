@@ -7,6 +7,7 @@ import FloatingBar from "@/components/site/FloatingBar";
 import BackToTop from "@/components/site/BackToTop";
 import { reviewsSummary } from "@/data/reviews";
 import CookieBanner from "@/components/site/CookieBanner";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,11 +47,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <script
-          type="application/ld+json"
-          suppressHydrationWarning
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <script
+            type="application/ld+json"
+            suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -128,11 +130,12 @@ export default function RootLayout({
           }}
         />
         <Header />
-        <main className="min-h-[60vh] pb-24 md:pb-0">{children}</main>
-        <Footer />
-        <FloatingBar />
-        <BackToTop />
-        <CookieBanner />
+          <main className="min-h-[60vh] pb-24 md:pb-0">{children}</main>
+          <Footer />
+          <FloatingBar />
+          <BackToTop />
+          <CookieBanner />
+        </ThemeProvider>
       </body>
     </html>
   );

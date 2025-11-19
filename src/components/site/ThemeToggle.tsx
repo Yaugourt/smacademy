@@ -1,34 +1,39 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Sun, Moon } from "lucide-react";
+import * as React from "react";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 export default function ThemeToggle() {
-  const [dark, setDark] = useState<boolean | null>(null);
+  const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
 
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    const isDark = saved ? saved === "dark" : document.documentElement.classList.contains("dark");
-    setDark(isDark);
-    document.documentElement.classList.toggle("dark", isDark);
+  React.useEffect(() => {
+    setMounted(true);
   }, []);
 
-  function toggle() {
-    const next = !dark;
-    setDark(next);
-    document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem("theme", next ? "dark" : "light");
+  if (!mounted) {
+    return (
+      <button
+        className="inline-flex h-8 w-8 items-center justify-center rounded-full border text-sm transition-colors hover:bg-accent"
+        aria-label="Toggle theme"
+      >
+        <span className="h-4 w-4" />
+      </button>
+    );
   }
 
   return (
     <button
       aria-label="Basculer le thème"
-      onClick={toggle}
-      className="inline-flex h-8 w-8 items-center justify-center rounded-full border text-sm transition-colors hover:bg-accent"
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      className="inline-flex h-8 w-8 items-center justify-center rounded-full border text-sm transition-colors hover:bg-accent hover:text-[var(--brand-orange)]"
     >
-      {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+      {theme === "dark" ? (
+        <Sun className="h-4 w-4" />
+      ) : (
+        <Moon className="h-4 w-4" />
+      )}
     </button>
   );
 }
-
-

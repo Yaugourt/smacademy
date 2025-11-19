@@ -44,6 +44,7 @@
 }
 
 :root {
+  color-scheme: light dark;
   --radius: 0.625rem;
   --background: #ffffff;
   --foreground: #324A6D;

@@ -22,7 +22,7 @@ export default function BlogIndex() {
   const others = sorted.slice(1);
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-background">
       {/* Blog Header */}
       <section className="bg-[var(--primary)] text-white py-16 relative overflow-hidden">
          <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
@@ -38,7 +38,7 @@ export default function BlogIndex() {
          {/* Featured Post */}
          {featured && (
            <Link href={`/blog/${featured.slug}`} className="group block mb-12 relative z-20">
-             <div className="grid md:grid-cols-[1.2fr_1fr] bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 transition-transform hover:-translate-y-1">
+             <div className="grid md:grid-cols-[1.2fr_1fr] bg-card rounded-2xl overflow-hidden shadow-lg border border-border transition-transform hover:-translate-y-1">
                 <div className="relative h-64 md:h-auto overflow-hidden">
                    <Image
                       src={featured.coverImage || "/blog-placeholder.jpg"}
@@ -54,15 +54,15 @@ export default function BlogIndex() {
                    </div>
                 </div>
                 <div className="p-8 md:p-10 flex flex-col justify-center">
-                   <div className="flex items-center gap-3 text-sm text-slate-500 mb-4">
+                   <div className="flex items-center gap-3 text-sm text-muted-foreground mb-4">
                       <span className="flex items-center gap-1"><CalendarDays className="h-4 w-4" /> {new Date(featured.date).toLocaleDateString("fr-FR", { dateStyle: "long" })}</span>
                       <span className="w-1 h-1 rounded-full bg-slate-300" />
                       <span className="text-[var(--brand-orange)] font-medium uppercase tracking-wider text-xs">{featured.category || "Actualité"}</span>
                    </div>
-                   <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 group-hover:text-[var(--primary)] transition-colors">
+                   <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-[var(--primary)] transition-colors">
                       {featured.title}
                    </h2>
-                   <p className="text-slate-600 mb-6 line-clamp-3 text-lg">
+                   <p className="text-muted-foreground mb-6 line-clamp-3 text-lg">
                       {featured.excerpt}
                    </p>
                    <div className="mt-auto flex items-center font-bold text-[var(--primary)]">
@@ -77,7 +77,7 @@ export default function BlogIndex() {
             {/* Main Grid */}
             <div>
                <div className="flex items-center justify-between mb-8">
-                  <h2 className="text-2xl font-bold flex items-center gap-2">
+                  <h2 className="text-2xl font-bold flex items-center gap-2 text-foreground">
                     <BookOpen className="h-6 w-6 text-[var(--brand-orange)]" />
                     Articles récents
                   </h2>
@@ -88,7 +88,7 @@ export default function BlogIndex() {
                      const wordCount = p.contentHtml.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length;
                      const reading = Math.max(1, Math.round(wordCount / 200));
                      return (
-                        <article key={p.slug} className="group flex flex-col bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                        <article key={p.slug} className="group flex flex-col bg-card rounded-xl overflow-hidden border border-border shadow-sm hover:shadow-md transition-all">
                            <Link href={`/blog/${p.slug}`} className="relative h-48 overflow-hidden">
                               <Image
                                  src={p.coverImage || "/blog-placeholder.jpg"}
@@ -98,23 +98,23 @@ export default function BlogIndex() {
                                  sizes="(min-width: 768px) 50vw, 100vw"
                               />
                               <div className="absolute top-3 right-3">
-                                 <Badge variant="secondary" className="bg-white/90 backdrop-blur-sm text-slate-800 shadow-sm">
+                                 <Badge variant="secondary" className="bg-background/90 backdrop-blur-sm text-foreground shadow-sm">
                                     {p.category}
                                  </Badge>
                               </div>
                            </Link>
                            
                            <div className="p-6 flex flex-col flex-1">
-                              <div className="flex items-center gap-3 text-xs text-slate-500 mb-3">
+                              <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
                                  <span className="flex items-center gap-1"><CalendarDays className="h-3 w-3" /> {new Date(p.date).toLocaleDateString("fr-FR")}</span>
                                  <span className="flex items-center gap-1"><Clock className="h-3 w-3" /> {reading} min</span>
                               </div>
                               
-                              <h3 className="text-xl font-bold text-slate-900 mb-2 line-clamp-2 group-hover:text-[var(--primary)] transition-colors">
+                              <h3 className="text-xl font-bold text-foreground mb-2 line-clamp-2 group-hover:text-[var(--primary)] transition-colors">
                                  <Link href={`/blog/${p.slug}`}>{p.title}</Link>
                               </h3>
                               
-                              <p className="text-slate-600 text-sm line-clamp-3 mb-4 flex-1">
+                              <p className="text-muted-foreground text-sm line-clamp-3 mb-4 flex-1">
                                  {p.excerpt}
                               </p>
                               
@@ -131,25 +131,25 @@ export default function BlogIndex() {
             {/* Sidebar */}
             <aside className="space-y-8">
                {/* Search Widget (Visual only for now) */}
-               <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                  <h3 className="font-bold mb-4 text-slate-900">Rechercher</h3>
+               <div className="bg-card p-6 rounded-xl border border-border shadow-sm">
+                  <h3 className="font-bold mb-4 text-foreground">Rechercher</h3>
                   <div className="relative">
-                     <Search className="absolute left-3 top-3 h-4 w-4 text-slate-400" />
-                     <Input placeholder="Mots-clés..." className="pl-9 bg-slate-50" />
+                     <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                     <Input placeholder="Mots-clés..." className="pl-9 bg-muted/50" />
                   </div>
                </div>
 
                {/* Categories Widget */}
-               <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                  <h3 className="font-bold mb-4 text-slate-900 flex items-center gap-2">
+               <div className="bg-card p-6 rounded-xl border border-border shadow-sm">
+                  <h3 className="font-bold mb-4 text-foreground flex items-center gap-2">
                     <Filter className="h-4 w-4" /> Catégories
                   </h3>
                   <ul className="space-y-2">
                      {categories.map((c) => (
                         <li key={c}>
-                           <Link href={`/blog/categorie/${encodeURIComponent(c)}`} className="flex items-center justify-between text-sm text-slate-600 hover:text-[var(--brand-orange)] hover:bg-slate-50 p-2 rounded-lg transition-colors">
+                           <Link href={`/blog/categorie/${encodeURIComponent(c)}`} className="flex items-center justify-between text-sm text-muted-foreground hover:text-[var(--brand-orange)] hover:bg-muted/50 p-2 rounded-lg transition-colors">
                               <span>{c}</span>
-                              <span className="bg-slate-100 text-slate-500 text-xs py-0.5 px-2 rounded-full">
+                              <span className="bg-muted text-muted-foreground text-xs py-0.5 px-2 rounded-full">
                                  {posts.filter(p => p.category === c).length}
                               </span>
                            </Link>
@@ -159,14 +159,14 @@ export default function BlogIndex() {
                </div>
 
                {/* Tags Cloud */}
-               <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                  <h3 className="font-bold mb-4 text-slate-900 flex items-center gap-2">
+               <div className="bg-card p-6 rounded-xl border border-border shadow-sm">
+                  <h3 className="font-bold mb-4 text-foreground flex items-center gap-2">
                     <Tag className="h-4 w-4" /> Mots-clés populaires
                   </h3>
                   <div className="flex flex-wrap gap-2">
                      {tags.map((t) => (
                         <Link key={t} href={`/blog/tag/${encodeURIComponent(t)}`}>
-                           <Badge variant="outline" className="hover:bg-[var(--brand-orange)] hover:text-white hover:border-[var(--brand-orange)] transition-colors cursor-pointer font-normal text-slate-600">
+                           <Badge variant="outline" className="hover:bg-[var(--brand-orange)] hover:text-white hover:border-[var(--brand-orange)] transition-colors cursor-pointer font-normal text-muted-foreground">
                               {t}
                            </Badge>
                         </Link>
