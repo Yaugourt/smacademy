@@ -61,7 +61,7 @@ export default function FormationsPage() {
       <section className="relative bg-[var(--primary)] text-white overflow-hidden">
         <div className="absolute inset-0">
            <Image
-             src="https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg" 
+             src="https://smacademy.fr/wp-content/uploads/2024/08/FullSizeR1-1.jpg" 
              alt="Formations SM Academy"
              fill
              className="object-cover opacity-10 mix-blend-overlay"
@@ -99,18 +99,18 @@ export default function FormationsPage() {
              <div className="hidden lg:grid grid-cols-2 gap-4 opacity-80">
                 <div className="space-y-4 mt-12">
                    <div className="relative h-40 rounded-2xl overflow-hidden shadow-lg transform rotate-[-2deg] border-2 border-white/20">
-                     <Image src="https://smacademy.fr/wp-content/uploads/2024/08/irvee.jpg" alt="Formation IRVE" fill className="object-cover" />
+                     <Image src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_1324.png" alt="Formation IRVE" fill className="object-cover" />
                    </div>
                    <div className="relative h-32 rounded-2xl overflow-hidden shadow-lg transform rotate-[1deg] translate-x-4 border-2 border-white/20">
-                     <Image src="https://smacademy.fr/wp-content/uploads/2024/08/gg.jpg" alt="Formation Gestes et Postures" fill className="object-cover" />
+                     <Image src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_0212-scaled.jpg" alt="Formation Gestes et Postures" fill className="object-cover" />
                    </div>
                 </div>
                 <div className="space-y-4">
                    <div className="relative h-32 rounded-2xl overflow-hidden shadow-lg transform rotate-[3deg] translate-y-4 border-2 border-white/20">
-                     <Image src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_0212-1024x768.jpg" alt="Formation Formateur" fill className="object-cover" />
+                     <Image src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_1326.jpg" alt="Formation Formateur" fill className="object-cover" />
                    </div>
                    <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg transform rotate-[-1deg] border-2 border-white/20">
-                     <Image src="https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg" alt="Formation Fibre" fill className="object-cover" />
+                     <Image src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_1325-e1740574444704.png" alt="Formation Fibre" fill className="object-cover" />
                    </div>
                 </div>
              </div>

@@ -96,7 +96,7 @@ export default function Home() {
             <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
               <div className="relative aspect-square lg:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
                  <Image
-                  src="https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg"
+                  src="https://smacademy.fr/wp-content/uploads/2025/02/IMG_3091-scaled-e1740573209118.jpg"
                   alt="Formation SM Academy"
                   fill
                   className="object-cover"
@@ -241,7 +241,7 @@ export default function Home() {
                <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-4 mt-8">
                     <div className="rounded-2xl overflow-hidden shadow-lg">
-                      <Image src="https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg" width={400} height={500} alt="Formation technique" className="w-full h-auto object-cover" />
+                      <Image src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_1326.jpg" width={400} height={500} alt="Formation technique" className="w-full h-auto object-cover" />
                     </div>
                     <div className="bg-[var(--primary)] p-6 rounded-2xl text-white text-center">
                       <div className="text-3xl font-bold mb-1">OPCO</div>
@@ -254,7 +254,7 @@ export default function Home() {
                       <div className="text-sm text-slate-600">Accompagnement administratif</div>
                     </div>
                     <div className="rounded-2xl overflow-hidden shadow-lg">
-                      <Image src="https://smacademy.fr/wp-content/uploads/2024/08/irvee.jpg" width={400} height={500} alt="Formation IRVE" className="w-full h-auto object-cover" />
+                      <Image src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_1325-e1740574444704.png" width={400} height={500} alt="Formation IRVE" className="w-full h-auto object-cover" />
                     </div>
                   </div>
                </div>
