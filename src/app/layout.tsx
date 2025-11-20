@@ -8,6 +8,7 @@ import BackToTop from "@/components/site/BackToTop";
 import { reviewsSummary } from "@/data/reviews";
 import CookieBanner from "@/components/site/CookieBanner";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -129,6 +130,7 @@ export default function RootLayout({
             }),
           }}
         />
+        <Analytics/>
         <Header />
           <main className="min-h-[60vh] pb-24 md:pb-0">{children}</main>
           <Footer />
