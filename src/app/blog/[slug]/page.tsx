@@ -128,14 +128,14 @@ export default async function BlogPostPage({ params }: PageProps) {
             
             {/* Main Content */}
             <article className="min-w-0">
-              <div className="bg-card border border-border rounded-3xl px-5 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12 shadow-sm">
+              <div className="bg-card border border-border rounded-[32px] px-5 py-8 sm:px-10 sm:py-12 lg:px-14 lg:py-14 shadow-sm">
                 <div
-                  className="prose prose-lg lg:prose-xl prose-slate dark:prose-invert max-w-none
-                  prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground prose-headings:mb-4
+                  className="prose prose-lg lg:prose-xl prose-slate dark:prose-invert max-w-3xl mx-auto
+                  prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground prose-headings:mb-5 lg:prose-headings:mb-6
                   prose-a:text-[var(--brand-orange)] prose-a:no-underline hover:prose-a:underline
                   prose-img:rounded-xl prose-img:shadow-md
-                  prose-p:text-muted-foreground prose-p:leading-relaxed lg:prose-p:leading-loose prose-p:mb-5
-                  prose-li:text-muted-foreground prose-li:leading-relaxed"
+                  prose-p:text-muted-foreground prose-p:leading-8 lg:prose-p:leading-9 prose-p:mb-6 lg:prose-p:mb-7
+                  prose-li:text-muted-foreground prose-li:leading-8"
                   dangerouslySetInnerHTML={{ __html: post.contentHtml }}
                 />
 
