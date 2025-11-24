@@ -10,7 +10,7 @@ import { MapPin, CheckCircle2, ArrowRight, Star } from "lucide-react";
 export const metadata: Metadata = {
   title: "Centre de formation à Nîmes (Gard) | SM Academy",
   description:
-    "SM Academy – centre de formation Qualiopi à Nîmes. SST, IRVE, Fibre optique D3, Gestes & Postures, Excel, Formateur. Sessions courtes, finançables OPCO / Entreprise.",
+    "SM Academy – centre de formation Qualiopi à Nîmes. Habilitations électriques, AIPR, SST, IRVE, Fibre optique D3, Gestes & Postures, Excel, Formateur. Sessions courtes, finançables OPCO / Entreprise.",
   alternates: { canonical: "/nimes" },
 };
 

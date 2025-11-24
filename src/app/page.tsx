@@ -40,6 +40,7 @@ export default function Home() {
     "fibre-optique-d3": <Cable className="h-5 w-5 text-[var(--brand-orange)]" />,
     sst: <HeartPulse className="h-5 w-5 text-[var(--brand-orange)]" />,
     irve: <Zap className="h-5 w-5 text-[var(--brand-orange)]" />,
+    "aipr-encadrement-operateur": <HardHat className="h-5 w-5 text-[var(--brand-orange)]" />,
     formateur: <GraduationCap className="h-5 w-5 text-[var(--brand-orange)]" />,
     "gestes-et-postures": <Dumbbell className="h-5 w-5 text-[var(--brand-orange)]" />,
     "pack-office": <FlaskConical className="h-5 w-5 text-[var(--brand-orange)]" />,
@@ -61,7 +62,7 @@ export default function Home() {
                   Boostez votre carrière avec nos <span className="text-[var(--primary)]">formations certifiantes</span>
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl leading-relaxed">
-                  Des formations courtes et opérationnelles : Fibre Optique, IRVE, SST, et plus. 
+                  Des formations courtes et opérationnelles : IRVE, habilitations électriques, AIPR, Fibre Optique, SST, et plus.
                   Basés à Nîmes, nous accompagnons les professionnels et les particuliers dans tout le Gard (30).
                   Financez votre avenir via OPCO / France Travail.
                 </p>

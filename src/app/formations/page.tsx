@@ -33,6 +33,7 @@ export default function FormationsPage() {
     "fibre-optique-d3": <Cable className="h-5 w-5" />,
     sst: <HeartPulse className="h-5 w-5" />,
     irve: <Zap className="h-5 w-5" />,
+    "aipr-encadrement-operateur": <HardHat className="h-5 w-5" />,
     formateur: <GraduationCap className="h-5 w-5" />,
     "gestes-et-postures": <Dumbbell className="h-5 w-5" />,
     "pack-office": <FlaskConical className="h-5 w-5" />,

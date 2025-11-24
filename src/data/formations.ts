@@ -48,6 +48,49 @@ export const formations: Formation[] = [
     ],
   },
   {
+    slug: "aipr-encadrement-operateur",
+    title: "AIPR – Encadrant & Opérateur",
+    city: "Nîmes (Gard)",
+    summary:
+      "Formation AIPR à Nîmes (Gard): préparer et réussir l'Autorisation d'Intervention à Proximité des Réseaux pour encadrants et opérateurs (VRD, TP, réseaux). Parcours court avec entraînement aux QCM officiels.",
+    tags: ["AIPR", "Réseaux"],
+    heroImage: "https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg",
+    duration: "1 à 2 jours",
+    price: "Nous consulter",
+    location: "Centre SM Academy (Nîmes) ou sur site dans le Gard",
+    certification: "Préparation à l'autorisation AIPR (encadrant / opérateur)",
+    audience:
+      "Conducteurs de travaux, chefs de chantier, encadrants de proximité et opérateurs intervenant à proximité des réseaux (VRD, travaux publics, paysagistes, entreprises de réseaux).",
+    objectives: [
+      "Comprendre le cadre réglementaire anti-endommagement et les responsabilités des intervenants",
+      "Lire les plans de réseaux et repérer les marquages au sol",
+      "Identifier les risques principaux lors des travaux à proximité des réseaux",
+      "Se préparer efficacement au QCM AIPR (encadrant ou opérateur)",
+    ],
+    prerequisites: [
+      "Expérience dans les travaux à proximité de réseaux recommandée",
+      "Compréhension écrite du français suffisante pour les QCM",
+    ],
+    program: [
+      "Réglementation anti-endommagement (DT-DICT, rôles des acteurs, obligations AIPR)",
+      "Lecture de plans et repérage des réseaux sur le terrain",
+      "Analyse de situations à risque, bonnes pratiques de prévention",
+      "Entraînement au QCM AIPR encadrant / opérateur sur plateforme dédiée",
+    ],
+    financingNotes:
+      "Formation AIPR finançable selon les cas via OPCO, France Travail ou financement direct entreprise. Nous vous accompagnons dans le montage du dossier.",
+    faqs: [
+      {
+        q: "La certification AIPR est-elle délivrée par SM Academy ?",
+        a: "Non, SM Academy prépare au QCM AIPR officiel. L'autorisation AIPR est ensuite délivrée par l'employeur sur la base du résultat au QCM et du dossier du salarié.",
+      },
+      {
+        q: "Quel profil peut suivre cette formation ?",
+        a: "Encadrants, chefs de chantier, conducteurs de travaux et opérateurs intervenant à proximité des réseaux (VRD, TP, paysagistes, entreprises de réseaux, etc.).",
+      },
+    ],
+  },
+  {
     slug: "irve",
     title: "IRVE – Installation de bornes de recharge",
     city: "Nîmes (Gard)",

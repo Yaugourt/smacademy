@@ -9,7 +9,7 @@ import { MapPin, CheckCircle2, ArrowRight, Building2, Globe2, Phone } from "luci
 export const metadata: Metadata = {
   title: "Centre de formation dans le Gard (30) | SM Academy",
   description:
-    "SM Academy, centre de formation Qualiopi basé à Nîmes, accompagne les entreprises et stagiaires dans tout le Gard (Alès, Bagnols-sur-Cèze, Beaucaire...). Formations IRVE, SST, Fibre optique, Gestes & Postures, bureautique et plus.",
+    "SM Academy, centre de formation Qualiopi basé à Nîmes, accompagne les entreprises et stagiaires dans tout le Gard (Alès, Bagnols-sur-Cèze, Beaucaire...). Formations IRVE, habilitations électriques, AIPR, SST, Fibre optique, Gestes & Postures, bureautique et plus.",
   alternates: { canonical: "/gard" },
 };
 

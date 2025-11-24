@@ -192,29 +192,115 @@ export const posts: Post[] = [
   },
   {
     slug: "habilitation-electrique-niveaux-et-bonnes-pratiques",
-    title: "Habilitation électrique: niveaux, rôles et bonnes pratiques",
+    title: "Habilitation électrique: niveaux, rôles et bonnes pratiques à Nîmes (Gard)",
     excerpt:
-      "Comprendre les symboles d'habilitation (H0/B0/BS/BE/B1/B2/BC/HC), les situations de travail et les réflexes sécurité.",
+      "Comprendre les symboles d'habilitation (H0/B0/BS/BE/B1/B2/BC/HC), les situations de travail et les réflexes sécurité pour vos équipes dans le Gard.",
     date: new Date(Date.now() - 3 * 86400000).toISOString(),
     coverImage: "/file.svg",
     category: "Électricité",
-    tags: ["Habilitation", "Sécurité", "Électricité"],
+    tags: ["Habilitation", "Sécurité", "Électricité", "Gard", "Nîmes"],
     author: "SM Academy",
     contentHtml: `
-      <p>L'habilitation électrique atteste de la capacité d'une personne à accomplir des tâches électriques en sécurité. Elle s'appuie sur l'évaluation des connaissances et des savoir-faire adaptés au poste.</p>
-      <h3>Lire les symboles</h3>
+      <p>
+        L&apos;<strong>habilitation électrique</strong> atteste de la capacité d&apos;une personne à accomplir des tâches électriques en sécurité.
+        Elle s&apos;appuie sur l&apos;évaluation des connaissances et des savoir-faire adaptés au poste et aux installations.
+        Pour les entreprises de Nîmes et du Gard, c&apos;est un enjeu à la fois réglementaire et opérationnel.
+      </p>
+
+      <h3>1. Lire les symboles d&apos;habilitation</h3>
       <ul>
-        <li><strong>H0/H0V</strong>: non électricien en haute tension (voisinage).</li>
-        <li><strong>B0/BS/BE</strong>: interventions élémentaires ou spécifiques en basse tension.</li>
-        <li><strong>B1/B2/B1V/B2V/BC</strong>: travaux d'ordre électrique en BT (exécution, consignation).</li>
-        <li><strong>HC</strong>: consignation en HT.</li>
+        <li><strong>H0/H0V</strong>&nbsp;: non électricien en haute tension (voisinage).</li>
+        <li><strong>B0/BS/BE</strong>&nbsp;: interventions élémentaires ou spécifiques en basse tension.</li>
+        <li><strong>B1/B2/B1V/B2V/BC</strong>&nbsp;: travaux d&apos;ordre électrique en BT (exécution, consignation).</li>
+        <li><strong>HC</strong>&nbsp;: consignation en HT.</li>
       </ul>
-      <p>Le recyclage périodique et la pratique sont essentiels pour maintenir le niveau de sécurité.</p>
+
+      <h3>2. Obligations pour l&apos;employeur</h3>
+      <p>
+        L&apos;employeur doit s&apos;assurer que tout salarié intervenant sur ou à proximité d&apos;installations électriques possède
+        une <strong>habilitation adaptée à son poste</strong>. En pratique, cela passe par&nbsp;:
+      </p>
+      <ul>
+        <li>l&apos;analyse des postes et des situations de travail concernées ;</li>
+        <li>la définition du niveau d&apos;habilitation cible (H0/B0/BS/BE/B1/B2/BC…) ;</li>
+        <li>la mise en place de <strong>formations habilitation électrique</strong> initiales et de recyclage ;</li>
+        <li>la formalisation de l&apos;habilitation via un titre signé par l&apos;employeur.</li>
+      </ul>
+
+      <h3>3. Recyclage et maintien des compétences</h3>
+      <p>
+        Le recyclage périodique (souvent tous les 3 ans) et la pratique sont essentiels pour maintenir le niveau de sécurité.
+        C&apos;est aussi l&apos;occasion de réactualiser les connaissances vis-à-vis des normes, des procédures internes et des retours d&apos;expérience.
+      </p>
+
+      <h3>4. Se former à l&apos;habilitation électrique à Nîmes (Gard)</h3>
       <p>
         SM Academy propose des parcours d&apos;<strong>habilitation électrique</strong> adaptés aux postes de travail, notamment pour les
-        entreprises du Gard (industrie, tertiaire, collectivités). Pour organiser une session à Nîmes ou sur vos sites,
-        consultez notre page dédiée au
-        <a href="/gard"> département du Gard</a>.
+        entreprises du Gard (industrie, tertiaire, collectivités). Les sessions peuvent être organisées en inter dans notre
+        centre de Nîmes ou en intra directement sur vos sites.
+      </p>
+      <p>
+        Pour avoir une vue d&apos;ensemble de nos dispositifs réglementaires (SST, habilitations, AIPR, etc.), vous pouvez consulter&nbsp;:
+      </p>
+      <ul>
+        <li>la page <a href="/gard">centre de formation dans le Gard</a> pour nos interventions dans le département ;</li>
+        <li>le <a href="/formations">catalogue des formations</a> pour découvrir les autres modules complémentaires (IRVE, AIPR, SST…).</li>
+      </ul>
+    `,
+  },
+  {
+    slug: "aipr-nimes-gard-encadrant-operateur",
+    title: "AIPR à Nîmes (Gard): bien préparer vos encadrants et opérateurs",
+    excerpt:
+      "Pourquoi et comment former vos équipes à l'AIPR à Nîmes et dans le Gard: obligations, profils concernés et préparation efficace au QCM.",
+    date: new Date(Date.now() - 3.5 * 86400000).toISOString(),
+    coverImage: "/window.svg",
+    category: "Prévention",
+    tags: ["AIPR", "Réseaux", "Gard", "Nîmes"],
+    author: "SM Academy",
+    contentHtml: `
+      <p>
+        L&apos;<strong>AIPR (Autorisation d&apos;Intervention à Proximité des Réseaux)</strong> est devenue incontournable pour les entreprises
+        de travaux publics, VRD, paysagistes ou encore les exploitants de réseaux. Sans collaborateurs habilités, certains chantiers
+        ne peuvent tout simplement pas démarrer.
+      </p>
+
+      <h3>1. Rappels sur l&apos;obligation AIPR</h3>
+      <p>
+        La réglementation anti-endommagement impose que les intervenants à proximité des réseaux soient titulaires d&apos;une AIPR
+        adaptée à leur rôle (concepteur, encadrant, opérateur). En cas d&apos;incident sur un réseau (coupure, fuite, dommage),
+        l&apos;entreprise doit être en mesure de prouver que ses équipes étaient correctement formées et autorisées.
+      </p>
+
+      <h3>2. Quels profils viser en priorité ?</h3>
+      <ul>
+        <li><strong>AIPR Encadrant</strong>&nbsp;: conducteurs de travaux, chefs de chantier, responsables d&apos;équipe.</li>
+        <li><strong>AIPR Opérateur</strong>&nbsp;: conducteurs d&apos;engins, suiveurs, ouvriers intervenant à proximité immédiate des réseaux.</li>
+      </ul>
+      <p>
+        Dans le <strong>Gard</strong>, cela concerne autant les entreprises de VRD et TP que les collectivités, syndicats de réseaux
+        ou prestataires intervenant sur l&apos;espace public.
+      </p>
+
+      <h3>3. Préparer le QCM AIPR à Nîmes</h3>
+      <p>
+        La formation AIPR proposée par SM Academy à Nîmes combine rappels réglementaires, analyse de plans et entraînement
+        ciblé au QCM officiel. L&apos;objectif est que le stagiaire arrive serein le jour du test et comprenne les enjeux derrière chaque question.
+      </p>
+
+      <h3>4. Comment organiser vos sessions dans le Gard ?</h3>
+      <p>
+        Nous accompagnons les entreprises du Gard pour planifier des sessions AIPR&nbsp;:
+      </p>
+      <ul>
+        <li>en inter-entreprises dans notre centre de Nîmes, pour 1 à quelques stagiaires ;</li>
+        <li>en intra sur vos sites (Alès, Bagnols-sur-Cèze, Beaucaire, etc.) lorsque vous avez plusieurs collaborateurs à former.</li>
+      </ul>
+
+      <p>
+        Pour aller plus loin, vous pouvez consulter la fiche détaillée de notre formation
+        <a href="/formations/aipr-encadrement-operateur"> AIPR – Encadrant &amp; Opérateur à Nîmes (Gard)</a>, ainsi que la page
+        <a href="/gard"> centre de formation dans le Gard</a> pour nos autres dispositifs réglementaires (SST, habilitations électriques, Gestes &amp; Postures, etc.).
       </p>
     `,
   },
