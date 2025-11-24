@@ -62,6 +62,7 @@ export default function Home() {
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl leading-relaxed">
                   Des formations courtes et opérationnelles : Fibre Optique, IRVE, SST, et plus. 
+                  Basés à Nîmes, nous accompagnons les professionnels et les particuliers dans tout le Gard (30).
                   Financez votre avenir via OPCO / France Travail.
                 </p>
               </div>

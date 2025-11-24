@@ -123,50 +123,59 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
       )}
 
-      <div className="mx-auto w-full max-w-screen-xl px-4 py-12 max-w-screen-lg">
-         <div className="grid lg:grid-cols-[1fr_300px] gap-12">
+      <div className="mx-auto w-full max-w-screen-xl px-4 py-16 lg:py-20 max-w-screen-lg">
+         <div className="grid lg:grid-cols-[minmax(0,2fr)_minmax(260px,320px)] gap-12 lg:gap-16">
             
             {/* Main Content */}
             <article className="min-w-0">
-               <div 
-                 className="prose prose-lg prose-slate dark:prose-invert max-w-none 
-                 prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground 
-                 prose-a:text-[var(--brand-orange)] prose-a:no-underline hover:prose-a:underline
-                 prose-img:rounded-xl prose-img:shadow-md prose-p:text-muted-foreground prose-li:text-muted-foreground"
-                 dangerouslySetInnerHTML={{ __html: post.contentHtml }} 
-               />
+              <div className="bg-card border border-border rounded-3xl px-5 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12 shadow-sm">
+                <div
+                  className="prose prose-lg lg:prose-xl prose-slate dark:prose-invert max-w-none
+                  prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground prose-headings:mb-4
+                  prose-a:text-[var(--brand-orange)] prose-a:no-underline hover:prose-a:underline
+                  prose-img:rounded-xl prose-img:shadow-md
+                  prose-p:text-muted-foreground prose-p:leading-relaxed lg:prose-p:leading-loose prose-p:mb-5
+                  prose-li:text-muted-foreground prose-li:leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+                />
 
-               {/* Tags */}
-               {post.tags && post.tags.length > 0 && (
-                  <div className="mt-12 pt-8 border-t border-border">
-                     <div className="flex items-center gap-2 mb-4 text-sm font-bold text-foreground">
-                        <Tag className="h-4 w-4" /> Sujets abordés :
-                     </div>
-                     <div className="flex flex-wrap gap-2">
-                        {post.tags.map(tag => (
-                           <Link key={tag} href={`/blog/tag/${encodeURIComponent(tag)}`}>
-                              <Badge variant="outline" className="hover:border-[var(--brand-orange)] hover:text-[var(--brand-orange)] cursor-pointer py-1.5 px-3 text-sm font-normal text-muted-foreground">
-                                 #{tag}
-                              </Badge>
-                           </Link>
-                        ))}
-                     </div>
+                {/* Tags */}
+                {post.tags && post.tags.length > 0 && (
+                  <div className="mt-10 pt-6 border-t border-border">
+                    <div className="flex items-center gap-2 mb-4 text-sm font-bold text-foreground">
+                      <Tag className="h-4 w-4" /> Sujets abordés :
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {post.tags.map((tag) => (
+                        <Link key={tag} href={`/blog/tag/${encodeURIComponent(tag)}`}>
+                          <Badge
+                            variant="outline"
+                            className="hover:border-[var(--brand-orange)] hover:text-[var(--brand-orange)] cursor-pointer py-1.5 px-3 text-sm font-normal text-muted-foreground"
+                          >
+                            #{tag}
+                          </Badge>
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-               )}
+                )}
 
-               {/* CTA Share */}
-               <div className="mt-12 bg-muted/50 rounded-2xl p-8 text-center border border-border">
+                {/* CTA Share */}
+                <div className="mt-10 bg-muted/50 rounded-2xl p-6 sm:p-8 text-center border border-border">
                   <h3 className="font-bold text-lg mb-2 text-foreground">Vous avez aimé cet article ?</h3>
-                  <p className="text-muted-foreground mb-6 text-sm">Partagez-le avec votre réseau ou découvrez nos formations liées.</p>
+                  <p className="text-muted-foreground mb-6 text-sm">
+                    Partagez-le avec votre réseau ou découvrez nos formations liées.
+                  </p>
                   <div className="flex justify-center gap-4">
-                     <Button variant="outline" className="gap-2 bg-card hover:bg-muted">
-                        <Share2 className="h-4 w-4" /> Partager
-                     </Button>
-                     <Button className="gap-2 bg-[var(--brand-orange)] hover:bg-[var(--brand-orange-600)] text-white">
-                        Voir nos formations
-                     </Button>
+                    <Button variant="outline" className="gap-2 bg-card hover:bg-muted">
+                      <Share2 className="h-4 w-4" /> Partager
+                    </Button>
+                    <Button className="gap-2 bg-[var(--brand-orange)] hover:bg-[var(--brand-orange-600)] text-white">
+                      Voir nos formations
+                    </Button>
                   </div>
-               </div>
+                </div>
+              </div>
             </article>
 
             {/* Sidebar */}

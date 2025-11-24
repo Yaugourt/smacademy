@@ -10,6 +10,8 @@ import ThemeToggle from "@/components/site/ThemeToggle";
 const navItems = [
   { href: "/", label: "Accueil" },
   { href: "/formations", label: "Formations" },
+  { href: "/nimes", label: "Nîmes" },
+  { href: "/gard", label: "Gard (30)" },
   { href: "/blog", label: "Blog" },
 ];
 

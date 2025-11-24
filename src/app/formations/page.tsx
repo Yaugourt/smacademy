@@ -20,9 +20,9 @@ import {
 import { Badge } from "@/components/ui/badge";
 
 export const metadata = {
-  title: "Catalogue des formations à Nîmes (Gard) | SM Academy",
+  title: "Catalogue des formations à Nîmes et dans le Gard (30) | SM Academy",
   description:
-    "Découvrez nos formations professionnelles à Nîmes : SST, IRVE, Fibre optique, et plus. Centre Qualiopi, financements OPCO et Entreprise acceptés.",
+    "Découvrez nos formations professionnelles à Nîmes et dans tout le Gard : SST, IRVE, Fibre optique, et plus. Centre Qualiopi, financements OPCO, France Travail et Entreprise acceptés.",
   alternates: {
     canonical: "/formations",
   },

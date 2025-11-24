@@ -64,6 +64,11 @@ export const posts: Post[] = [
         recherche de défauts et mise en service guidée. L’objectif est que le stagiaire reparte avec des réflexes applicables
         dès le retour sur le terrain.
       </p>
+      <p>
+        Les entreprises et installateurs du <strong>Gard (30)</strong> peuvent suivre cette formation dans notre centre de Nîmes
+        ou directement sur site. Pour en savoir plus sur nos interventions dans le département, consultez la page
+        <a href="/gard"> centre de formation dans le Gard</a>.
+      </p>
     `,
   },
   {
@@ -116,6 +121,12 @@ export const posts: Post[] = [
       <p>
         La formation SST proposée par SM Academy alterne mises en situation, cas concrets liés à votre activité
         et rappels réglementaires pour que chaque stagiaire soit opérationnel dès son retour sur poste.
+      </p>
+      <p>
+        Si votre entreprise est basée dans le <strong>Gard</strong> (Nîmes, Alès, Bagnols-sur-Cèze, Beaucaire, etc.),
+        nous pouvons organiser des sessions en inter à Nîmes ou en intra dans vos locaux. Découvrez nos possibilités
+        d&apos;intervention sur la page
+        <a href="/gard"> formations dans le Gard</a>.
       </p>
     `,
   },
@@ -171,6 +182,12 @@ export const posts: Post[] = [
         justificatifs à transmettre à votre OPCO ou à France Travail. L’objectif: vous simplifier la partie
         administrative pour vous concentrer sur l’essentiel, la montée en compétences.
       </p>
+      <p>
+        Vous êtes salarié, demandeur d&apos;emploi ou dirigeant d&apos;une entreprise située dans le <strong>Gard (30)</strong>&nbsp;?
+        Nos équipes basées à Nîmes peuvent vous conseiller et vous orienter vers la bonne prise en charge. Pour une vue
+        d&apos;ensemble de notre offre départementale, vous pouvez consulter la page
+        <a href="/gard"> centre de formation dans le Gard</a>.
+      </p>
     `,
   },
   {
@@ -193,6 +210,12 @@ export const posts: Post[] = [
         <li><strong>HC</strong>: consignation en HT.</li>
       </ul>
       <p>Le recyclage périodique et la pratique sont essentiels pour maintenir le niveau de sécurité.</p>
+      <p>
+        SM Academy propose des parcours d&apos;<strong>habilitation électrique</strong> adaptés aux postes de travail, notamment pour les
+        entreprises du Gard (industrie, tertiaire, collectivités). Pour organiser une session à Nîmes ou sur vos sites,
+        consultez notre page dédiée au
+        <a href="/gard"> département du Gard</a>.
+      </p>
     `,
   },
   {
@@ -230,6 +253,12 @@ export const posts: Post[] = [
       <p>
         Les stagiaires expérimentent de nouveaux gestes, apprennent à organiser leur poste et repartent avec des outils simples
         pour prolonger la démarche dans leur équipe (étirements, micro‑pauses, check‑list de poste).
+      </p>
+      <p>
+        Dans le <strong>Gard</strong>, de nombreuses entreprises de logistique, de commerce et de services sont concernées par les TMS.
+        Nos formations Gestes &amp; Postures peuvent être réalisées en inter à Nîmes ou directement dans vos entrepôts et magasins.
+        Plus d&apos;infos sur la page
+        <a href="/gard"> SM Academy dans le Gard</a>.
       </p>
     `,
   },
@@ -270,6 +299,13 @@ export const posts: Post[] = [
       <p>
         La certification de SM Academy est donc un gage de sérieux, mais aussi un levier concret pour sécuriser vos
         projets de formation et leur financement.
+      </p>
+      <p>
+        Pour les entreprises et structures implantées dans le <strong>Gard (30)</strong>, cela signifie que vos projets de formation
+        menés avec notre centre de Nîmes respectent le Référentiel National Qualité et sont finançables par les dispositifs
+        publics ou mutualisés. Vous pouvez démarrer en explorant notre
+        <a href="/gard"> page dédiée au Gard</a> ou directement le
+        <a href="/formations"> catalogue de formations</a>.
       </p>
     `,
   },
@@ -320,6 +356,109 @@ export const posts: Post[] = [
       <p>
         SM Academy peut vous aider à faire le point en amont: validation de votre projet, choix de la bonne
         formation dans notre catalogue et accompagnement sur les démarches de financement.
+      </p>
+      <p>
+        Si vous êtes basé dans le <strong>Gard</strong> (entreprise, collectivité, indépendant), nos conseillers à Nîmes peuvent
+        construire avec vous un plan de formation cohérent pour vos équipes. Pour commencer, consultez notre
+        <a href="/gard"> page Gard</a> ou rendez-vous sur le
+        <a href="/formations"> catalogue des formations</a>.
+      </p>
+    `,
+  },
+  {
+    slug: "formation-professionnelle-gard-entreprises-obligations",
+    title: "Formation professionnelle dans le Gard: obligations et bonnes pratiques pour les entreprises",
+    excerpt:
+      "Panorama des obligations formation pour les employeurs dans le Gard et des bonnes pratiques pour structurer votre plan de développement des compétences.",
+    date: new Date(Date.now() - 7 * 86400000).toISOString(),
+    coverImage: "/globe.svg",
+    category: "Conseils",
+    tags: ["Gard", "Entreprise", "Obligations", "Formation"],
+    author: "SM Academy",
+    contentHtml: `
+      <p>
+        Les entreprises du <strong>Gard (30)</strong> sont soumises aux mêmes obligations que partout en France en matière de
+        formation professionnelle: veiller à l&apos;adaptation des salariés à leur poste de travail et au maintien de leur
+        capacité à occuper un emploi (article L6321-1 du Code du travail).
+      </p>
+
+      <h3>1. Connaître vos obligations</h3>
+      <ul>
+        <li>Garantir la sécurité des salariés (SST, habilitations, Gestes &amp; Postures, prévention des risques).</li>
+        <li>Maintenir les compétences nécessaires pour tenir le poste (technique, bureautique, réglementaire).</li>
+        <li>Proposer un parcours dans le temps (entretiens professionnels, formations régulières).</li>
+      </ul>
+
+      <h3>2. S&apos;appuyer sur un plan de formation</h3>
+      <p>
+        Dans la pratique, les PME du Gard gagnent à structurer un plan de développement des compétences qui couvre
+        à la fois les obligations réglementaires (SST, habilitations, etc.) et les enjeux métier (IRVE, fibre, bureautique).
+      </p>
+      <ul>
+        <li>Lister les postes sensibles (électriciens, techniciens fibre, manutention, encadrement).</li>
+        <li>Identifier les formations obligatoires ou fortement recommandées.</li>
+        <li>Planifier les recyclages pour éviter les ruptures d&apos;habilitation.</li>
+      </ul>
+
+      <h3>3. Travailler avec un partenaire local</h3>
+      <p>
+        En vous appuyant sur un <strong>centre de formation basé à Nîmes</strong>, vous limitez les déplacements, facilitez la
+        logistique et pouvez organiser des sessions intra sur vos sites (Alès, Bagnols, Beaucaire, Uzès, etc.).
+      </p>
+      <p>
+        SM Academy accompagne de nombreuses entreprises du Gard dans la construction et le déploiement de leur plan
+        de formation: recensement des besoins, calendrier, optimisation des financements.
+      </p>
+      <p>
+        Pour découvrir notre périmètre d&apos;intervention, rendez-vous sur la page
+        <a href="/gard"> centre de formation dans le Gard</a>, puis explorez notre
+        <a href="/formations"> catalogue de formations</a> pour identifier les modules adaptés à vos équipes.
+      </p>
+    `,
+  },
+  {
+    slug: "organiser-formations-nimes-pour-sites-gard",
+    title: "Organiser vos formations à Nîmes pour vos sites dans le Gard",
+    excerpt:
+      "Comment utiliser le centre de formation de Nîmes pour former efficacement vos équipes réparties dans tout le Gard.",
+    date: new Date(Date.now() - 8 * 86400000).toISOString(),
+    coverImage: "/window.svg",
+    category: "Conseils",
+    tags: ["Gard", "Nîmes", "Organisation", "Logistique"],
+    author: "SM Academy",
+    contentHtml: `
+      <p>
+        De nombreuses entreprises du <strong>Gard</strong> disposent de plusieurs sites (agences, dépôts, magasins) répartis
+        entre Nîmes, Alès, Bagnols-sur-Cèze, Beaucaire ou encore le Grau-du-Roi. La question est alors: comment organiser
+        les formations de manière simple et efficace ?
+      </p>
+
+      <h3>1. Utiliser Nîmes comme point central</h3>
+      <p>
+        Le centre de formation SM Academy à Nîmes offre un accès pratique depuis la plupart des villes du département
+        (proximité des axes routiers, parking, restauration à proximité). Organiser vos sessions inter-entreprises à Nîmes
+        permet de regrouper plusieurs sites sur une même formation.
+      </p>
+
+      <h3>2. Combiner inter et intra</h3>
+      <ul>
+        <li>Sessions <strong>inter</strong> à Nîmes pour des besoins ponctuels ou des effectifs réduits.</li>
+        <li>Sessions <strong>intra</strong> directement dans vos locaux du Gard quand vous avez plusieurs salariés à former.</li>
+        <li>Planification annuelle pour lisser les absences et optimiser la production.</li>
+      </ul>
+
+      <h3>3. Quels types de formations ?</h3>
+      <p>
+        Les thématiques les plus souvent organisées pour des entreprises du Gard sont: IRVE, habilitations électriques,
+        SST, Gestes &amp; Postures, fibre optique D3 et Pack Office. Toutes ces formations sont détaillées dans notre
+        <a href="/formations"> catalogue en ligne</a>.
+      </p>
+
+      <p>
+        Pour construire un dispositif adapté à la géographie de vos sites (Nîmes, Alès, Bagnols, Beaucaire, Uzès, etc.),
+        vous pouvez commencer par prendre contact via notre
+        <a href="/gard"> page Gard</a> et nous décrire votre organisation. Nous vous proposerons ensuite un scénario
+        mêlant formations à Nîmes et interventions sur site.
       </p>
     `,
   },
