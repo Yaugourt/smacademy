@@ -92,6 +92,7 @@ export default function NimesPage() {
              <h2 className="text-3xl font-bold mb-4">Formations disponibles à Nîmes</h2>
              <p className="text-slate-600">
                Tous nos stages se déroulent dans nos locaux nîmois ou peuvent être organisés dans votre entreprise (intra) partout dans le Gard.
+               Chaque programme précise les objectifs, le contenu détaillé et les conditions de financement possibles.
              </p>
            </div>
 

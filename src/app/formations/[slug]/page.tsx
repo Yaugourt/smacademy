@@ -124,7 +124,7 @@ export default async function FormationPage({ params }: PageProps) {
                    )}
                    <div className="flex items-center gap-2">
                       <div className="p-2 bg-muted rounded-full"><CheckCircle2 className="h-4 w-4 text-green-600" /></div>
-                      <span className="font-medium text-green-700">Éligible OPCO / France Travail</span>
+                      <span className="font-medium text-green-700">Financement possible (OPCO / France Travail / Entreprise)</span>
                    </div>
                 </div>
              </div>

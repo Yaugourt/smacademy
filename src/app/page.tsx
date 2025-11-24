@@ -234,6 +234,145 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Publics & Financement */}
+      <section className="py-16 lg:py-20 bg-background border-y">
+        <div className="mx-auto w-full max-w-screen-xl px-4">
+          <div className="grid gap-10 lg:grid-cols-2 items-start">
+            {/* À qui s'adressent nos formations ? */}
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <span className="inline-flex items-center rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
+                  Pour qui ?
+                </span>
+                <h2 className="text-2xl lg:text-3xl font-bold tracking-tight text-foreground">
+                  À qui s&apos;adressent nos formations ?
+                </h2>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Nos parcours sont pensés pour des profils variés, du salarié en poste au demandeur d&apos;emploi qui prépare
+                  une reconversion, en passant par les indépendants et les entreprises qui veulent faire monter leurs équipes
+                  en compétences.
+                </p>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl border border-border bg-card p-4">
+                  <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">
+                    Salariés
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
+                    Développer vos compétences, sécuriser votre poste ou préparer une évolution de fonction avec des
+                    formations courtes et opérationnelles.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-border bg-card p-4">
+                  <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">
+                    Demandeurs d&apos;emploi
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
+                    Acquérir une compétence recherchée (IRVE, Fibre, SST…) pour accélérer votre retour à l&apos;emploi
+                    avec l&apos;aide de France Travail et des partenaires.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-border bg-card p-4">
+                  <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">
+                    Entreprises
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
+                    Mettre vos équipes à niveau sur les référentiels réglementaires et techniques, organiser des sessions
+                    dédiées (intra) et sécuriser vos interventions.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-border bg-card p-4">
+                  <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base">
+                    Indépendants / artisans
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
+                    Structurer votre activité avec des certifications reconnues et des habilitations à jour pour répondre
+                    aux exigences de vos clients et donneurs d&apos;ordre.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Comment financer sa formation ? */}
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <span className="inline-flex items-center rounded-full bg-[var(--primary)]/10 px-3 py-1 text-xs font-medium text-[var(--primary)]">
+                  Financement
+                </span>
+                <h2 className="text-2xl lg:text-3xl font-bold tracking-tight text-foreground">
+                  Comment financer votre formation ?
+                </h2>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  En fonction de votre situation, plusieurs dispositifs peuvent prendre en charge tout ou partie du coût
+                  de la formation. Nous vous accompagnons pour trouver la solution la plus adaptée.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex gap-3">
+                  <div className="mt-1 h-6 w-6 rounded-full bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)] text-xs font-bold">
+                    1
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm sm:text-base text-foreground">
+                      OPCO – salariés
+                    </h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground">
+                      Prise en charge possible via l&apos;OPCO de votre entreprise pour les formations liées à votre poste
+                      ou à l&apos;évolution de vos missions.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-3">
+                  <div className="mt-1 h-6 w-6 rounded-full bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)] text-xs font-bold">
+                    2
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm sm:text-base text-foreground">
+                      France Travail – demandeurs d&apos;emploi
+                    </h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground">
+                      Selon votre projet de retour à l&apos;emploi, des aides peuvent être mobilisées pour financer une
+                      formation qualifiante ou certifiante.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-3">
+                  <div className="mt-1 h-6 w-6 rounded-full bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)] text-xs font-bold">
+                    3
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-sm sm:text-base text-foreground">
+                      Financement entreprise / individuel
+                    </h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground">
+                      L&apos;entreprise ou le stagiaire peut aussi financer directement la formation pour gagner en
+                      réactivité sur certains besoins urgents.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button asChild variant="outline" size="sm" className="rounded-full">
+                  <Link href="/formations">
+                    Voir le catalogue complet
+                  </Link>
+                </Button>
+                <Button asChild size="sm" className="rounded-full bg-[var(--brand-orange)] hover:bg-[var(--brand-orange-600)] text-white">
+                  <Link href="#contact">
+                    Parler à un conseiller
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us - Features */}
       <section className="py-16 lg:py-24">
         <div className="mx-auto w-full max-w-screen-xl px-4">

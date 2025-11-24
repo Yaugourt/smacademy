@@ -124,13 +124,19 @@ export default function FormationsPage() {
           
           {/* Main Column: Formations List */}
           <div className="space-y-6">
-             <div className="flex items-center justify-between mb-6">
+             <div className="flex items-center justify-between mb-2">
                <h2 className="text-2xl font-bold text-foreground">Catalogue {new Date().getFullYear()}</h2>
                <div className="hidden sm:flex items-center gap-2 text-sm text-muted-foreground">
                  <Filter className="h-4 w-4" />
                  <span>{formations.length} formations disponibles</span>
                </div>
              </div>
+             <p className="text-sm text-muted-foreground mb-4 max-w-2xl">
+               Chaque fiche détaille les <span className="font-medium">objectifs pédagogiques</span>, le{" "}
+               <span className="font-medium">programme</span>, les <span className="font-medium">prérequis</span> et les{" "}
+               <span className="font-medium">modalités de financement</span>. Pour un conseil personnalisé, vous pouvez aussi
+               nous joindre directement par téléphone.
+             </p>
 
              <div className="grid gap-6">
                {formations.map((f) => (
@@ -176,7 +182,8 @@ export default function FormationsPage() {
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-4 text-foreground">Un projet de formation ?</h2>
             <p className="text-muted-foreground">
-              Laissez-nous vos coordonnées, un conseiller pédagogique vous rappelle sous 24h.
+              Laissez-nous vos coordonnées, un conseiller pédagogique vous rappelle sous 24h pour étudier votre besoin,
+              vérifier les prérequis et voir les possibilités de financement (OPCO, France Travail, entreprise).
             </p>
           </div>
           <div className="bg-muted/30 p-6 md:p-8 rounded-2xl border border-border">
