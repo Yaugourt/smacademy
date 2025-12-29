@@ -428,8 +428,8 @@ export default function Home() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-[var(--primary)] dark:bg-blue-900/30">
-                    <Trophy className="h-6 w-6" />
+                  <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 rounded-xl bg-white border border-border shadow-sm p-1">
+                    <Image src="/certificationqualiopi.png" alt="Certification Qualiopi" width={56} height={56} className="object-contain" />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-foreground">Certifié Qualiopi</h3>

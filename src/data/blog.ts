@@ -12,12 +12,251 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "formation-irve-2025-nouvelles-normes-certifications",
+    title: "Formation IRVE 2025 : Nouvelles normes et certifications pour les installateurs",
+    excerpt:
+      "Découvrez les évolutions 2025 des formations IRVE à Nîmes (Gard) : nouvelles normes, niveaux de qualification P1/P2/P3 et perspectives d'emploi pour les électriciens.",
+    date: "2025-01-02T10:00:00.000Z",
+    coverImage: "/blog/irve-1.jpeg",
+    category: "IRVE",
+    tags: ["IRVE", "Électricité", "Normes", "2025", "Nîmes", "Gard"],
+    author: "SM Academy",
+    contentHtml: `
+      <p>
+        Le marché de la <strong>recharge de véhicules électriques</strong> connaît une croissance exponentielle en 2025.
+        Avec l'obligation pour les parkings neufs d'intégrer des bornes et les aides à l'installation pour les particuliers,
+        les électriciens formés IRVE sont très recherchés dans le <strong>Gard</strong> et toute la région <strong>Occitanie</strong>.
+      </p>
+
+      <h3>1. Évolutions réglementaires IRVE 2025</h3>
+      <p>
+        Les normes IRVE évoluent régulièrement pour intégrer les nouvelles technologies (charge bidirectionnelle, pilotage intelligent)
+        et renforcer la sécurité. En 2025, les points clés sont :
+      </p>
+      <ul>
+        <li><strong>NF C 15-100</strong> mise à jour pour les installations résidentielles et tertiaires.</li>
+        <li>Exigences renforcées sur le <strong>dimensionnement des protections</strong> et la gestion dynamique de puissance.</li>
+        <li>Nouvelles recommandations pour les <strong>bornes AC et DC</strong> en espace public.</li>
+      </ul>
+
+      <h3>2. Les 3 niveaux de qualification IRVE</h3>
+      <p>
+        Pour intervenir légalement sur des installations IRVE, l'électricien doit obtenir une qualification adaptée :
+      </p>
+      <ul>
+        <li><strong>P1 (niveau 1)</strong> : Installation de bornes jusqu'à 22 kW sans configuration spécifique.</li>
+        <li><strong>P2 (niveau 2)</strong> : Installation de bornes jusqu'à 22 kW avec configuration pour la supervision et le pilotage énergétique.</li>
+        <li><strong>P3 (niveau 3)</strong> : Installation de bornes de recharge rapide (DC) au-delà de 22 kW.</li>
+      </ul>
+
+      <h3>3. Débouchés dans le Gard et en Occitanie</h3>
+      <p>
+        Le département du <strong>Gard (30)</strong> et la ville de <strong>Nîmes</strong> voient se multiplier les projets :
+      </p>
+      <ul>
+        <li>Équipement des copropriétés et résidences neuves.</li>
+        <li>Déploiement de bornes sur les parkings d'entreprises et commerces.</li>
+        <li>Installation chez les particuliers avec les aides Advenir et MaPrimeRénov'.</li>
+      </ul>
+      <p>
+        Les électriciens qualifiés IRVE peuvent facturer leurs prestations entre <strong>150€ et 300€ par borne</strong>
+        pour l'installation, avec un volume de demandes en hausse constante.
+      </p>
+
+      <h3>4. Se former IRVE à Nîmes avec SM Academy</h3>
+      <p>
+        Notre <a href="/formations/irve">formation IRVE à Nîmes</a> couvre les niveaux P1 et P2 sur 3 jours.
+        Elle alterne théorie (normes, schémas, dimensionnement) et pratique sur notre plateau technique équipé de bornes réelles.
+      </p>
+      <p>
+        La formation est <strong>finançable par OPCO</strong> pour les salariés ou par <strong>France Travail</strong>
+        pour les demandeurs d'emploi. Nous accompagnons chaque stagiaire dans le montage de son dossier.
+      </p>
+      <p>
+        Pour les entreprises du <strong>Gard</strong> (Nîmes, Alès, Bagnols-sur-Cèze, Uzès), nous proposons également
+        des sessions intra directement sur vos sites. Découvrez notre
+        <a href="/gard">offre de formation dans le Gard</a>.
+      </p>
+    `,
+  },
+  {
+    slug: "reconversion-fibre-optique-guide-complet-gard",
+    title: "Reconversion Fibre Optique dans le Gard : Salaires, formation et débouchés 2025",
+    excerpt:
+      "Guide complet pour votre reconversion technicien fibre optique dans le Gard (Nîmes, Alès, Bagnols) : salaires, formation D3, débouchés et financement.",
+    date: "2025-01-01T10:00:00.000Z",
+    coverImage: "/blog/formationnimes.jpg",
+    category: "Fibre",
+    tags: ["Fibre optique", "Reconversion", "Gard", "Nîmes", "Emploi", "Salaire"],
+    author: "SM Academy",
+    contentHtml: `
+      <p>
+        La <strong>fibre optique</strong> continue son déploiement massif en France, et le <strong>Gard</strong> ne fait pas exception.
+        Le département vise une couverture 100% fibre d'ici 2025-2026, créant une forte demande de techniciens qualifiés.
+        Pour les personnes en reconversion professionnelle, c'est une opportunité concrète d'accéder rapidement à l'emploi.
+      </p>
+
+      <h3>1. Le marché de la fibre dans le Gard</h3>
+      <p>
+        Le plan France Très Haut Débit et les investissements des opérateurs (Orange, SFR, Free, Bouygues) génèrent un besoin
+        constant de techniciens pour :
+      </p>
+      <ul>
+        <li>Le <strong>déploiement horizontal</strong> (tirage de câbles, pose de boîtiers).</li>
+        <li>Le <strong>raccordement D3</strong> (branchement abonné, soudure, tests).</li>
+        <li>La <strong>maintenance</strong> et le dépannage des réseaux existants.</li>
+      </ul>
+      <p>
+        Les zones rurales du Gard (Cévennes, Petite Camargue) sont particulièrement concernées par les chantiers en cours.
+      </p>
+
+      <h3>2. Salaires technicien fibre optique dans le Gard</h3>
+      <p>
+        Les rémunérations varient selon l'expérience et le statut :
+      </p>
+      <ul>
+        <li><strong>Débutant</strong> (après formation D3) : 1 700€ à 2 000€ brut/mois.</li>
+        <li><strong>Confirmé</strong> (2-3 ans d'expérience) : 2 200€ à 2 600€ brut/mois.</li>
+        <li><strong>Chef d'équipe / Technicien expert</strong> : 2 800€ à 3 200€ brut/mois.</li>
+        <li><strong>Indépendant (sous-traitant)</strong> : facturation à la prise (8€ à 15€/prise selon complexité).</li>
+      </ul>
+      <p>
+        À noter : les techniciens disposant de <strong>plusieurs compétences</strong> (fibre + IRVE par exemple) sont particulièrement recherchés.
+      </p>
+
+      <h3>3. La formation Fibre Optique D3 à Nîmes</h3>
+      <p>
+        La <a href="/formations/fibre-optique-d3">formation Fibre Optique D3</a> dispensée par SM Academy à Nîmes
+        dure 2 à 3 jours et couvre :
+      </p>
+      <ul>
+        <li>L'architecture FTTH et les règles de sécurité.</li>
+        <li>Les techniques de raccordement (soudeuse, connecteurs, jarretières).</li>
+        <li>Les mesures et contrôles qualité (OTDR, photométrie).</li>
+      </ul>
+      <p>
+        À l'issue de la formation, vous recevez une <strong>attestation de compétences</strong> reconnue par les donneurs d'ordre.
+      </p>
+
+      <h3>4. Financer sa reconversion</h3>
+      <p>
+        Plusieurs dispositifs permettent de financer votre formation fibre optique :
+      </p>
+      <ul>
+        <li><strong>France Travail</strong> : AIF, POEI/POEC pour les demandeurs d'emploi.</li>
+        <li><strong>Région Occitanie</strong> : aides à la reconversion dans les métiers en tension.</li>
+        <li><strong>OPCO</strong> : pour les salariés en transition professionnelle.</li>
+      </ul>
+      <p>
+        Notre équipe vous accompagne dans toutes les démarches administratives. Contactez-nous via notre
+        <a href="/gard">page Gard</a> pour un conseil personnalisé.
+      </p>
+
+      <h3>5. Perspectives d'emploi à Nîmes, Alès et Bagnols</h3>
+      <p>
+        Les entreprises qui recrutent des techniciens fibre dans le Gard incluent :
+      </p>
+      <ul>
+        <li>Les sous-traitants des opérateurs (Circet, Scopelec, Solutions 30, etc.).</li>
+        <li>Les entreprises locales de travaux publics et réseaux.</li>
+        <li>Les artisans électriciens diversifiant leur activité.</li>
+      </ul>
+      <p>
+        Avec une formation de quelques jours et de la motivation, vous pouvez être opérationnel et embauché
+        en moins d'un mois.
+      </p>
+    `,
+  },
+  {
+    slug: "mac-sst-vs-sst-initiale-quelle-formation-choisir",
+    title: "MAC SST vs SST Initiale : Quelle formation choisir à Nîmes ?",
+    excerpt:
+      "Différences entre formation SST initiale et recyclage MAC SST à Nîmes (Gard) : durée, programme, validité et obligations employeur.",
+    date: "2024-12-30T10:00:00.000Z",
+    coverImage: "/blog/sst.jpg",
+    category: "SST",
+    tags: ["SST", "MAC SST", "Sécurité", "Nîmes", "Gard", "Recyclage"],
+    author: "SM Academy",
+    contentHtml: `
+      <p>
+        Vous devez former vos salariés au <strong>Sauveteur Secouriste du Travail (SST)</strong> mais vous hésitez
+        entre la formation initiale et le recyclage (MAC SST) ? Cet article clarifie les différences et vous aide
+        à choisir la bonne formule pour votre équipe dans le <strong>Gard</strong>.
+      </p>
+
+      <h3>1. SST Initiale : pour les nouveaux sauveteurs</h3>
+      <p>
+        La <strong>formation SST initiale</strong> s'adresse aux personnes n'ayant jamais été certifiées SST
+        ou dont le certificat a expiré depuis plus de 24 mois.
+      </p>
+      <ul>
+        <li><strong>Durée</strong> : 14 heures (2 jours consécutifs).</li>
+        <li><strong>Programme</strong> : Cadre juridique, protection/examen/alerte, gestes de secours complets (PLS, RCP, DAE, hémorragies, brûlures, etc.).</li>
+        <li><strong>Validation</strong> : Épreuves certificatives en fin de formation.</li>
+        <li><strong>Validité</strong> : 24 mois.</li>
+      </ul>
+
+      <h3>2. MAC SST : pour maintenir ses compétences</h3>
+      <p>
+        Le <strong>MAC SST (Maintien et Actualisation des Compétences)</strong> est le recyclage obligatoire
+        pour les SST déjà certifiés.
+      </p>
+      <ul>
+        <li><strong>Durée</strong> : 7 heures (1 jour).</li>
+        <li><strong>Programme</strong> : Révision des gestes, actualisation des recommandations, mises en situation.</li>
+        <li><strong>Prérequis</strong> : Être titulaire d'un certificat SST valide (moins de 24 mois).</li>
+        <li><strong>Validité</strong> : Prolonge le certificat de 24 mois supplémentaires.</li>
+      </ul>
+
+      <h3>3. Tableau comparatif</h3>
+      <table>
+        <thead>
+          <tr><th>Critère</th><th>SST Initiale</th><th>MAC SST</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Durée</td><td>2 jours (14h)</td><td>1 jour (7h)</td></tr>
+          <tr><td>Public</td><td>Nouveaux SST</td><td>SST à recycler</td></tr>
+          <tr><td>Prérequis</td><td>Aucun</td><td>Certificat SST valide</td></tr>
+          <tr><td>Validité obtenue</td><td>24 mois</td><td>24 mois</td></tr>
+          <tr><td>Tarif indicatif</td><td>150-200€</td><td>100-150€</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4. Obligations de l'employeur</h3>
+      <p>
+        Le Code du travail impose à l'employeur de disposer de personnel formé aux premiers secours.
+        Les recommandations INRS/CARSAT préconisent :
+      </p>
+      <ul>
+        <li>Au minimum <strong>1 SST par équipe ou zone de travail</strong>.</li>
+        <li>Une <strong>redondance</strong> pour couvrir absences et congés.</li>
+        <li>Un <strong>recyclage avant expiration</strong> du certificat (tous les 24 mois maximum).</li>
+      </ul>
+
+      <h3>5. Se former SST à Nîmes avec SM Academy</h3>
+      <p>
+        Notre <a href="/formations/sst">formation SST à Nîmes</a> est dispensée par des formateurs certifiés INRS.
+        Nous proposons :
+      </p>
+      <ul>
+        <li>Sessions <strong>inter-entreprises</strong> à Nîmes avec des dates régulières.</li>
+        <li>Sessions <strong>intra</strong> dans vos locaux partout dans le Gard (Alès, Bagnols, Beaucaire, Uzès).</li>
+        <li>Accompagnement au <strong>financement OPCO</strong> ou France Travail.</li>
+      </ul>
+      <p>
+        Pour planifier les formations de votre équipe, contactez-nous via notre
+        <a href="/gard">page Gard</a> ou appelez le 09 82 77 44 44.
+      </p>
+    `,
+  },
+
+  {
     slug: "guide-irve-normes-installation",
     title: "IRVE: normes et bonnes pratiques d'installation",
     excerpt:
       "IRVE à Nîmes (Gard): panorama des normes et points de vigilance pour l'installation et la mise en service.",
     date: new Date().toISOString(),
-    coverImage: "/window.svg",
+    coverImage: "/blog/irve-1.jpeg",
     category: "IRVE",
     tags: ["IRVE", "Électricité", "Normes"],
     author: "SM Academy",
@@ -77,7 +316,7 @@ export const posts: Post[] = [
     excerpt:
       "SST à Nîmes: l'intérêt du Sauveteur Secouriste du Travail et les obligations de l'employeur.",
     date: new Date(Date.now() - 86400000).toISOString(),
-    coverImage: "/file.svg",
+    coverImage: "/blog/sst.jpg",
     category: "SST",
     tags: ["SST", "Sécurité"],
     author: "SM Academy",
@@ -136,7 +375,7 @@ export const posts: Post[] = [
     excerpt:
       "Financer sa formation à Nîmes: tour d'horizon des prises en charge OPCO et des aides France Travail.",
     date: new Date(Date.now() - 2 * 86400000).toISOString(),
-    coverImage: "/globe.svg",
+    coverImage: "/blog/financement.jpg",
     category: "Financements",
     tags: ["Financement", "OPCO", "France Travail"],
     author: "SM Academy",
@@ -196,7 +435,7 @@ export const posts: Post[] = [
     excerpt:
       "Comprendre les symboles d'habilitation (H0/B0/BS/BE/B1/B2/BC/HC), les situations de travail et les réflexes sécurité pour vos équipes dans le Gard.",
     date: new Date(Date.now() - 3 * 86400000).toISOString(),
-    coverImage: "/file.svg",
+    coverImage: "/blog/habilitationelectrique.png",
     category: "Électricité",
     tags: ["Habilitation", "Sécurité", "Électricité", "Gard", "Nîmes"],
     author: "SM Academy",
@@ -254,7 +493,7 @@ export const posts: Post[] = [
     excerpt:
       "Pourquoi et comment former vos équipes à l'AIPR à Nîmes et dans le Gard: obligations, profils concernés et préparation efficace au QCM.",
     date: new Date(Date.now() - 3.5 * 86400000).toISOString(),
-    coverImage: "/window.svg",
+    coverImage: "/blog/AIPR.png",
     category: "Prévention",
     tags: ["AIPR", "Réseaux", "Gard", "Nîmes"],
     author: "SM Academy",
@@ -310,7 +549,7 @@ export const posts: Post[] = [
     excerpt:
       "Repérer les facteurs de risque, aménager le poste et adopter les bons gestes pour réduire les troubles musculo-squelettiques.",
     date: new Date(Date.now() - 4 * 86400000).toISOString(),
-    coverImage: "/window.svg",
+    coverImage: "/blog/tms.jpg",
     category: "Prévention",
     tags: ["TMS", "Prévention", "Ergonomie"],
     author: "SM Academy",
@@ -354,7 +593,7 @@ export const posts: Post[] = [
     excerpt:
       "Décryptage des critères du Référentiel National Qualité (RNQ) et des bénéfices pour les apprenants et entreprises.",
     date: new Date(Date.now() - 5 * 86400000).toISOString(),
-    coverImage: "/globe.svg",
+    coverImage: "/blog/qualiopi.png",
     category: "Qualité",
     tags: ["Qualiopi", "Qualité", "RNQ"],
     author: "SM Academy",
@@ -401,7 +640,7 @@ export const posts: Post[] = [
     excerpt:
       "Objectifs, prérequis, financement, certification: les 5 questions à se poser pour un choix efficace.",
     date: new Date(Date.now() - 6 * 86400000).toISOString(),
-    coverImage: "/file.svg",
+    coverImage: "/blog/choixformation.webp",
     category: "Conseils",
     tags: ["Orientation", "Financement", "Qualité"],
     author: "SM Academy",
@@ -457,7 +696,7 @@ export const posts: Post[] = [
     excerpt:
       "Panorama des obligations formation pour les employeurs dans le Gard et des bonnes pratiques pour structurer votre plan de développement des compétences.",
     date: new Date(Date.now() - 7 * 86400000).toISOString(),
-    coverImage: "/globe.svg",
+    coverImage: "/blog/bonnepratiqueformationpro.png",
     category: "Conseils",
     tags: ["Gard", "Entreprise", "Obligations", "Formation"],
     author: "SM Academy",
@@ -508,7 +747,7 @@ export const posts: Post[] = [
     excerpt:
       "Comment utiliser le centre de formation de Nîmes pour former efficacement vos équipes réparties dans tout le Gard.",
     date: new Date(Date.now() - 8 * 86400000).toISOString(),
-    coverImage: "/window.svg",
+    coverImage: "/blog/formationnimes.jpg",
     category: "Conseils",
     tags: ["Gard", "Nîmes", "Organisation", "Logistique"],
     author: "SM Academy",

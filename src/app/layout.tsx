@@ -23,11 +23,23 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://smacademy.fr"),
   title: {
-    default: "SM Academy – Centre de formation à Nîmes (Qualiopi)",
-    template: "%s · SM Academy",
+    default: "SM Academy – Centre de formation professionnelle à Nîmes (Gard) | Qualiopi",
+    template: "%s | SM Academy Nîmes",
   },
   description:
-    "Formations professionnelles à Nîmes: SST, IRVE, Fibre optique, Gestes & Postures, Pack Office, Formation de formateur.",
+    "Centre de formation Qualiopi à Nîmes (Gard, Occitanie). Formations SST, IRVE, Fibre optique D3, AIPR, Gestes & Postures, Pack Office et Formation de formateur. Financement OPCO et France Travail. Sessions courtes et certifiantes.",
+  keywords: [
+    "formation professionnelle Nîmes",
+    "centre de formation Gard",
+    "formation SST Nîmes",
+    "formation IRVE Gard",
+    "formation fibre optique Nîmes",
+    "formation AIPR Gard",
+    "Qualiopi Nîmes",
+    "OPCO formation Gard",
+    "France Travail formation Nîmes",
+    "SM Academy",
+  ],
   alternates: {
     canonical: "/",
   },
@@ -36,9 +48,38 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://smacademy.fr/",
     siteName: "SM Academy",
-    title: "SM Academy – Centre de formation à Nîmes (Qualiopi)",
+    title: "SM Academy – Centre de formation professionnelle à Nîmes (Gard) | Qualiopi",
     description:
-      "Formations professionnelles à Nîmes: SST, IRVE, Fibre optique, Gestes & Postures, Pack Office, Formation de formateur.",
+      "Centre de formation Qualiopi à Nîmes (Gard). Formations SST, IRVE, Fibre optique, AIPR, Gestes & Postures, Pack Office. Financement OPCO et France Travail.",
+    images: [
+      {
+        url: "https://smacademy.fr/Logo_SMACADEMY.png",
+        width: 800,
+        height: 600,
+        alt: "SM Academy - Centre de formation Nîmes",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SM Academy – Centre de formation à Nîmes (Gard)",
+    description:
+      "Formations professionnelles certifiantes à Nîmes : SST, IRVE, Fibre optique, AIPR. Finançables OPCO et France Travail.",
+    images: ["https://smacademy.fr/Logo_SMACADEMY.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "votre-code-verification-google",
   },
 };
 

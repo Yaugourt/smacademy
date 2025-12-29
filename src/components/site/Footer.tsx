@@ -1,15 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="border-t bg-slate-50">
       <div className="mx-auto w-full max-w-screen-xl px-4 py-12">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-          <div className="space-y-2">
+          <div className="space-y-3">
             <div className="text-sm font-semibold">SM Academy</div>
             <p className="text-sm text-muted-foreground">
               Centre de formation certifié Qualiopi – Nîmes (Gard).
             </p>
+            <div className="flex items-center gap-2 bg-white rounded-lg p-2 border border-border w-fit">
+              <Image src="/certificationqualiopi.png" alt="Certification Qualiopi" width={80} height={40} className="object-contain" />
+            </div>
             <address className="not-italic text-xs text-muted-foreground">
               94 Avenue du Docteur Fleming<br />
               30900 Nîmes, France<br />

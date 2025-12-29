@@ -7,17 +7,17 @@ import Breadcrumbs from "@/components/site/Breadcrumbs";
 import Link from "next/link";
 import Image from "next/image";
 import MapEmbed from "@/components/site/MapEmbed";
-import { 
-  Clock, 
-  MapPin, 
-  Award, 
-  Euro, 
-  CheckCircle2, 
-  Calendar, 
-  FileText, 
-  Target, 
-  BookOpen, 
-  Users, 
+import {
+  Clock,
+  MapPin,
+  Award,
+  Euro,
+  CheckCircle2,
+  Calendar,
+  FileText,
+  Target,
+  BookOpen,
+  Users,
   HelpCircle,
   Phone,
   Download
@@ -75,15 +75,58 @@ export default async function FormationPage({ params }: PageProps) {
               "@type": "Organization",
               name: "SM Academy",
               sameAs: "https://smacademy.fr",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "94 Avenue du Docteur Fleming",
+                addressLocality: "Nîmes",
+                addressRegion: "Occitanie",
+                postalCode: "30900",
+                addressCountry: "FR",
+              },
             },
+            hasCourseInstance: {
+              "@type": "CourseInstance",
+              courseMode: "in-person",
+              courseWorkload: formation.duration || "2-3 jours",
+              instructor: {
+                "@type": "Person",
+                name: "Formateurs certifiés SM Academy",
+              },
+              location: {
+                "@type": "Place",
+                name: "SM Academy Nîmes",
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "94 Avenue du Docteur Fleming",
+                  addressLocality: "Nîmes",
+                  addressRegion: "Gard",
+                  postalCode: "30900",
+                  addressCountry: "FR",
+                },
+              },
+            },
+            offers: {
+              "@type": "Offer",
+              category: "Formation professionnelle",
+              availability: "https://schema.org/InStock",
+              priceCurrency: "EUR",
+              price: "0",
+              priceValidUntil: "2025-12-31",
+              description: "Financement OPCO, France Travail ou Entreprise possible",
+            },
+            coursePrerequisites: formation.prerequisites?.join(", ") || "Aucun prérequis spécifique",
+            educationalLevel: "Professionnel",
+            inLanguage: "fr",
+            isAccessibleForFree: false,
+            image: formation.heroImage || "https://smacademy.fr/Logo_SMACADEMY.png",
           }),
         }}
       />
-      
+
       {/* Hero Header */}
       <header className="relative bg-card border-b">
         <div className="mx-auto w-full max-w-screen-xl px-4 py-8">
-           <Breadcrumbs
+          <Breadcrumbs
             items={[
               { href: "/", label: "Accueil" },
               { href: "/formations", label: "Formations" },
@@ -91,86 +134,86 @@ export default async function FormationPage({ params }: PageProps) {
             ]}
           />
           <div className="mt-6 grid lg:grid-cols-[1fr_400px] gap-8 items-start">
-             <div className="space-y-6">
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="bg-[var(--brand-orange)]/10 text-[var(--brand-orange-700)] dark:text-[var(--brand-orange)] hover:bg-[var(--brand-orange)]/20 border-0">
-                    {formation.city}
+            <div className="space-y-6">
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary" className="bg-[var(--brand-orange)]/10 text-[var(--brand-orange-700)] dark:text-[var(--brand-orange)] hover:bg-[var(--brand-orange)]/20 border-0">
+                  {formation.city}
+                </Badge>
+                {formation.tags?.map((t) => (
+                  <Badge key={t} variant="outline" className="text-muted-foreground">
+                    {t}
                   </Badge>
-                  {formation.tags?.map((t) => (
-                    <Badge key={t} variant="outline" className="text-muted-foreground">
-                      {t}
-                    </Badge>
-                  ))}
-                </div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-                  {formation.title}
-                </h1>
-                <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                  {formation.summary}
-                </p>
-                
-                <div className="flex flex-wrap gap-6 text-sm text-muted-foreground pt-2">
-                   {formation.duration && (
-                     <div className="flex items-center gap-2">
-                       <div className="p-2 bg-muted rounded-full"><Clock className="h-4 w-4" /></div>
-                       <span className="font-medium">{formation.duration}</span>
-                     </div>
-                   )}
-                   {formation.certification && (
-                     <div className="flex items-center gap-2">
-                       <div className="p-2 bg-muted rounded-full"><Award className="h-4 w-4" /></div>
-                       <span className="font-medium">{formation.certification}</span>
-                     </div>
-                   )}
-                   <div className="flex items-center gap-2">
-                      <div className="p-2 bg-muted rounded-full"><CheckCircle2 className="h-4 w-4 text-green-600" /></div>
-                      <span className="font-medium text-green-700">Financement possible (OPCO / France Travail / Entreprise)</span>
-                   </div>
-                </div>
-             </div>
-             
-             {/* Hero Image (Desktop) */}
-             <div className="hidden lg:block relative h-64 w-full rounded-2xl overflow-hidden shadow-lg">
-                {formation.heroImage ? (
-                  <Image
-                    src={formation.heroImage}
-                    alt={formation.title}
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                ) : (
-                   <div className="w-full h-full bg-muted flex items-center justify-center">
-                     <Award className="h-12 w-12 text-muted-foreground" />
-                   </div>
+                ))}
+              </div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+                {formation.title}
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
+                {formation.summary}
+              </p>
+
+              <div className="flex flex-wrap gap-6 text-sm text-muted-foreground pt-2">
+                {formation.duration && (
+                  <div className="flex items-center gap-2">
+                    <div className="p-2 bg-muted rounded-full"><Clock className="h-4 w-4" /></div>
+                    <span className="font-medium">{formation.duration}</span>
+                  </div>
                 )}
-             </div>
+                {formation.certification && (
+                  <div className="flex items-center gap-2">
+                    <div className="p-2 bg-muted rounded-full"><Award className="h-4 w-4" /></div>
+                    <span className="font-medium">{formation.certification}</span>
+                  </div>
+                )}
+                <div className="flex items-center gap-2">
+                  <div className="p-2 bg-muted rounded-full"><CheckCircle2 className="h-4 w-4 text-green-600" /></div>
+                  <span className="font-medium text-green-700">Financement possible (OPCO / France Travail / Entreprise)</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Hero Image (Desktop) */}
+            <div className="hidden lg:block relative h-64 w-full rounded-2xl overflow-hidden shadow-lg">
+              {formation.heroImage ? (
+                <Image
+                  src={formation.heroImage}
+                  alt={formation.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              ) : (
+                <div className="w-full h-full bg-muted flex items-center justify-center">
+                  <Award className="h-12 w-12 text-muted-foreground" />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </header>
 
       <div className="mx-auto w-full max-w-screen-xl px-4 py-12">
         <div className="grid gap-12 lg:grid-cols-[1fr_380px]">
-          
+
           {/* Main Content */}
           <main className="space-y-12">
-            
+
             {/* Sticky Nav */}
             <nav className="sticky top-16 z-20 bg-background/80 backdrop-blur-md border border-border rounded-full px-4 py-2 shadow-sm overflow-x-auto no-scrollbar">
-               <ul className="flex items-center gap-1 text-sm font-medium min-w-max">
-                 {[
-                    { id: "objectifs", label: "Objectifs", show: Boolean(formation.objectives?.length) },
-                    { id: "programme", label: "Programme", show: Boolean(formation.program?.length) },
-                    { id: "prerequis", label: "Prérequis", show: Boolean(formation.prerequisites?.length) },
-                    { id: "infos", label: "Infos", show: true },
-                 ].filter(x => x.show).map((item) => (
-                   <li key={item.id}>
-                     <a href={`#${item.id}`} className="px-4 py-2 rounded-full hover:bg-muted hover:text-[var(--primary)] transition-colors block text-foreground">
-                       {item.label}
-                     </a>
-                   </li>
-                 ))}
-               </ul>
+              <ul className="flex items-center gap-1 text-sm font-medium min-w-max">
+                {[
+                  { id: "objectifs", label: "Objectifs", show: Boolean(formation.objectives?.length) },
+                  { id: "programme", label: "Programme", show: Boolean(formation.program?.length) },
+                  { id: "prerequis", label: "Prérequis", show: Boolean(formation.prerequisites?.length) },
+                  { id: "infos", label: "Infos", show: true },
+                ].filter(x => x.show).map((item) => (
+                  <li key={item.id}>
+                    <a href={`#${item.id}`} className="px-4 py-2 rounded-full hover:bg-muted hover:text-[var(--primary)] transition-colors block text-foreground">
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </nav>
 
             {formation.objectives?.length && (
@@ -199,10 +242,10 @@ export default async function FormationPage({ params }: PageProps) {
                 <div className="space-y-4">
                   {formation.program.map((p, i) => (
                     <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-muted/50 border border-border">
-                       <span className="flex h-8 w-8 items-center justify-center rounded-full bg-background border border-border font-bold text-muted-foreground text-sm">
-                         {i + 1}
-                       </span>
-                       <p className="text-foreground font-medium pt-1">{p}</p>
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-background border border-border font-bold text-muted-foreground text-sm">
+                        {i + 1}
+                      </span>
+                      <p className="text-foreground font-medium pt-1">{p}</p>
                     </div>
                   ))}
                 </div>
@@ -215,27 +258,27 @@ export default async function FormationPage({ params }: PageProps) {
             )}
 
             <div className="grid md:grid-cols-2 gap-8">
-               {formation.prerequisites?.length && (
-                  <section id="prerequis" className="bg-card rounded-2xl p-6 border border-border shadow-sm scroll-mt-32">
-                    <h2 className="flex items-center gap-2 text-lg font-bold mb-4 text-foreground">
-                      <FileText className="h-5 w-5 text-[var(--brand-orange)]" />
-                      Prérequis
-                    </h2>
-                    <ul className="list-disc pl-5 space-y-2 text-muted-foreground text-sm">
-                      {formation.prerequisites.map((p, i) => <li key={i}>{p}</li>)}
-                    </ul>
-                  </section>
-               )}
+              {formation.prerequisites?.length && (
+                <section id="prerequis" className="bg-card rounded-2xl p-6 border border-border shadow-sm scroll-mt-32">
+                  <h2 className="flex items-center gap-2 text-lg font-bold mb-4 text-foreground">
+                    <FileText className="h-5 w-5 text-[var(--brand-orange)]" />
+                    Prérequis
+                  </h2>
+                  <ul className="list-disc pl-5 space-y-2 text-muted-foreground text-sm">
+                    {formation.prerequisites.map((p, i) => <li key={i}>{p}</li>)}
+                  </ul>
+                </section>
+              )}
 
-               {formation.audience && (
-                  <section className="bg-card rounded-2xl p-6 border border-border shadow-sm">
-                    <h2 className="flex items-center gap-2 text-lg font-bold mb-4 text-foreground">
-                      <Users className="h-5 w-5 text-[var(--brand-orange)]" />
-                      Public visé
-                    </h2>
-                    <p className="text-muted-foreground text-sm">{formation.audience}</p>
-                  </section>
-               )}
+              {formation.audience && (
+                <section className="bg-card rounded-2xl p-6 border border-border shadow-sm">
+                  <h2 className="flex items-center gap-2 text-lg font-bold mb-4 text-foreground">
+                    <Users className="h-5 w-5 text-[var(--brand-orange)]" />
+                    Public visé
+                  </h2>
+                  <p className="text-muted-foreground text-sm">{formation.audience}</p>
+                </section>
+              )}
             </div>
 
             {formation.faqs?.length && (
@@ -263,39 +306,39 @@ export default async function FormationPage({ params }: PageProps) {
 
           {/* Sidebar Booking Card */}
           <aside className="lg:sticky lg:top-24 lg:h-fit space-y-6">
-            
+
             {/* Booking Box */}
             <div className="rounded-2xl border border-border bg-card p-6 shadow-xl shadow-black/5 dark:shadow-black/20">
-               <div className="mb-6 pb-6 border-b border-border">
-                 <div className="text-sm text-muted-foreground mb-1">Tarif de la formation</div>
-                 <div className="flex items-baseline gap-2">
-                   <span className="text-3xl font-bold text-[var(--primary)]">
-                     {formation.price === "Nous consulter" ? "Sur devis" : formation.price}
-                   </span>
-                 </div>
-                 {formation.financingNotes && (
-                   <div className="mt-2 text-xs bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 px-2 py-1 rounded inline-block">
-                     Financement possible
-                   </div>
-                 )}
-               </div>
+              <div className="mb-6 pb-6 border-b border-border">
+                <div className="text-sm text-muted-foreground mb-1">Tarif de la formation</div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-3xl font-bold text-[var(--primary)]">
+                    {formation.price === "Nous consulter" ? "Sur devis" : formation.price}
+                  </span>
+                </div>
+                {formation.financingNotes && (
+                  <div className="mt-2 text-xs bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 px-2 py-1 rounded inline-block">
+                    Financement possible
+                  </div>
+                )}
+              </div>
 
-               <div className="space-y-4 mb-6">
-                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <MapPin className="h-4 w-4 text-muted-foreground/70" />
-                    <span>{formation.location || "Centre SM Academy, Nîmes"}</span>
-                 </div>
-                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <Calendar className="h-4 w-4 text-muted-foreground/70" />
-                    <span>Prochaines sessions : <span className="text-green-600 font-medium">Nous contacter</span></span>
-                 </div>
-               </div>
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                  <MapPin className="h-4 w-4 text-muted-foreground/70" />
+                  <span>{formation.location || "Centre SM Academy, Nîmes"}</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                  <Calendar className="h-4 w-4 text-muted-foreground/70" />
+                  <span>Prochaines sessions : <span className="text-green-600 font-medium">Nous contacter</span></span>
+                </div>
+              </div>
 
-               <div className="space-y-3">
-                 <h3 className="font-bold text-sm text-foreground">Intéressé(e) ?</h3>
-                 <p className="text-xs text-muted-foreground mb-3">Remplissez le formulaire pour recevoir le programme détaillé et un devis.</p>
-                 <ContactForm context={`Page: ${formation.title}`} />
-               </div>
+              <div className="space-y-3">
+                <h3 className="font-bold text-sm text-foreground">Intéressé(e) ?</h3>
+                <p className="text-xs text-muted-foreground mb-3">Remplissez le formulaire pour recevoir le programme détaillé et un devis.</p>
+                <ContactForm context={`Page: ${formation.title}`} />
+              </div>
             </div>
 
             {/* Map Box */}
@@ -306,7 +349,7 @@ export default async function FormationPage({ params }: PageProps) {
               </div>
             </div>
 
-             {/* Need Help Box */}
+            {/* Need Help Box */}
             <div className="rounded-2xl bg-slate-900 p-6 text-white">
               <div className="flex items-center gap-3 mb-3">
                 <div className="p-2 bg-white/10 rounded-full">
