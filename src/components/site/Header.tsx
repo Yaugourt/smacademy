@@ -23,7 +23,7 @@ export function Header() {
       <div className="mx-auto flex h-16 w-full max-w-screen-xl items-center justify-between px-4 sm:h-20">
         <Link href="/" className="inline-flex items-center gap-2 font-semibold tracking-tight">
           <Image
-            src="https://smacademy.fr/wp-content/uploads/2024/09/logo-sma.png"
+            src="/Logo_SMACADEMY.png"
             alt="SM Academy"
             width={120}
             height={28}

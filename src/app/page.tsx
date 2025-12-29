@@ -21,6 +21,7 @@ import {
   Building2 as LucideBuilding2,
   Handshake as LucideHandshake,
   MapPin,
+  HardHat,
 } from "lucide-react";
 import ValuesAccordion from "@/components/sections/Values";
 import ReviewsStrip from "@/components/site/ReviewsStrip";
@@ -77,7 +78,7 @@ export default function Home() {
                   </Link>
                 </Button>
               </div>
-              
+
               {/* Trust Badges */}
               <div className="flex flex-wrap gap-6 text-sm text-muted-foreground items-center pt-4">
                 <div className="flex items-center gap-2">
@@ -94,11 +95,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
             {/* Hero Image Composition */}
             <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
               <div className="relative aspect-square lg:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-background bg-muted">
-                 <Image
+                <Image
                   src="https://smacademy.fr/wp-content/uploads/2025/02/IMG_3091-scaled-e1740573209118.jpg"
                   alt="Formation SM Academy"
                   fill
@@ -155,9 +156,9 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8">
             <h2 className="text-2xl font-bold tracking-tight text-foreground">Ils nous font confiance</h2>
             <div className="flex items-center gap-1">
-               {[1, 2, 3, 4, 5].map((i) => (
-                 <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-               ))}
+              {[1, 2, 3, 4, 5].map((i) => (
+                <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+              ))}
             </div>
           </div>
           <ReviewsStrip />
@@ -214,22 +215,22 @@ export default function Home() {
                   <p className="mb-6 text-sm text-muted-foreground line-clamp-3 flex-1">
                     {f.summary}
                   </p>
-                  
+
                   <div className="mt-auto pt-4 border-t border-border flex items-center justify-between">
-                     <div className="text-xs text-muted-foreground font-medium flex items-center gap-1">
-                       <CalendarCheck className="h-3.5 w-3.5" /> Sessions fréquentes
-                     </div>
-                     <Link href={`/formations/${f.slug}`} className="text-sm font-semibold text-[var(--primary)] flex items-center gap-1 hover:text-[var(--brand-orange)] transition-colors">
-                       Voir le programme <ArrowRight className="h-3.5 w-3.5" />
-                     </Link>
+                    <div className="text-xs text-muted-foreground font-medium flex items-center gap-1">
+                      <CalendarCheck className="h-3.5 w-3.5" /> Sessions fréquentes
+                    </div>
+                    <Link href={`/formations/${f.slug}`} className="text-sm font-semibold text-[var(--primary)] flex items-center gap-1 hover:text-[var(--brand-orange)] transition-colors">
+                      Voir le programme <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          
+
           <div className="mt-8 text-center md:hidden">
-             <Button variant="outline" asChild className="w-full">
+            <Button variant="outline" asChild className="w-full">
               <Link href="/formations">Voir tout le catalogue <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
@@ -380,32 +381,32 @@ export default function Home() {
         <div className="mx-auto w-full max-w-screen-xl px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 relative">
-               <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-4 mt-8">
-                    <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
-                      <Image src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_1326.jpg" width={400} height={500} alt="Formation technique" className="w-full h-auto object-cover" />
-                    </div>
-                    <div className="bg-[var(--primary)] p-6 rounded-2xl text-white text-center">
-                      <div className="text-3xl font-bold mb-1">OPCO</div>
-                      <div className="text-sm opacity-90">Prise en charge entreprise</div>
-                    </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4 mt-8">
+                  <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
+                    <Image src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_1326.jpg" width={400} height={500} alt="Formation technique" className="w-full h-auto object-cover" />
                   </div>
-                  <div className="space-y-4">
-                     <div className="bg-muted p-6 rounded-2xl text-center border border-border">
-                      <div className="text-3xl font-bold mb-1 text-[var(--brand-orange)]">100%</div>
-                      <div className="text-sm text-muted-foreground">Accompagnement administratif</div>
-                    </div>
-                    <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
-                      <Image src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_1325-e1740574444704.png" width={400} height={500} alt="Formation IRVE" className="w-full h-auto object-cover" />
-                    </div>
+                  <div className="bg-[var(--primary)] p-6 rounded-2xl text-white text-center">
+                    <div className="text-3xl font-bold mb-1">OPCO</div>
+                    <div className="text-sm opacity-90">Prise en charge entreprise</div>
                   </div>
-               </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-muted p-6 rounded-2xl text-center border border-border">
+                    <div className="text-3xl font-bold mb-1 text-[var(--brand-orange)]">100%</div>
+                    <div className="text-sm text-muted-foreground">Accompagnement administratif</div>
+                  </div>
+                  <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
+                    <Image src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_1325-e1740574444704.png" width={400} height={500} alt="Formation IRVE" className="w-full h-auto object-cover" />
+                  </div>
+                </div>
+              </div>
             </div>
-            
+
             <div className="order-1 lg:order-2 space-y-8">
               <div className="space-y-4">
                 <div className="inline-flex items-center rounded-full bg-[var(--primary)]/10 px-3 py-1 text-sm font-medium text-[var(--primary)]">
-                   Pourquoi nous choisir ?
+                  Pourquoi nous choisir ?
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                   L'excellence de la formation professionnelle à Nîmes
@@ -414,7 +415,7 @@ export default function Home() {
                   SM Academy est bien plus qu'un centre de formation. Nous sommes votre partenaire pour l'évolution de vos compétences et de votre carrière.
                 </p>
               </div>
-              
+
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-orange-100 text-[var(--brand-orange)] dark:bg-orange-900/30">
@@ -425,7 +426,7 @@ export default function Home() {
                     <p className="text-muted-foreground">Tous nos formateurs sont des professionnels certifiés avec une solide expérience terrain.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-[var(--primary)] dark:bg-blue-900/30">
                     <Trophy className="h-6 w-6" />
@@ -435,7 +436,7 @@ export default function Home() {
                     <p className="text-muted-foreground">Un gage de qualité qui rend nos formations éligibles aux financements publics et mutualisés.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-600 dark:bg-green-900/30">
                     <Handshake className="h-6 w-6" />
@@ -454,42 +455,42 @@ export default function Home() {
       {/* Contact / CTA Section */}
       <section id="contact" className="py-16 lg:py-24 bg-[var(--primary)] text-white">
         <div className="mx-auto w-full max-w-screen-xl px-4">
-           <div className="grid lg:grid-cols-2 gap-12">
-             <div className="space-y-8">
-               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Prêt à lancer votre projet ?</h2>
-               <p className="text-white/80 text-lg max-w-md">
-                 Remplissez le formulaire, nous vous rappelons dans la journée pour étudier votre besoin et vos possibilités de financement.
-               </p>
-               
-               <div className="space-y-6 pt-4">
-                 <div className="flex items-center gap-4">
-                   <div className="bg-white/10 p-3 rounded-full">
-                     <Phone className="h-6 w-6" />
-                   </div>
-                   <div className="flex flex-col">
-                     <div className="text-sm text-white/60">Par téléphone</div>
-                     <a href="tel:+33982774444" className="text-xl font-bold hover:text-[var(--brand-orange)] transition-colors">09 82 77 44 44</a>
-                     <a href="tel:+33668997436" className="text-lg font-bold hover:text-[var(--brand-orange)] transition-colors">06 68 99 74 36</a>
-                   </div>
-                 </div>
-                 
-                 <div className="flex items-center gap-4">
-                   <div className="bg-white/10 p-3 rounded-full">
-                     <MapPin className="h-6 w-6" />
-                   </div>
-                   <div>
-                     <div className="text-sm text-white/60">Notre centre</div>
-                     <div className="font-medium">94 Avenue du Docteur Fleming<br/>30900 Nîmes</div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-             
-             <div className="bg-background text-foreground rounded-2xl p-6 shadow-2xl">
-               <h3 className="text-xl font-bold mb-6">Demande de rappel gratuite</h3>
-               <ContactForm context="Accueil-New" />
-             </div>
-           </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Prêt à lancer votre projet ?</h2>
+              <p className="text-white/80 text-lg max-w-md">
+                Remplissez le formulaire, nous vous rappelons dans la journée pour étudier votre besoin et vos possibilités de financement.
+              </p>
+
+              <div className="space-y-6 pt-4">
+                <div className="flex items-center gap-4">
+                  <div className="bg-white/10 p-3 rounded-full">
+                    <Phone className="h-6 w-6" />
+                  </div>
+                  <div className="flex flex-col">
+                    <div className="text-sm text-white/60">Par téléphone</div>
+                    <a href="tel:+33982774444" className="text-xl font-bold hover:text-[var(--brand-orange)] transition-colors">09 82 77 44 44</a>
+                    <a href="tel:+33668997436" className="text-lg font-bold hover:text-[var(--brand-orange)] transition-colors">06 68 99 74 36</a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="bg-white/10 p-3 rounded-full">
+                    <MapPin className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-white/60">Notre centre</div>
+                    <div className="font-medium">94 Avenue du Docteur Fleming<br />30900 Nîmes</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-background text-foreground rounded-2xl p-6 shadow-2xl">
+              <h3 className="text-xl font-bold mb-6">Demande de rappel gratuite</h3>
+              <ContactForm context="Accueil-New" />
+            </div>
+          </div>
         </div>
       </section>
     </div>
