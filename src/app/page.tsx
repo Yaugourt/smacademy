@@ -461,53 +461,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certificat Qualiopi Section */}
-      <section className="py-16 lg:py-24 bg-muted/30 border-y">
-        <div className="mx-auto w-full max-w-screen-xl px-4">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center rounded-full bg-[var(--primary)]/10 px-3 py-1 text-sm font-medium text-[var(--primary)] mb-4">
-              Certification officielle
-            </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
-              Notre certificat Qualiopi
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              SM Academy est certifié Qualiopi au titre des actions de formation. 
-              Cette certification garantit la qualité de nos formations et leur éligibilité aux financements publics.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mt-6 text-sm">
-              <div className="bg-background border border-border px-4 py-2 rounded-full">
-                <strong>N° certificat :</strong> QUA007114
-              </div>
-              <div className="bg-background border border-border px-4 py-2 rounded-full">
-                <strong>Validité :</strong> 20/05/2024 au 19/05/2027
-              </div>
-            </div>
-          </div>
-          
-          <div className="rounded-2xl overflow-hidden border border-border bg-background shadow-xl max-w-4xl mx-auto">
-            <div className="bg-muted px-4 py-3 border-b border-border flex items-center justify-between">
-              <span className="text-sm font-medium text-foreground">Certificat Qualiopi - SM Academy</span>
-              <a 
-                href="/certificat-qualiopi.pdf" 
-                download
-                className="inline-flex items-center gap-2 text-sm font-medium text-[var(--primary)] hover:text-[var(--brand-orange)] transition-colors"
-              >
-                <FileDown className="h-4 w-4" />
-                Télécharger
-              </a>
-            </div>
-            <div className="relative w-full" style={{ height: "700px" }}>
-              <iframe
-                src="/certificat-qualiopi.pdf"
-                className="absolute inset-0 w-full h-full"
-                title="Certificat Qualiopi SM Academy"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact / CTA Section */}
       <section id="contact" className="py-16 lg:py-24 bg-[var(--primary)] text-white">
         <div className="mx-auto w-full max-w-screen-xl px-4">
@@ -545,6 +498,51 @@ export default function Home() {
             <div className="bg-background text-foreground rounded-2xl p-6 shadow-2xl">
               <h3 className="text-xl font-bold mb-6">Demande de rappel gratuite</h3>
               <ContactForm context="Accueil-New" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certificat Qualiopi Section - Compact */}
+      <section className="py-12 bg-background border-t">
+        <div className="mx-auto w-full max-w-screen-xl px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            <div className="lg:w-1/3 text-center lg:text-left">
+              <h3 className="text-xl font-bold text-foreground mb-2">Certificat Qualiopi</h3>
+              <p className="text-sm text-muted-foreground mb-3">
+                N° QUA007114 • Valide jusqu&apos;au 19/05/2027
+              </p>
+              <Button asChild size="sm" className="bg-[var(--brand-orange)] hover:bg-[var(--brand-orange-600)] text-white">
+                <a href="/certificat-qualiopi.pdf" target="_blank" rel="noopener noreferrer">
+                  <FileDown className="h-4 w-4 mr-2" />
+                  Voir le certificat PDF
+                </a>
+              </Button>
+            </div>
+            <div className="lg:w-2/3 rounded-xl overflow-hidden border border-border bg-muted/50 shadow-md">
+              <object
+                data="/certificat-qualiopi.pdf"
+                type="application/pdf"
+                className="w-full h-[400px]"
+              >
+                <div className="flex flex-col items-center justify-center h-[400px] p-8 text-center">
+                  <Image 
+                    src="/certificationqualiopi.png" 
+                    alt="Certification Qualiopi" 
+                    width={120} 
+                    height={120} 
+                    className="mb-4"
+                  />
+                  <p className="text-muted-foreground mb-4">
+                    Votre navigateur ne peut pas afficher le PDF directement.
+                  </p>
+                  <Button asChild variant="outline">
+                    <a href="/certificat-qualiopi.pdf" target="_blank" rel="noopener noreferrer">
+                      Ouvrir le certificat dans un nouvel onglet
+                    </a>
+                  </Button>
+                </div>
+              </object>
             </div>
           </div>
         </div>

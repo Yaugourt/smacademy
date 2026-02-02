@@ -40,7 +40,7 @@ export default function BlogIndex() {
            <Link href={`/blog/${featured.slug}`} className="group block mb-12 relative z-20">
              <div className="grid md:grid-cols-[1.2fr_1fr] bg-card rounded-2xl overflow-hidden shadow-lg border border-border transition-transform hover:-translate-y-1">
                 <div className="relative h-64 md:h-auto overflow-hidden">
-                   <Image
+                    <Image
                       src={featured.coverImage || "/blog-placeholder.jpg"}
                       alt={featured.title}
                       fill
@@ -68,9 +68,9 @@ export default function BlogIndex() {
                    <div className="mt-auto flex items-center font-bold text-[var(--primary)]">
                       Lire l'article <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                    </div>
-                </div>
-             </div>
-           </Link>
+                  </div>
+                  </div>
+                    </Link>
          )}
 
          <div className="grid lg:grid-cols-[1fr_300px] gap-12">
@@ -108,7 +108,7 @@ export default function BlogIndex() {
                               <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
                                  <span className="flex items-center gap-1"><CalendarDays className="h-3 w-3" /> {new Date(p.date).toLocaleDateString("fr-FR")}</span>
                                  <span className="flex items-center gap-1"><Clock className="h-3 w-3" /> {reading} min</span>
-                              </div>
+                    </div>
                               
                               <h3 className="text-xl font-bold text-foreground mb-2 line-clamp-2 group-hover:text-[var(--primary)] transition-colors">
                                  <Link href={`/blog/${p.slug}`}>{p.title}</Link>
@@ -121,11 +121,11 @@ export default function BlogIndex() {
                               <Link href={`/blog/${p.slug}`} className="text-sm font-semibold text-[var(--primary)] flex items-center mt-auto group-hover:underline underline-offset-4">
                                  Lire la suite
                               </Link>
-                           </div>
-                        </article>
-                     );
-                  })}
-               </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
             </div>
 
             {/* Sidebar */}
@@ -145,18 +145,18 @@ export default function BlogIndex() {
                     <Filter className="h-4 w-4" /> Catégories
                   </h3>
                   <ul className="space-y-2">
-                     {categories.map((c) => (
-                        <li key={c}>
+              {categories.map((c) => (
+                <li key={c}>
                            <Link href={`/blog/categorie/${encodeURIComponent(c)}`} className="flex items-center justify-between text-sm text-muted-foreground hover:text-[var(--brand-orange)] hover:bg-muted/50 p-2 rounded-lg transition-colors">
                               <span>{c}</span>
                               <span className="bg-muted text-muted-foreground text-xs py-0.5 px-2 rounded-full">
                                  {posts.filter(p => p.category === c).length}
                               </span>
                            </Link>
-                        </li>
-                     ))}
-                  </ul>
-               </div>
+                </li>
+              ))}
+            </ul>
+          </div>
 
                {/* Tags Cloud */}
                <div className="bg-card p-6 rounded-xl border border-border shadow-sm">
@@ -164,15 +164,15 @@ export default function BlogIndex() {
                     <Tag className="h-4 w-4" /> Mots-clés populaires
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                     {tags.map((t) => (
+              {tags.map((t) => (
                         <Link key={t} href={`/blog/tag/${encodeURIComponent(t)}`}>
                            <Badge variant="outline" className="hover:bg-[var(--brand-orange)] hover:text-white hover:border-[var(--brand-orange)] transition-colors cursor-pointer font-normal text-muted-foreground">
                               {t}
                            </Badge>
                         </Link>
-                     ))}
-                  </div>
-               </div>
+              ))}
+            </div>
+          </div>
 
                {/* Newsletter CTA */}
                <div className="bg-slate-900 text-white p-6 rounded-xl shadow-lg">
@@ -187,7 +187,7 @@ export default function BlogIndex() {
                      </Button>
                   </div>
                </div>
-            </aside>
+        </aside>
          </div>
       </div>
     </div>
