@@ -9,7 +9,7 @@ import { MapPin, CheckCircle2, ArrowRight, Building2, Globe2, Phone } from "luci
 export const metadata: Metadata = {
   title: "Centre de formation dans le Gard (30) | SM Academy",
   description:
-    "SM Academy, centre de formation Qualiopi basé à Nîmes, accompagne les entreprises et stagiaires dans tout le Gard (Alès, Bagnols-sur-Cèze, Beaucaire...). Formations IRVE, habilitations électriques, AIPR, SST, Fibre optique, Gestes & Postures, bureautique et plus.",
+    "SM Academy, centre de formation Qualiopi basé à Nîmes, accompagne les entreprises et stagiaires dans tout le Gard (Alès, Bagnols-sur-Cèze, Beaucaire...). Formations AIPR, Fibre optique, Gestes & Postures, Pack Office, Bientraitance, Risque routier.",
   alternates: { canonical: "/gard" },
 };
 
@@ -158,32 +158,32 @@ export default function GardPage() {
             <h2 className="text-3xl font-bold mb-3">Domaines de formation dans le Gard</h2>
             <p className="text-blue-100 text-sm sm:text-base">
               Nos principaux axes de formation couvrent les besoins réglementaires et opérationnels des entreprises du Gard&nbsp;:
-              réseaux électriques, IRVE, fibre optique, sécurité au travail et bureautique.
+              AIPR, fibre optique, prévention, bureautique et accompagnement social.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-slate-800/70 rounded-2xl p-5 border border-white/10">
-              <h3 className="font-semibold mb-2">Électricité &amp; IRVE</h3>
+              <h3 className="font-semibold mb-2">Sécurité &amp; prévention</h3>
               <ul className="text-sm text-blue-100 space-y-1">
-                <li>Habilitation électrique (H0 / B0 / BS / BE / B1 / B2 / BC)</li>
-                <li>IRVE – installation de bornes de recharge</li>
-                <li>Mise en conformité des installations</li>
+                <li>AIPR – Autorisation d&apos;intervention à proximité des réseaux</li>
+                <li>Gestes &amp; Postures / prévention TMS</li>
+                <li>Risque routier – sensibilisation conducteurs</li>
               </ul>
             </div>
             <div className="bg-slate-800/70 rounded-2xl p-5 border border-white/10">
               <h3 className="font-semibold mb-2">Fibre &amp; réseaux</h3>
               <ul className="text-sm text-blue-100 space-y-1">
                 <li>Fibre optique D3 – raccordement abonné</li>
-                <li>Travaux sur réseaux cuivre / fibre</li>
+                <li>Mesures OTDR et maintenance réseau</li>
                 <li>Interventions terrain et qualité de service</li>
               </ul>
             </div>
             <div className="bg-slate-800/70 rounded-2xl p-5 border border-white/10">
-              <h3 className="font-semibold mb-2">Prévention &amp; tertiaire</h3>
+              <h3 className="font-semibold mb-2">Tertiaire &amp; social</h3>
               <ul className="text-sm text-blue-100 space-y-1">
-                <li>Sauveteur Secouriste du Travail (SST)</li>
-                <li>Gestes &amp; Postures / prévention TMS</li>
-                <li>Pack Office / bureautique</li>
+                <li>Pack Office Expert (Word, Excel, PowerPoint)</li>
+                <li>Bientraitance auprès des personnes âgées</li>
+                <li>Formations sur mesure selon vos besoins</li>
               </ul>
             </div>
           </div>

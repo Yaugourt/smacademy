@@ -249,11 +249,15 @@ export default async function FormationPage({ params }: PageProps) {
                     </div>
                   ))}
                 </div>
-                <div className="mt-6 pt-6 border-t border-border">
-                  <Button variant="outline" className="gap-2">
-                    <Download className="h-4 w-4" /> Télécharger le programme PDF
-                  </Button>
-                </div>
+                {formation.programPdf && (
+                  <div className="mt-6 pt-6 border-t border-border">
+                    <Button variant="outline" className="gap-2" asChild>
+                      <a href={formation.programPdf} download>
+                        <Download className="h-4 w-4" /> Télécharger le programme détaillé
+                      </a>
+                    </Button>
+                  </div>
+                )}
               </section>
             )}
 

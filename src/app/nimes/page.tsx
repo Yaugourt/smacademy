@@ -10,7 +10,7 @@ import { MapPin, CheckCircle2, ArrowRight, Star } from "lucide-react";
 export const metadata: Metadata = {
   title: "Centre de formation à Nîmes (Gard) | SM Academy",
   description:
-    "SM Academy – centre de formation Qualiopi à Nîmes. Habilitations électriques, AIPR, SST, IRVE, Fibre optique D3, Gestes & Postures, Excel, Formateur. Sessions courtes, finançables OPCO / Entreprise.",
+    "SM Academy – centre de formation Qualiopi à Nîmes. AIPR, Fibre optique D3, Gestes & Postures, Pack Office, Bientraitance, Risque routier. Sessions courtes, finançables OPCO / Entreprise.",
   alternates: { canonical: "/nimes" },
 };
 
@@ -128,16 +128,16 @@ export default function NimesPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
                <div className="grid grid-cols-2 gap-4">
                   <div className="h-48 rounded-xl bg-slate-800 overflow-hidden relative">
-                     <Image src="https://smacademy.fr/wp-content/uploads/2024/08/technicien-1-1.jpg" alt="Plateau technique" fill className="object-cover opacity-80 hover:opacity-100 transition-opacity" />
+                     <Image src="/smAcademy/fibre3.PNG" alt="Plateau technique Fibre" fill className="object-cover opacity-80 hover:opacity-100 transition-opacity" />
                   </div>
                   <div className="h-48 rounded-xl bg-slate-800 overflow-hidden relative mt-8">
-                     <Image src="https://smacademy.fr/wp-content/uploads/2024/08/irvee.jpg" alt="Salle de formation" fill className="object-cover opacity-80 hover:opacity-100 transition-opacity" />
+                     <Image src="/smAcademy/sstt 2.jpg" alt="Salle de formation SST" fill className="object-cover opacity-80 hover:opacity-100 transition-opacity" />
                   </div>
                </div>
                <div className="space-y-6">
                   <h2 className="text-3xl font-bold">Un plateau technique de qualité</h2>
                   <p className="text-slate-300 text-lg">
-                    Pour garantir la qualité de nos formations pratiques (Fibre Optique, IRVE, SST), nous disposons d'équipements pédagogiques récents et conformes aux référentiels.
+                    Pour garantir la qualité de nos formations pratiques (Fibre Optique, AIPR, Gestes & Postures…), nous disposons d'équipements pédagogiques récents et conformes aux référentiels.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-3">

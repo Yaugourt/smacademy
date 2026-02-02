@@ -29,7 +29,7 @@ import ReviewsStrip from "@/components/site/ReviewsStrip";
 export const metadata = {
   title: "Centre de formation à Nîmes (Qualiopi) | SM Academy",
   description:
-    "Formations professionnelles à Nîmes (Gard) : SST, IRVE, Fibre optique D3, Gestes & Postures, Pack Office, Formation de formateur. Sessions courtes, finançables OPCO.",
+    "Formations professionnelles à Nîmes (Gard) : AIPR, Fibre optique D3, Gestes & Postures, Pack Office, Bientraitance, Risque routier. Sessions courtes, finançables OPCO.",
   alternates: {
     canonical: "/",
   },
@@ -38,13 +38,12 @@ export const metadata = {
 export default function Home() {
   const featured = formations.slice(0, 6);
   const iconBySlug: Record<string, React.ReactNode> = {
-    "fibre-optique-d3": <Cable className="h-5 w-5 text-[var(--brand-orange)]" />,
-    sst: <HeartPulse className="h-5 w-5 text-[var(--brand-orange)]" />,
-    irve: <Zap className="h-5 w-5 text-[var(--brand-orange)]" />,
-    "aipr-encadrement-operateur": <HardHat className="h-5 w-5 text-[var(--brand-orange)]" />,
-    formateur: <GraduationCap className="h-5 w-5 text-[var(--brand-orange)]" />,
+    "aipr-operateur": <HardHat className="h-5 w-5 text-[var(--brand-orange)]" />,
+    "bientraitance": <HeartPulse className="h-5 w-5 text-[var(--brand-orange)]" />,
     "gestes-et-postures": <Dumbbell className="h-5 w-5 text-[var(--brand-orange)]" />,
     "pack-office": <FlaskConical className="h-5 w-5 text-[var(--brand-orange)]" />,
+    "fibre-optique-d3": <Cable className="h-5 w-5 text-[var(--brand-orange)]" />,
+    "risque-routier": <Zap className="h-5 w-5 text-[var(--brand-orange)]" />,
   };
 
   return (
@@ -63,7 +62,7 @@ export default function Home() {
                   Boostez votre carrière avec nos <span className="text-[var(--primary)]">formations certifiantes</span>
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl leading-relaxed">
-                  Des formations courtes et opérationnelles : IRVE, habilitations électriques, AIPR, Fibre Optique, SST, et plus.
+                  Des formations courtes et opérationnelles : AIPR, Fibre Optique, Gestes & Postures, Pack Office, Bientraitance, Risque routier.
                   Basés à Nîmes, nous accompagnons les professionnels et les particuliers dans tout le Gard (30).
                   Financez votre avenir via OPCO / France Travail.
                 </p>
@@ -100,7 +99,7 @@ export default function Home() {
             <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
               <div className="relative aspect-square lg:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-background bg-muted">
                 <Image
-                  src="https://smacademy.fr/wp-content/uploads/2025/02/IMG_3091-scaled-e1740573209118.jpg"
+                  src="/smAcademy/IMG_3076.jpeg"
                   alt="Formation SM Academy"
                   fill
                   className="object-cover"
@@ -384,7 +383,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4 mt-8">
                   <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
-                    <Image src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_1326.jpg" width={400} height={500} alt="Formation technique" className="w-full h-auto object-cover" />
+                    <Image src="/smAcademy/fibre.jpeg" width={400} height={500} alt="Formation Fibre optique" className="w-full h-auto object-cover" />
                   </div>
                   <div className="bg-[var(--primary)] p-6 rounded-2xl text-white text-center">
                     <div className="text-3xl font-bold mb-1">OPCO</div>
@@ -397,7 +396,7 @@ export default function Home() {
                     <div className="text-sm text-muted-foreground">Accompagnement administratif</div>
                   </div>
                   <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
-                    <Image src="https://smacademy.fr/wp-content/uploads/2024/08/IMG_1325-e1740574444704.png" width={400} height={500} alt="Formation IRVE" className="w-full h-auto object-cover" />
+                    <Image src="/smAcademy/sst.jpeg" width={400} height={500} alt="Formation SST" className="w-full h-auto object-cover" />
                   </div>
                 </div>
               </div>
