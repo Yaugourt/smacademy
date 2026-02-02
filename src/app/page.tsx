@@ -22,6 +22,7 @@ import {
   Handshake as LucideHandshake,
   MapPin,
   HardHat,
+  FileDown,
 } from "lucide-react";
 import ValuesAccordion from "@/components/sections/Values";
 import ReviewsStrip from "@/components/site/ReviewsStrip";
@@ -433,6 +434,15 @@ export default function Home() {
                   <div>
                     <h3 className="font-bold text-lg text-foreground">Certifié Qualiopi</h3>
                     <p className="text-muted-foreground">Un gage de qualité qui rend nos formations éligibles aux financements publics et mutualisés.</p>
+                    <a 
+                      href="/certificat-qualiopi.pdf" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-2 text-sm font-medium text-[var(--primary)] hover:text-[var(--brand-orange)] transition-colors"
+                    >
+                      <FileDown className="h-4 w-4" />
+                      Voir notre certificat Qualiopi
+                    </a>
                   </div>
                 </div>
 
@@ -446,6 +456,53 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certificat Qualiopi Section */}
+      <section className="py-16 lg:py-24 bg-muted/30 border-y">
+        <div className="mx-auto w-full max-w-screen-xl px-4">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center rounded-full bg-[var(--primary)]/10 px-3 py-1 text-sm font-medium text-[var(--primary)] mb-4">
+              Certification officielle
+            </div>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
+              Notre certificat Qualiopi
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              SM Academy est certifié Qualiopi au titre des actions de formation. 
+              Cette certification garantit la qualité de nos formations et leur éligibilité aux financements publics.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mt-6 text-sm">
+              <div className="bg-background border border-border px-4 py-2 rounded-full">
+                <strong>N° certificat :</strong> QUA007114
+              </div>
+              <div className="bg-background border border-border px-4 py-2 rounded-full">
+                <strong>Validité :</strong> 20/05/2024 au 19/05/2027
+              </div>
+            </div>
+          </div>
+          
+          <div className="rounded-2xl overflow-hidden border border-border bg-background shadow-xl max-w-4xl mx-auto">
+            <div className="bg-muted px-4 py-3 border-b border-border flex items-center justify-between">
+              <span className="text-sm font-medium text-foreground">Certificat Qualiopi - SM Academy</span>
+              <a 
+                href="/certificat-qualiopi.pdf" 
+                download
+                className="inline-flex items-center gap-2 text-sm font-medium text-[var(--primary)] hover:text-[var(--brand-orange)] transition-colors"
+              >
+                <FileDown className="h-4 w-4" />
+                Télécharger
+              </a>
+            </div>
+            <div className="relative w-full" style={{ height: "700px" }}>
+              <iframe
+                src="/certificat-qualiopi.pdf"
+                className="absolute inset-0 w-full h-full"
+                title="Certificat Qualiopi SM Academy"
+              />
             </div>
           </div>
         </div>
