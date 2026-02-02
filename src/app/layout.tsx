@@ -27,14 +27,18 @@ export const metadata: Metadata = {
     template: "%s | SM Academy Nîmes",
   },
   description:
-    "Centre de formation Qualiopi à Nîmes (Gard, Occitanie). Formations SST, IRVE, Fibre optique D3, AIPR, Gestes & Postures, Pack Office et Formation de formateur. Financement OPCO et France Travail. Sessions courtes et certifiantes.",
+    "Centre de formation Qualiopi à Nîmes (Gard, Occitanie). Formations AIPR, Fibre optique D3, Gestes & Postures, Pack Office, Bientraitance, Risque routier. Financement OPCO et France Travail. Sessions courtes et certifiantes.",
   keywords: [
     "formation professionnelle Nîmes",
     "centre de formation Gard",
-    "formation SST Nîmes",
-    "formation IRVE Gard",
-    "formation fibre optique Nîmes",
+    "formation AIPR Nîmes",
     "formation AIPR Gard",
+    "formation fibre optique Nîmes",
+    "formation fibre optique D3 Gard",
+    "formation gestes et postures Nîmes",
+    "formation Pack Office Gard",
+    "formation bientraitance Nîmes",
+    "formation risque routier Gard",
     "Qualiopi Nîmes",
     "OPCO formation Gard",
     "France Travail formation Nîmes",
@@ -50,7 +54,7 @@ export const metadata: Metadata = {
     siteName: "SM Academy",
     title: "SM Academy – Centre de formation professionnelle à Nîmes (Gard) | Qualiopi",
     description:
-      "Centre de formation Qualiopi à Nîmes (Gard). Formations SST, IRVE, Fibre optique, AIPR, Gestes & Postures, Pack Office. Financement OPCO et France Travail.",
+      "Centre de formation Qualiopi à Nîmes (Gard). Formations AIPR, Fibre optique D3, Gestes & Postures, Pack Office, Bientraitance, Risque routier. Financement OPCO et France Travail.",
     images: [
       {
         url: "https://smacademy.fr/Logo_SMACADEMY.png",
@@ -64,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SM Academy – Centre de formation à Nîmes (Gard)",
     description:
-      "Formations professionnelles certifiantes à Nîmes : SST, IRVE, Fibre optique, AIPR. Finançables OPCO et France Travail.",
+      "Formations professionnelles certifiantes à Nîmes : AIPR, Fibre optique, Gestes & Postures, Pack Office, Bientraitance. Finançables OPCO et France Travail.",
     images: ["https://smacademy.fr/Logo_SMACADEMY.png"],
   },
   robots: {
