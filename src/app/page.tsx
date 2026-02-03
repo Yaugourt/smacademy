@@ -131,7 +131,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-screen-xl px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-[var(--primary)]">500+</div>
+              <div className="text-3xl md:text-4xl font-bold text-[var(--primary)]">87</div>
               <div className="text-sm font-medium text-muted-foreground">Stagiaires formés</div>
             </div>
             <div className="space-y-2">
@@ -143,8 +143,8 @@ export default function Home() {
               <div className="text-sm font-medium text-muted-foreground">Accompagnement dossiers</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-[var(--primary)]">30</div>
-              <div className="text-sm font-medium text-muted-foreground">Sessions par an</div>
+              <div className="text-3xl md:text-4xl font-bold text-[var(--primary)]">24</div>
+              <div className="text-sm font-medium text-muted-foreground">Sessions</div>
             </div>
           </div>
         </div>
