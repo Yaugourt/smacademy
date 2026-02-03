@@ -45,6 +45,8 @@ export default function Home() {
     "pack-office": <FlaskConical className="h-5 w-5 text-[var(--brand-orange)]" />,
     "fibre-optique-d3": <Cable className="h-5 w-5 text-[var(--brand-orange)]" />,
     "risque-routier": <Zap className="h-5 w-5 text-[var(--brand-orange)]" />,
+    "sst": <HeartPulse className="h-5 w-5 text-[var(--brand-orange)]" />,
+    "habilitation-electrique-h0b0": <Zap className="h-5 w-5 text-[var(--brand-orange)]" />,
   };
 
   return (
@@ -216,13 +218,25 @@ export default function Home() {
                     {f.summary}
                   </p>
 
-                  <div className="mt-auto pt-4 border-t border-border flex items-center justify-between">
-                    <div className="text-xs text-muted-foreground font-medium flex items-center gap-1">
-                      <CalendarCheck className="h-3.5 w-3.5" /> Sessions fréquentes
+                  <div className="mt-auto pt-4 border-t border-border flex flex-col gap-3">
+                    <div className="flex items-center justify-between">
+                      <div className="text-xs text-muted-foreground font-medium flex items-center gap-1">
+                        <CalendarCheck className="h-3.5 w-3.5" /> Sessions fréquentes
+                      </div>
+                      <Link href={`/formations/${f.slug}`} className="text-sm font-semibold text-[var(--primary)] flex items-center gap-1 hover:text-[var(--brand-orange)] transition-colors">
+                        Voir le programme <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
                     </div>
-                    <Link href={`/formations/${f.slug}`} className="text-sm font-semibold text-[var(--primary)] flex items-center gap-1 hover:text-[var(--brand-orange)] transition-colors">
-                      Voir le programme <ArrowRight className="h-3.5 w-3.5" />
-                    </Link>
+                    {f.programPdf && (
+                      <a
+                        href={f.programPdf}
+                        download
+                        className="flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-[var(--brand-orange)]/10 text-[var(--brand-orange)] text-sm font-medium hover:bg-[var(--brand-orange)] hover:text-white transition-colors"
+                      >
+                        <FileDown className="h-4 w-4" />
+                        Télécharger le programme
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

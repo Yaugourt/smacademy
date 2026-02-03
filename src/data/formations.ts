@@ -247,6 +247,96 @@ export const formations: Formation[] = [
     ],
     programPdf: "/smAcademy/PROGRAMME RISQUE ROUTIER 2026.docx",
   },
+  {
+    slug: "sst",
+    title: "SST – Sauveteur Secouriste du Travail",
+    city: "Nîmes (Gard)",
+    summary:
+      "Formation SST à Nîmes (Gard) : devenez Sauveteur Secouriste du Travail certifié. Apprenez les gestes de premiers secours et la prévention des risques. 2 jours, 250 €, finançable OPCO / France Travail.",
+    tags: ["Sécurité", "Secourisme", "Prévention"],
+    heroImage: "/smAcademy/sst.jpeg",
+    duration: "2 jours (14 heures)",
+    price: "250 €",
+    location: "Centre SM Academy (Nîmes) ou sur site",
+    certification: "Certificat SST délivré par l'INRS (validité 2 ans)",
+    audience:
+      "Tout salarié souhaitant devenir acteur de la prévention dans son entreprise et être capable d'intervenir efficacement face à une situation d'accident.",
+    objectives: [
+      "Intervenir efficacement face à une situation d'accident du travail",
+      "Mettre en application ses compétences de SST au service de la prévention des risques professionnels",
+      "Situer le rôle du SST dans l'organisation de la prévention de l'entreprise",
+      "Contribuer à la mise en œuvre d'actions de prévention",
+    ],
+    prerequisites: ["Aucun prérequis"],
+    program: [
+      "Le cadre juridique de l'intervention du SST",
+      "Réaliser une protection adaptée",
+      "Examiner la victime avant et pour la mise en œuvre de l'action choisie",
+      "Faire alerter ou alerter en fonction de l'organisation des secours",
+      "Secourir : la victime saigne abondamment, s'étouffe, se plaint de malaise, se plaint de brûlures",
+      "La victime se plaint d'une douleur empêchant certains mouvements",
+      "La victime se plaint d'une plaie qui ne saigne pas abondamment",
+      "La victime ne répond pas mais respire",
+      "La victime ne répond pas et ne respire pas : réanimation cardio-pulmonaire et utilisation du DAE",
+      "Situations inhérentes aux risques spécifiques de l'entreprise",
+    ],
+    images: [
+      "/smAcademy/sst.jpeg",
+      "/smAcademy/header-sst.jpg",
+    ],
+    financingNotes:
+      "Éligible OPCO, France Travail. Nous vous accompagnons pour le montage du dossier.",
+    faqs: [
+      { q: "Public visé ?", a: "Tout salarié souhaitant devenir Sauveteur Secouriste du Travail." },
+      { q: "Lieu ?", a: "Au centre SM Academy (Nîmes) ou en intra sur votre site." },
+      { q: "Certification ?", a: "Certificat SST délivré par l'INRS, valable 2 ans (recyclage MAC SST recommandé)." },
+      { q: "Matériel ?", a: "Mannequins adulte, enfant et nourrisson, défibrillateur de formation, maquillage de simulation." },
+    ],
+    programPdf: "/smAcademy/PROGRAMME SST 2026.docx",
+  },
+  {
+    slug: "habilitation-electrique-h0b0",
+    title: "Habilitation Électrique H0B0 – Personnel non électricien",
+    city: "Nîmes (Gard)",
+    summary:
+      "Formation Habilitation Électrique H0B0 à Nîmes (Gard) : obtenez votre habilitation pour travailler en sécurité à proximité d'installations électriques. 1 jour, 190 €, finançable OPCO / France Travail.",
+    tags: ["Sécurité", "Électricité", "Habilitation"],
+    heroImage: "/smAcademy/IMG_3076.jpeg",
+    duration: "1 jour (7 heures)",
+    price: "190 €",
+    location: "Centre SM Academy (Nîmes) ou sur site",
+    certification: "Avis d'habilitation H0B0 (validité 3 ans)",
+    audience:
+      "Personnel non électricien devant effectuer des travaux d'ordre non électrique dans un environnement présentant des risques électriques (peintres, maçons, agents d'entretien, etc.).",
+    objectives: [
+      "Identifier les risques électriques et savoir s'en protéger",
+      "Connaître et appliquer les prescriptions de sécurité de la norme NF C18-510",
+      "Intégrer la prévention dans l'organisation du travail",
+      "Mettre en œuvre les mesures de prévention adaptées",
+      "Réagir en cas d'accident ou d'incendie d'origine électrique",
+    ],
+    prerequisites: ["Aucun prérequis technique, savoir lire et écrire le français"],
+    program: [
+      "Notions élémentaires d'électricité : tension, intensité, résistance, courant alternatif/continu",
+      "Les effets du courant électrique sur le corps humain",
+      "Les différents domaines de tension et zones d'environnement",
+      "Les équipements de protection individuelle et collective",
+      "La conduite à tenir en cas d'accident d'origine électrique",
+      "La conduite à tenir en cas d'incendie d'origine électrique",
+      "Les responsabilités de chacun : employeur, chargé d'exploitation, exécutant",
+      "Les documents applicables : titre d'habilitation, autorisation de travail",
+      "Évaluation théorique et pratique",
+    ],
+    financingNotes:
+      "Éligible OPCO, France Travail. Nous vous accompagnons pour le montage du dossier.",
+    faqs: [
+      { q: "Public visé ?", a: "Personnel non électricien travaillant à proximité d'installations électriques." },
+      { q: "Lieu ?", a: "Au centre SM Academy (Nîmes) ou en intra sur votre site." },
+      { q: "Certification ?", a: "Avis d'habilitation H0B0 permettant à l'employeur de délivrer le titre d'habilitation." },
+      { q: "Recyclage ?", a: "Recommandé tous les 3 ans selon la norme NF C18-510." },
+    ],
+    programPdf: "/smAcademy/formation+habilitation+H0B0+résumé+V2.pdf",
+  },
 ];
 
 export function getFormationBySlug(slug: string): Formation | undefined {

@@ -15,7 +15,8 @@ import {
   Clock, 
   MapPin,
   ArrowRight,
-  Filter
+  Filter,
+  FileDown
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -36,6 +37,8 @@ export default function FormationsPage() {
     "pack-office": <FlaskConical className="h-5 w-5" />,
     "fibre-optique-d3": <Cable className="h-5 w-5" />,
     "risque-routier": <Zap className="h-5 w-5" />,
+    "sst": <HeartPulse className="h-5 w-5" />,
+    "habilitation-electrique-h0b0": <Zap className="h-5 w-5" />,
   };
 
   return (
@@ -241,23 +244,35 @@ function FormationCard({ formation, icon }: { formation: any; icon: React.ReactN
           {formation.summary}
         </p>
 
-        <div className="flex items-center justify-between pt-4 border-t border-border mt-auto">
-           <div className="flex flex-col gap-1">
-             {formation.price && (
-                <span className="text-xs font-medium text-muted-foreground">
-                   {formation.price === "Nous consulter" ? "Sur devis" : formation.price}
-                </span>
-             )}
-             <span className="text-xs text-green-600 flex items-center gap-1">
-               <CheckCircle2 className="h-3 w-3" /> Financement possible
-             </span>
+        <div className="flex flex-col gap-3 pt-4 border-t border-border mt-auto">
+           <div className="flex items-center justify-between">
+             <div className="flex flex-col gap-1">
+               {formation.price && (
+                  <span className="text-xs font-medium text-muted-foreground">
+                     {formation.price === "Nous consulter" ? "Sur devis" : formation.price}
+                  </span>
+               )}
+               <span className="text-xs text-green-600 flex items-center gap-1">
+                 <CheckCircle2 className="h-3 w-3" /> Financement possible
+               </span>
+             </div>
+             
+             <Button asChild size="sm" className="rounded-full group-hover:translate-x-1 transition-transform">
+               <Link href={`/formations/${formation.slug}`}>
+                 Découvrir <ArrowRight className="ml-2 h-3.5 w-3.5" />
+               </Link>
+             </Button>
            </div>
-           
-           <Button asChild size="sm" className="rounded-full group-hover:translate-x-1 transition-transform">
-             <Link href={`/formations/${formation.slug}`}>
-               Découvrir <ArrowRight className="ml-2 h-3.5 w-3.5" />
-             </Link>
-           </Button>
+           {formation.programPdf && (
+             <a
+               href={formation.programPdf}
+               download
+               className="flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-[var(--brand-orange)]/10 text-[var(--brand-orange)] text-sm font-medium hover:bg-[var(--brand-orange)] hover:text-white transition-colors"
+             >
+               <FileDown className="h-4 w-4" />
+               Télécharger le programme
+             </a>
+           )}
         </div>
       </div>
     </div>
