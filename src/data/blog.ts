@@ -12,6 +12,466 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "formation-sst-nimes-gard-guide-complet-2026",
+    title: "Formation SST à Nîmes (Gard) : Guide complet 2026 – Devenir Sauveteur Secouriste du Travail",
+    excerpt:
+      "Tout savoir sur la formation SST à Nîmes : obligations légales, programme, durée, prix et financement. Devenez Sauveteur Secouriste du Travail certifié INRS dans le Gard.",
+    date: "2026-02-03T10:00:00.000Z",
+    coverImage: "/smAcademy/sst.jpeg",
+    category: "SST",
+    tags: ["SST", "Sécurité", "Nîmes", "Gard", "Formation obligatoire", "INRS"],
+    author: "SM Academy",
+    contentHtml: \`
+      <p>
+        La <strong>formation SST (Sauveteur Secouriste du Travail)</strong> est une obligation légale pour de nombreuses entreprises.
+        Si vous êtes basé à <strong>Nîmes</strong> ou dans le <strong>Gard (30)</strong>, ce guide complet vous explique tout ce qu'il faut
+        savoir pour former vos équipes ou vous former vous-même.
+      </p>
+
+      <h2>1. Qu'est-ce que la formation SST ?</h2>
+      <p>
+        Le SST est un salarié capable d'intervenir lors d'un accident du travail et de participer à la prévention des risques
+        professionnels dans son entreprise. La formation est encadrée par l'<strong>INRS</strong> (Institut National de Recherche et de Sécurité)
+        et délivre un <strong>certificat SST valable 24 mois</strong>.
+      </p>
+
+      <h2>2. Obligation légale : que dit le Code du Travail ?</h2>
+      <p>
+        Le <strong>Code du Travail (article R4224-15)</strong> impose la présence d'au moins un sauveteur secouriste dans :
+      </p>
+      <ul>
+        <li>Chaque atelier où sont effectués des <strong>travaux dangereux</strong></li>
+        <li>Chaque chantier de <strong>plus de 20 personnes</strong> pendant plus de 15 jours avec travaux dangereux</li>
+      </ul>
+      <p>
+        Dans le <strong>Gard</strong>, les entreprises du BTP, de l'industrie, de la logistique et des services sont particulièrement concernées.
+      </p>
+
+      <h2>3. Programme de la formation SST initiale</h2>
+      <p>
+        La formation SST initiale dure <strong>14 heures (2 jours)</strong> et couvre :
+      </p>
+      <ul>
+        <li><strong>Le cadre juridique</strong> : rôle du SST, responsabilités</li>
+        <li><strong>La protection</strong> : analyser la situation, supprimer ou isoler le danger</li>
+        <li><strong>L'examen de la victime</strong> : reconnaître les signes vitaux</li>
+        <li><strong>L'alerte</strong> : qui alerter, comment transmettre les informations</li>
+        <li><strong>Les gestes de secours</strong> : PLS, RCP, utilisation du DAE, hémorragies, brûlures, plaies</li>
+      </ul>
+
+      <h2>4. Recyclage MAC SST : maintenir ses compétences</h2>
+      <p>
+        Le certificat SST est valable <strong>24 mois</strong>. Pour le prolonger, il faut suivre un recyclage appelé
+        <strong>MAC SST (Maintien et Actualisation des Compétences)</strong> :
+      </p>
+      <ul>
+        <li><strong>Durée</strong> : 7 heures (1 jour)</li>
+        <li><strong>Contenu</strong> : révision des gestes, actualisation des recommandations, mises en situation</li>
+        <li><strong>Validité</strong> : prolonge le certificat de 24 mois</li>
+      </ul>
+
+      <h2>5. Prix et financement de la formation SST à Nîmes</h2>
+      <p>
+        Chez SM Academy à Nîmes, la formation SST est proposée à <strong>250 € par stagiaire</strong>. Plusieurs dispositifs
+        permettent de financer cette formation :
+      </p>
+      <ul>
+        <li><strong>OPCO</strong> : prise en charge pour les salariés via l'opérateur de compétences de votre branche</li>
+        <li><strong>France Travail</strong> : aides AIF/POEI pour les demandeurs d'emploi</li>
+        <li><strong>Plan de formation entreprise</strong> : budget formation interne</li>
+      </ul>
+
+      <h2>6. Pourquoi choisir SM Academy pour votre formation SST dans le Gard ?</h2>
+      <ul>
+        <li><strong>Centre certifié Qualiopi</strong> : formations finançables par les fonds publics</li>
+        <li><strong>Formateurs certifiés INRS</strong> : expertise et pédagogie reconnues</li>
+        <li><strong>Sessions régulières</strong> à Nîmes et en intra dans tout le Gard (Alès, Bagnols, Uzès, Beaucaire)</li>
+        <li><strong>Accompagnement administratif</strong> : montage des dossiers OPCO et France Travail</li>
+      </ul>
+
+      <p>
+        Découvrez notre <a href="/formations/sst">formation SST à Nîmes</a> et contactez-nous pour planifier vos sessions.
+        Pour les entreprises du <strong>Gard</strong>, consultez également notre <a href="/gard">page dédiée au département</a>.
+      </p>
+    \`,
+  },
+  {
+    slug: "habilitation-electrique-h0b0-nimes-guide-2026",
+    title: "Habilitation Électrique H0B0 à Nîmes : Formation obligatoire pour non-électriciens (Guide 2026)",
+    excerpt:
+      "Formation habilitation électrique H0B0 à Nîmes (Gard) : norme NF C18-510, programme, durée 7h, prix et financement. Indispensable pour les non-électriciens.",
+    date: "2026-02-02T10:00:00.000Z",
+    coverImage: "/smAcademy/IMG_3076.jpeg",
+    category: "Électricité",
+    tags: ["Habilitation électrique", "H0B0", "Sécurité", "Nîmes", "Gard", "NF C18-510"],
+    author: "SM Academy",
+    contentHtml: \`
+      <p>
+        L'<strong>habilitation électrique H0B0</strong> est obligatoire pour tout personnel non-électricien amené à travailler
+        à proximité d'installations électriques. Si vous êtes à <strong>Nîmes</strong> ou dans le <strong>Gard</strong>,
+        voici tout ce qu'il faut savoir sur cette formation réglementaire.
+      </p>
+
+      <h2>1. Qu'est-ce que l'habilitation électrique H0B0 ?</h2>
+      <p>
+        L'habilitation électrique est la <strong>reconnaissance par l'employeur</strong> de la capacité d'une personne à accomplir
+        en sécurité des tâches à proximité d'installations électriques. Elle est encadrée par la <strong>norme NF C18-510</strong>
+        et le <strong>décret 2010-1118</strong>.
+      </p>
+      <p>
+        Le symbole <strong>H0B0</strong> signifie :
+      </p>
+      <ul>
+        <li><strong>H0</strong> : travaux d'ordre non électrique en haute tension (voisinage)</li>
+        <li><strong>B0</strong> : travaux d'ordre non électrique en basse tension</li>
+      </ul>
+
+      <h2>2. Qui doit suivre la formation H0B0 ?</h2>
+      <p>
+        Cette formation s'adresse aux <strong>non-électriciens</strong> qui peuvent être exposés au risque électrique :
+      </p>
+      <ul>
+        <li>Peintres, maçons, plaquistes intervenant près de tableaux électriques</li>
+        <li>Agents d'entretien, gardiens, agents de sécurité</li>
+        <li>Personnel de maintenance non électricien</li>
+        <li>Intérimaires, sous-traitants accédant à des locaux électriques</li>
+      </ul>
+      <p>
+        Dans le <strong>Gard</strong>, les entreprises du BTP, de l'industrie et des services sont particulièrement concernées.
+      </p>
+
+      <h2>3. Programme de la formation H0B0 (7 heures)</h2>
+      <p>
+        La formation habilitation électrique H0B0 dure <strong>1 jour (7 heures)</strong> et couvre :
+      </p>
+      <ul>
+        <li><strong>Notions d'électricité</strong> : tension, intensité, résistance, courant alternatif/continu</li>
+        <li><strong>Effets du courant sur le corps humain</strong> : électrisation, électrocution, brûlures</li>
+        <li><strong>Zones d'environnement</strong> : domaines de tension, distances de sécurité</li>
+        <li><strong>Équipements de protection</strong> : EPI et EPC</li>
+        <li><strong>Conduite à tenir en cas d'accident</strong> : incendie, électrisation</li>
+        <li><strong>Évaluation</strong> : QCM théorique et mise en situation pratique</li>
+      </ul>
+
+      <h2>4. Validité et recyclage</h2>
+      <p>
+        L'habilitation électrique H0B0 est valable <strong>3 ans</strong> pour le même poste de travail.
+        Un <strong>recyclage est obligatoire</strong> :
+      </p>
+      <ul>
+        <li>Tous les 3 ans pour le même poste</li>
+        <li>En cas de changement de fonction ou d'entreprise</li>
+        <li>En cas de restriction médicale</li>
+        <li>Après un accident électrique</li>
+      </ul>
+
+      <h2>5. Prix et financement à Nîmes</h2>
+      <p>
+        Chez SM Academy, la formation H0B0 est proposée à <strong>190 € par stagiaire</strong>. Financement possible :
+      </p>
+      <ul>
+        <li><strong>OPCO</strong> : prise en charge pour les salariés</li>
+        <li><strong>France Travail</strong> : aides pour les demandeurs d'emploi</li>
+        <li><strong>Plan de formation entreprise</strong></li>
+      </ul>
+
+      <h2>6. Formation H0B0 dans le Gard avec SM Academy</h2>
+      <p>
+        Notre centre de formation à <strong>Nîmes</strong> propose des sessions régulières d'habilitation électrique H0B0.
+        Nous intervenons également en <strong>intra</strong> dans tout le Gard : Alès, Bagnols-sur-Cèze, Beaucaire, Uzès, etc.
+      </p>
+      <p>
+        Découvrez notre <a href="/formations/habilitation-electrique-h0b0">formation H0B0 à Nîmes</a> et contactez-nous
+        pour organiser vos sessions. Pour plus d'informations sur nos interventions dans le département,
+        consultez notre <a href="/gard">page Gard</a>.
+      </p>
+    \`,
+  },
+  {
+    slug: "cpf-formation-nimes-gard-guide-utilisation-2026",
+    title: "CPF 2026 : Comment utiliser votre Compte Personnel de Formation à Nîmes (Gard)",
+    excerpt:
+      "Guide complet CPF 2026 : comment consulter vos droits, choisir une formation éligible à Nîmes et financer votre projet professionnel dans le Gard.",
+    date: "2026-02-01T10:00:00.000Z",
+    coverImage: "/smAcademy/IMG_3092.png",
+    category: "Financements",
+    tags: ["CPF", "Financement", "Nîmes", "Gard", "Formation professionnelle"],
+    author: "SM Academy",
+    contentHtml: \`
+      <p>
+        Le <strong>Compte Personnel de Formation (CPF)</strong> est un dispositif qui permet à tout actif de financer
+        ses formations tout au long de sa vie professionnelle. Si vous êtes à <strong>Nîmes</strong> ou dans le <strong>Gard</strong>,
+        voici comment utiliser vos droits CPF en 2026.
+      </p>
+
+      <h2>1. Qu'est-ce que le CPF ?</h2>
+      <p>
+        Le CPF est un compte individuel alimenté en euros chaque année pour les salariés et indépendants.
+        Il remplace le DIF (Droit Individuel à la Formation) depuis 2015.
+      </p>
+      <ul>
+        <li><strong>Alimentation</strong> : 500 € par an pour un temps plein (plafonné à 5 000 €)</li>
+        <li><strong>Majoré</strong> : 800 € par an pour les salariés peu qualifiés (plafonné à 8 000 €)</li>
+        <li><strong>Portabilité</strong> : vos droits vous suivent même si vous changez d'employeur</li>
+      </ul>
+
+      <h2>2. Comment consulter vos droits CPF ?</h2>
+      <p>
+        Pour connaître le montant de vos droits, rendez-vous sur <strong>moncompteformation.gouv.fr</strong> :
+      </p>
+      <ol>
+        <li>Connectez-vous avec FranceConnect (identifiants impots.gouv.fr ou Ameli)</li>
+        <li>Consultez votre solde CPF en euros</li>
+        <li>Recherchez les formations éligibles</li>
+      </ol>
+
+      <h2>3. Quelles formations sont éligibles au CPF ?</h2>
+      <p>
+        Seules les formations certifiantes ou qualifiantes inscrites au <strong>RNCP</strong> ou au <strong>Répertoire Spécifique</strong>
+        sont éligibles. Dans le Gard, les formations les plus demandées sont :
+      </p>
+      <ul>
+        <li><strong>Formations sécurité</strong> : SST, habilitations électriques</li>
+        <li><strong>Formations techniques</strong> : IRVE, fibre optique</li>
+        <li><strong>Bureautique</strong> : Pack Office, Excel, Word</li>
+        <li><strong>Langues</strong> : anglais, espagnol</li>
+      </ul>
+
+      <h2>4. Attention aux arnaques CPF</h2>
+      <p>
+        Le CPF est la cible de nombreuses arnaques. <strong>Ne communiquez jamais</strong> vos identifiants par téléphone
+        ou par email. Aucun organisme sérieux ne vous demandera de vous inscrire immédiatement.
+      </p>
+      <ul>
+        <li>Méfiez-vous des appels non sollicités</li>
+        <li>Vérifiez que l'organisme est certifié <strong>Qualiopi</strong></li>
+        <li>Prenez le temps de comparer les offres</li>
+      </ul>
+
+      <h2>5. Financer sa formation à Nîmes avec le CPF</h2>
+      <p>
+        Si votre solde CPF ne couvre pas la totalité de la formation, plusieurs options existent :
+      </p>
+      <ul>
+        <li><strong>Reste à charge personnel</strong> : vous complétez la différence</li>
+        <li><strong>Abondement employeur</strong> : votre entreprise peut compléter</li>
+        <li><strong>Abondement France Travail</strong> : pour les demandeurs d'emploi</li>
+        <li><strong>Abondement Région Occitanie</strong> : selon les dispositifs en cours</li>
+      </ul>
+
+      <h2>6. SM Academy : formations éligibles CPF dans le Gard</h2>
+      <p>
+        Chez SM Academy à <strong>Nîmes</strong>, plusieurs de nos formations sont finançables par différents dispositifs
+        (OPCO, France Travail, plan de formation entreprise). Nous vous accompagnons dans vos démarches de financement.
+      </p>
+      <p>
+        Consultez notre <a href="/formations">catalogue de formations</a> et contactez-nous pour étudier
+        les possibilités de financement adaptées à votre situation.
+      </p>
+    \`,
+  },
+  {
+    slug: "metiers-qui-recrutent-nimes-gard-2026",
+    title: "Top 10 des métiers qui recrutent à Nîmes et dans le Gard en 2026",
+    excerpt:
+      "Découvrez les métiers en tension dans le Gard : technicien fibre optique, installateur IRVE, SST, électricien... et les formations pour y accéder à Nîmes.",
+    date: "2026-01-30T10:00:00.000Z",
+    coverImage: "/smAcademy/fibre.jpeg",
+    category: "Emploi",
+    tags: ["Emploi", "Nîmes", "Gard", "Reconversion", "Métiers en tension"],
+    author: "SM Academy",
+    contentHtml: \`
+      <p>
+        Le marché de l'emploi dans le <strong>Gard (30)</strong> évolue rapidement avec la transition énergétique et numérique.
+        Voici les <strong>métiers qui recrutent le plus à Nîmes</strong> et dans le département en 2026, ainsi que les formations
+        pour y accéder.
+      </p>
+
+      <h2>1. Technicien Fibre Optique</h2>
+      <p>
+        Le déploiement de la fibre continue dans le Gard, notamment dans les zones rurales (Cévennes, Petite Camargue).
+        Les techniciens D3 (raccordement abonné) sont très recherchés.
+      </p>
+      <ul>
+        <li><strong>Salaire débutant</strong> : 1 700 € à 2 000 € brut/mois</li>
+        <li><strong>Formation</strong> : <a href="/formations/fibre-optique-d3">Fibre Optique D3 (10 jours)</a></li>
+        <li><strong>Débouchés</strong> : Sous-traitants opérateurs, entreprises TP, artisans</li>
+      </ul>
+
+      <h2>2. Installateur IRVE (Bornes de recharge)</h2>
+      <p>
+        Avec l'essor des véhicules électriques, les électriciens qualifiés IRVE sont en forte demande.
+        Le Gard voit se multiplier les projets en copropriétés, entreprises et chez les particuliers.
+      </p>
+      <ul>
+        <li><strong>Salaire</strong> : 2 200 € à 3 000 € brut/mois</li>
+        <li><strong>Formation</strong> : IRVE niveaux P1/P2/P3</li>
+        <li><strong>Débouchés</strong> : Électriciens, artisans, entreprises d'installation</li>
+      </ul>
+
+      <h2>3. Sauveteur Secouriste du Travail (SST)</h2>
+      <p>
+        Les entreprises du Gard recherchent des salariés formés SST pour respecter leurs obligations légales.
+        C'est une compétence valorisante pour tout CV.
+      </p>
+      <ul>
+        <li><strong>Formation</strong> : <a href="/formations/sst">SST Initiale (2 jours)</a></li>
+        <li><strong>Avantage</strong> : Compétence transversale, applicable dans tous les secteurs</li>
+      </ul>
+
+      <h2>4. Agent de prévention et sécurité</h2>
+      <p>
+        Les événements, commerces et sites industriels du Gard recrutent des agents de sécurité.
+        La formation SST est souvent un prérequis.
+      </p>
+
+      <h2>5. Technicien de maintenance</h2>
+      <p>
+        L'industrie et le tertiaire recherchent des techniciens polyvalents avec habilitations électriques.
+      </p>
+      <ul>
+        <li><strong>Formation</strong> : <a href="/formations/habilitation-electrique-h0b0">Habilitation H0B0</a> ou BS/BE</li>
+      </ul>
+
+      <h2>6. Aide à domicile / Auxiliaire de vie</h2>
+      <p>
+        Le vieillissement de la population dans le Gard crée une forte demande.
+        La formation Bientraitance est un plus apprécié.
+      </p>
+      <ul>
+        <li><strong>Formation</strong> : <a href="/formations/bientraitance">Bientraitance (1 jour)</a></li>
+      </ul>
+
+      <h2>7. Conducteur d'engins TP</h2>
+      <p>
+        Les chantiers de travaux publics dans le Gard nécessitent des conducteurs avec AIPR.
+      </p>
+      <ul>
+        <li><strong>Formation</strong> : <a href="/formations/aipr-operateur">AIPR Opérateur (1 jour)</a></li>
+      </ul>
+
+      <h2>8. Employé administratif / Assistant bureautique</h2>
+      <p>
+        La maîtrise du Pack Office reste essentielle pour les emplois de bureau.
+      </p>
+      <ul>
+        <li><strong>Formation</strong> : <a href="/formations/pack-office">Pack Office Expert (5 jours)</a></li>
+      </ul>
+
+      <h2>9. Manutentionnaire / Préparateur de commandes</h2>
+      <p>
+        La logistique recrute dans le Gard. La formation Gestes et Postures est recommandée.
+      </p>
+      <ul>
+        <li><strong>Formation</strong> : <a href="/formations/gestes-et-postures">Gestes et Postures (1 jour)</a></li>
+      </ul>
+
+      <h2>10. Formateur professionnel</h2>
+      <p>
+        Avec l'essor de la formation continue, les formateurs sont recherchés dans tous les domaines.
+      </p>
+
+      <h2>Se former à Nîmes pour accéder à ces métiers</h2>
+      <p>
+        SM Academy à <strong>Nîmes</strong> propose des formations courtes et certifiantes pour accéder rapidement
+        à ces métiers en tension. Nos formations sont finançables par OPCO et France Travail.
+      </p>
+      <p>
+        Consultez notre <a href="/formations">catalogue complet</a> ou notre <a href="/gard">page Gard</a>
+        pour découvrir nos interventions dans le département.
+      </p>
+    \`,
+  },
+  {
+    slug: "reconversion-professionnelle-nimes-gard-guide-2026",
+    title: "Reconversion professionnelle à Nîmes (Gard) : Guide complet 2026",
+    excerpt:
+      "Comment réussir sa reconversion professionnelle dans le Gard : métiers porteurs, formations courtes à Nîmes, financement et accompagnement.",
+    date: "2026-01-28T10:00:00.000Z",
+    coverImage: "/smAcademy/IMG_6244.jpeg",
+    category: "Reconversion",
+    tags: ["Reconversion", "Nîmes", "Gard", "Formation professionnelle", "Emploi"],
+    author: "SM Academy",
+    contentHtml: \`
+      <p>
+        Vous envisagez une <strong>reconversion professionnelle</strong> à <strong>Nîmes</strong> ou dans le <strong>Gard</strong> ?
+        Ce guide vous présente les étapes clés, les métiers porteurs et les formations courtes pour réussir votre transition.
+      </p>
+
+      <h2>1. Pourquoi se reconvertir en 2026 ?</h2>
+      <p>
+        La reconversion professionnelle n'est plus un tabou. Elle répond à plusieurs motivations :
+      </p>
+      <ul>
+        <li><strong>Quête de sens</strong> : exercer un métier aligné avec ses valeurs</li>
+        <li><strong>Évolution du marché</strong> : certains métiers disparaissent, d'autres émergent</li>
+        <li><strong>Opportunités locales</strong> : le Gard recrute dans les métiers techniques</li>
+        <li><strong>Amélioration salariale</strong> : les métiers en tension offrent de bonnes rémunérations</li>
+      </ul>
+
+      <h2>2. Les métiers porteurs pour une reconversion dans le Gard</h2>
+      <p>
+        Certains secteurs recrutent activement dans le département :
+      </p>
+      <ul>
+        <li><strong>Fibre optique</strong> : technicien D3, chef d'équipe fibre</li>
+        <li><strong>Électricité</strong> : installateur IRVE, électricien habilité</li>
+        <li><strong>Sécurité</strong> : agent de prévention, SST en entreprise</li>
+        <li><strong>Aide à la personne</strong> : auxiliaire de vie, aide-soignant</li>
+        <li><strong>BTP</strong> : conducteur d'engins, ouvrier qualifié</li>
+      </ul>
+
+      <h2>3. Formations courtes pour une reconversion rapide</h2>
+      <p>
+        Contrairement aux idées reçues, une reconversion ne nécessite pas forcément des années d'études.
+        Des formations courtes permettent d'être opérationnel rapidement :
+      </p>
+      <ul>
+        <li><strong>Fibre optique D3</strong> : 10 jours pour devenir technicien raccordement</li>
+        <li><strong>SST</strong> : 2 jours pour obtenir le certificat Sauveteur Secouriste</li>
+        <li><strong>Habilitation électrique</strong> : 1 à 3 jours selon le niveau</li>
+        <li><strong>AIPR</strong> : 1 jour pour travailler sur les chantiers</li>
+        <li><strong>Pack Office</strong> : 5 jours pour maîtriser la bureautique</li>
+      </ul>
+
+      <h2>4. Comment financer sa reconversion ?</h2>
+      <p>
+        Plusieurs dispositifs existent pour financer votre projet :
+      </p>
+      <ul>
+        <li><strong>France Travail</strong> : AIF, POEI/POEC pour les demandeurs d'emploi</li>
+        <li><strong>Région Occitanie</strong> : aides à la reconversion dans les métiers en tension</li>
+        <li><strong>Transition Pro</strong> : pour les salariés en CDI (ex-FONGECIF)</li>
+        <li><strong>OPCO</strong> : via le plan de développement des compétences</li>
+      </ul>
+
+      <h2>5. Les étapes d'une reconversion réussie</h2>
+      <ol>
+        <li><strong>Bilan de compétences</strong> : identifier vos atouts et motivations</li>
+        <li><strong>Étude du marché local</strong> : quels métiers recrutent dans le Gard ?</li>
+        <li><strong>Choix de la formation</strong> : courte, certifiante, finançable</li>
+        <li><strong>Montage du dossier</strong> : financement, planning, accompagnement</li>
+        <li><strong>Formation</strong> : acquisition des compétences</li>
+        <li><strong>Recherche d'emploi</strong> : CV, réseau, candidatures</li>
+      </ol>
+
+      <h2>6. SM Academy vous accompagne à Nîmes</h2>
+      <p>
+        Notre centre de formation à <strong>Nîmes</strong> propose des parcours adaptés aux reconversions :
+      </p>
+      <ul>
+        <li>Formations courtes et certifiantes</li>
+        <li>Accompagnement au financement</li>
+        <li>Conseils sur les débouchés locaux</li>
+        <li>Réseau d'entreprises partenaires dans le Gard</li>
+      </ul>
+      <p>
+        Consultez notre <a href="/formations">catalogue de formations</a> ou contactez-nous pour un conseil personnalisé.
+        Découvrez également notre <a href="/gard">page Gard</a> pour nos interventions dans le département.
+      </p>
+    \`,
+  },
+  {
     slug: "formation-irve-2025-nouvelles-normes-certifications",
     title: "Formation IRVE 2025 : Nouvelles normes et certifications pour les installateurs",
     excerpt:
