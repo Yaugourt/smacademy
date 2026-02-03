@@ -21,7 +21,7 @@ export const posts: Post[] = [
     category: "SST",
     tags: ["SST", "Sécurité", "Nîmes", "Gard", "Formation obligatoire", "INRS"],
     author: "SM Academy",
-    contentHtml: \`
+    contentHtml: `
       <p>
         La <strong>formation SST (Sauveteur Secouriste du Travail)</strong> est une obligation légale pour de nombreuses entreprises.
         Si vous êtes basé à <strong>Nîmes</strong> ou dans le <strong>Gard (30)</strong>, ce guide complet vous explique tout ce qu'il faut
@@ -93,7 +93,7 @@ export const posts: Post[] = [
         Découvrez notre <a href="/formations/sst">formation SST à Nîmes</a> et contactez-nous pour planifier vos sessions.
         Pour les entreprises du <strong>Gard</strong>, consultez également notre <a href="/gard">page dédiée au département</a>.
       </p>
-    \`,
+    `,
   },
   {
     slug: "habilitation-electrique-h0b0-nimes-guide-2026",
@@ -105,7 +105,7 @@ export const posts: Post[] = [
     category: "Électricité",
     tags: ["Habilitation électrique", "H0B0", "Sécurité", "Nîmes", "Gard", "NF C18-510"],
     author: "SM Academy",
-    contentHtml: \`
+    contentHtml: `
       <p>
         L'<strong>habilitation électrique H0B0</strong> est obligatoire pour tout personnel non-électricien amené à travailler
         à proximité d'installations électriques. Si vous êtes à <strong>Nîmes</strong> ou dans le <strong>Gard</strong>,
@@ -185,7 +185,7 @@ export const posts: Post[] = [
         pour organiser vos sessions. Pour plus d'informations sur nos interventions dans le département,
         consultez notre <a href="/gard">page Gard</a>.
       </p>
-    \`,
+    `,
   },
   {
     slug: "cpf-formation-nimes-gard-guide-utilisation-2026",
@@ -197,7 +197,7 @@ export const posts: Post[] = [
     category: "Financements",
     tags: ["CPF", "Financement", "Nîmes", "Gard", "Formation professionnelle"],
     author: "SM Academy",
-    contentHtml: \`
+    contentHtml: `
       <p>
         Le <strong>Compte Personnel de Formation (CPF)</strong> est un dispositif qui permet à tout actif de financer
         ses formations tout au long de sa vie professionnelle. Si vous êtes à <strong>Nîmes</strong> ou dans le <strong>Gard</strong>,
@@ -268,7 +268,7 @@ export const posts: Post[] = [
         Consultez notre <a href="/formations">catalogue de formations</a> et contactez-nous pour étudier
         les possibilités de financement adaptées à votre situation.
       </p>
-    \`,
+    `,
   },
   {
     slug: "metiers-qui-recrutent-nimes-gard-2026",
@@ -280,7 +280,7 @@ export const posts: Post[] = [
     category: "Emploi",
     tags: ["Emploi", "Nîmes", "Gard", "Reconversion", "Métiers en tension"],
     author: "SM Academy",
-    contentHtml: \`
+    contentHtml: `
       <p>
         Le marché de l'emploi dans le <strong>Gard (30)</strong> évolue rapidement avec la transition énergétique et numérique.
         Voici les <strong>métiers qui recrutent le plus à Nîmes</strong> et dans le département en 2026, ainsi que les formations
@@ -380,7 +380,7 @@ export const posts: Post[] = [
         Consultez notre <a href="/formations">catalogue complet</a> ou notre <a href="/gard">page Gard</a>
         pour découvrir nos interventions dans le département.
       </p>
-    \`,
+    `,
   },
   {
     slug: "reconversion-professionnelle-nimes-gard-guide-2026",
@@ -392,7 +392,7 @@ export const posts: Post[] = [
     category: "Reconversion",
     tags: ["Reconversion", "Nîmes", "Gard", "Formation professionnelle", "Emploi"],
     author: "SM Academy",
-    contentHtml: \`
+    contentHtml: `
       <p>
         Vous envisagez une <strong>reconversion professionnelle</strong> à <strong>Nîmes</strong> ou dans le <strong>Gard</strong> ?
         Ce guide vous présente les étapes clés, les métiers porteurs et les formations courtes pour réussir votre transition.
@@ -469,7 +469,7 @@ export const posts: Post[] = [
         Consultez notre <a href="/formations">catalogue de formations</a> ou contactez-nous pour un conseil personnalisé.
         Découvrez également notre <a href="/gard">page Gard</a> pour nos interventions dans le département.
       </p>
-    \`,
+    `,
   },
   {
     slug: "formation-irve-2025-nouvelles-normes-certifications",
